@@ -1,0 +1,2086 @@
+{
+ "format": "netdiagrams-export/1",
+ "netbox_version": "sample",
+ "netbox_url": "",
+ "site": {
+  "id": 1,
+  "name": "Plant A (sample)",
+  "slug": "s01"
+ },
+ "devices": [
+  {
+   "id": 1,
+   "name": "S01-FW-EDGE-01",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "PA-1410",
+    "manufacturer": {
+     "name": "Palo Alto Networks",
+     "slug": "palo-alto-networks"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R03"
+   },
+   "position": 30,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.1.99.2/24"
+   },
+   "serial": "SN-DEMO-0001",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "WAN \u00b7 Internet",
+     "slug": "zone-wan"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 2,
+   "name": "S01-SDWAN-01",
+   "role": {
+    "name": "Sdwan Edge",
+    "slug": "sdwan-edge"
+   },
+   "device_type": {
+    "model": "C8300-1N1S-6T",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R03"
+   },
+   "position": 34,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.1.99.4/24"
+   },
+   "serial": "SN-DEMO-0002",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "WAN \u00b7 Internet",
+     "slug": "zone-wan"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 3,
+   "name": "S01-IT-CORE-1",
+   "role": {
+    "name": "Core Switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "C9500-24Y4C",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R01"
+   },
+   "position": 40,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.1.99.10/24"
+   },
+   "serial": "SN-DEMO-0003",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "IT-ENT \u00b7 Site enterprise",
+     "slug": "zone-it-ent"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 4,
+   "name": "S01-IT-CORE-2",
+   "role": {
+    "name": "Core Switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "C9500-24Y4C",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R02"
+   },
+   "position": 40,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.1.99.11/24"
+   },
+   "serial": "SN-DEMO-0004",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "IT-ENT \u00b7 Site enterprise",
+     "slug": "zone-it-ent"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 5,
+   "name": "S01-IT-ACC-IDF1",
+   "role": {
+    "name": "Access Switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "C9300-48UXM",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R01"
+   },
+   "position": 30,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.1.99.20/24"
+   },
+   "serial": "SN-DEMO-0005",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "IT-ENT \u00b7 Site enterprise",
+     "slug": "zone-it-ent"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 6,
+   "name": "S01-WLC-01",
+   "role": {
+    "name": "Wireless Controller",
+    "slug": "wireless-controller"
+   },
+   "device_type": {
+    "model": "C9800-L-F",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R02"
+   },
+   "position": 30,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.1.99.30/24"
+   },
+   "serial": "SN-DEMO-0006",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "IT-ENT \u00b7 Site enterprise",
+     "slug": "zone-it-ent"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 7,
+   "name": "S01-FW-ITOT-01",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "PA-450",
+    "manufacturer": {
+     "name": "Palo Alto Networks",
+     "slug": "palo-alto-networks"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R03"
+   },
+   "position": 20,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.250.1.226/27"
+   },
+   "serial": "SN-DEMO-0007",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "IDMZ",
+     "slug": "zone-idmz"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 8,
+   "name": "S01-FW-ITOT-02",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "PA-450",
+    "manufacturer": {
+     "name": "Palo Alto Networks",
+     "slug": "palo-alto-networks"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R03"
+   },
+   "position": 21,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.250.1.227/27"
+   },
+   "serial": "SN-DEMO-0008",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "IDMZ",
+     "slug": "zone-idmz"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 9,
+   "name": "S01-IDMZ-HV01",
+   "role": {
+    "name": "Hypervisor",
+    "slug": "hypervisor"
+   },
+   "device_type": {
+    "model": "PowerEdge R660",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R03"
+   },
+   "position": 10,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.250.1.230/27"
+   },
+   "serial": "SN-DEMO-0009",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "IDMZ",
+     "slug": "zone-idmz"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 10,
+   "name": "S01-OT-CORE-1",
+   "role": {
+    "name": "Core Switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "C9300-24S",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R04"
+   },
+   "position": 40,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.101.90.10/24"
+   },
+   "serial": "SN-DEMO-0010",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "OT-OPS \u00b7 Site operations",
+     "slug": "zone-ot-ops"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 11,
+   "name": "S01-OT-CORE-2",
+   "role": {
+    "name": "Core Switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "C9300-24S",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R05"
+   },
+   "position": 40,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.101.90.11/24"
+   },
+   "serial": "SN-DEMO-0011",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "OT-OPS \u00b7 Site operations",
+     "slug": "zone-ot-ops"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 12,
+   "name": "S01-OT-HV01",
+   "role": {
+    "name": "Hypervisor",
+    "slug": "hypervisor"
+   },
+   "device_type": {
+    "model": "PowerEdge R660",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R04"
+   },
+   "position": 10,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.101.90.40/24"
+   },
+   "serial": "SN-DEMO-0012",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "OT-OPS \u00b7 Site operations",
+     "slug": "zone-ot-ops"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 13,
+   "name": "S01-OT-OOB-01",
+   "role": {
+    "name": "Oob Switch",
+    "slug": "oob-switch"
+   },
+   "device_type": {
+    "model": "C9200L-24T-4G",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "MDF-01"
+   },
+   "rack": {
+    "name": "R05"
+   },
+   "position": 30,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.101.90.5/24"
+   },
+   "serial": "SN-DEMO-0013",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "OT-MGMT \u00b7 Network management",
+     "slug": "zone-ot-mgmt"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 14,
+   "name": "S01-C01-IE01",
+   "role": {
+    "name": "Industrial Switch",
+    "slug": "industrial-switch"
+   },
+   "device_type": {
+    "model": "IE-3400-8T2S",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "CELL01 floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.101.90.51/24"
+   },
+   "serial": "SN-DEMO-0014",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "CELL01 \u00b7 Assembly",
+     "slug": "zone-cell01"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 15,
+   "name": "S01-C01-IE02",
+   "role": {
+    "name": "Industrial Switch",
+    "slug": "industrial-switch"
+   },
+   "device_type": {
+    "model": "IE-3400-8T2S",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "CELL01 floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.101.90.52/24"
+   },
+   "serial": "SN-DEMO-0015",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "CELL01 \u00b7 Assembly",
+     "slug": "zone-cell01"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 16,
+   "name": "S01-C01-PLC01",
+   "role": {
+    "name": "Plc",
+    "slug": "plc"
+   },
+   "device_type": {
+    "model": "1756-L83E",
+    "manufacturer": {
+     "name": "Rockwell Automation",
+     "slug": "rockwell-automation"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "CELL01 floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "serial": "SN-DEMO-0016",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "CELL01 \u00b7 Assembly",
+     "slug": "zone-cell01"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 17,
+   "name": "S01-C01-HMI01",
+   "role": {
+    "name": "Hmi",
+    "slug": "hmi"
+   },
+   "device_type": {
+    "model": "PanelView 5510",
+    "manufacturer": {
+     "name": "Rockwell Automation",
+     "slug": "rockwell-automation"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "CELL01 floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "serial": "SN-DEMO-0017",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "CELL01 \u00b7 Assembly",
+     "slug": "zone-cell01"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 18,
+   "name": "S01-C02-IE01",
+   "role": {
+    "name": "Industrial Switch",
+    "slug": "industrial-switch"
+   },
+   "device_type": {
+    "model": "IE-3400-8T2S",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "CELL02 floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.101.90.61/24"
+   },
+   "serial": "SN-DEMO-0018",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "CELL02 \u00b7 Packaging",
+     "slug": "zone-cell02"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 19,
+   "name": "S01-C02-PLC01",
+   "role": {
+    "name": "Plc",
+    "slug": "plc"
+   },
+   "device_type": {
+    "model": "S7-1516",
+    "manufacturer": {
+     "name": "Siemens",
+     "slug": "siemens"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "CELL02 floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "serial": "SN-DEMO-0019",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "CELL02 \u00b7 Packaging",
+     "slug": "zone-cell02"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 20,
+   "name": "S01-SIS-SW01",
+   "role": {
+    "name": "Sis Switch",
+    "slug": "sis-switch"
+   },
+   "device_type": {
+    "model": "IE-3400-8T2S",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "SIS floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "serial": "SN-DEMO-0020",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "SIS \u00b7 Safety",
+     "slug": "zone-sis"
+    }
+   ],
+   "custom_fields": {}
+  },
+  {
+   "id": 21,
+   "name": "S01-SIS-PLC01",
+   "role": {
+    "name": "Sis Controller",
+    "slug": "sis-controller"
+   },
+   "device_type": {
+    "model": "Triconex Tricon CX",
+    "manufacturer": {
+     "name": "Schneider Electric",
+     "slug": "schneider-electric"
+    }
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "site": {
+    "name": "Plant A",
+    "slug": "s01"
+   },
+   "location": {
+    "name": "SIS floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "serial": "SN-DEMO-0021",
+   "asset_tag": null,
+   "description": "",
+   "tags": [
+    {
+     "name": "SIS \u00b7 Safety",
+     "slug": "zone-sis"
+    }
+   ],
+   "custom_fields": {}
+  }
+ ],
+ "virtual_chassis": [],
+ "cables": [
+  {
+   "id": 1,
+   "label": "S01-CBL-001",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1001,
+     "object": {
+      "name": "ethernet1/3",
+      "device": {
+       "id": 1,
+       "name": "S01-FW-EDGE-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2003,
+     "object": {
+      "name": "Twe1/0/1",
+      "device": {
+       "id": 3,
+       "name": "S01-IT-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "label": "S01-CBL-002",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1002,
+     "object": {
+      "name": "Gi0/0/1",
+      "device": {
+       "id": 2,
+       "name": "S01-SDWAN-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2004,
+     "object": {
+      "name": "Twe2/0/1",
+      "device": {
+       "id": 4,
+       "name": "S01-IT-CORE-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "label": "S01-CBL-003",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1003,
+     "object": {
+      "name": "Hu1/0/25",
+      "device": {
+       "id": 3,
+       "name": "S01-IT-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2004,
+     "object": {
+      "name": "Hu2/0/25",
+      "device": {
+       "id": 4,
+       "name": "S01-IT-CORE-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "label": "S01-CBL-004",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1003,
+     "object": {
+      "name": "Twe1/0/13",
+      "device": {
+       "id": 3,
+       "name": "S01-IT-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2005,
+     "object": {
+      "name": "Te1/1/1",
+      "device": {
+       "id": 5,
+       "name": "S01-IT-ACC-IDF1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "label": "S01-CBL-005",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1004,
+     "object": {
+      "name": "Twe2/0/13",
+      "device": {
+       "id": 4,
+       "name": "S01-IT-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2005,
+     "object": {
+      "name": "Te3/1/1",
+      "device": {
+       "id": 5,
+       "name": "S01-IT-ACC-IDF1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "label": "S01-CBL-006",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1003,
+     "object": {
+      "name": "Twe1/0/17",
+      "device": {
+       "id": 3,
+       "name": "S01-IT-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2006,
+     "object": {
+      "name": "Te0/1/0",
+      "device": {
+       "id": 6,
+       "name": "S01-WLC-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "label": "S01-CBL-007",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1003,
+     "object": {
+      "name": "Twe1/0/19",
+      "device": {
+       "id": 3,
+       "name": "S01-IT-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2007,
+     "object": {
+      "name": "ethernet1/1",
+      "device": {
+       "id": 7,
+       "name": "S01-FW-ITOT-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "label": "S01-CBL-008",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1004,
+     "object": {
+      "name": "Twe2/0/19",
+      "device": {
+       "id": 4,
+       "name": "S01-IT-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2008,
+     "object": {
+      "name": "ethernet1/1",
+      "device": {
+       "id": 8,
+       "name": "S01-FW-ITOT-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "label": "S01-CBL-009",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1007,
+     "object": {
+      "name": "ethernet1/3",
+      "device": {
+       "id": 7,
+       "name": "S01-FW-ITOT-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2009,
+     "object": {
+      "name": "eno1",
+      "device": {
+       "id": 9,
+       "name": "S01-IDMZ-HV01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "label": "S01-CBL-010",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1007,
+     "object": {
+      "name": "ethernet1/5",
+      "device": {
+       "id": 7,
+       "name": "S01-FW-ITOT-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2010,
+     "object": {
+      "name": "Gi1/0/23",
+      "device": {
+       "id": 10,
+       "name": "S01-OT-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "label": "S01-CBL-011",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1008,
+     "object": {
+      "name": "ethernet1/5",
+      "device": {
+       "id": 8,
+       "name": "S01-FW-ITOT-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2011,
+     "object": {
+      "name": "Gi2/0/23",
+      "device": {
+       "id": 11,
+       "name": "S01-OT-CORE-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "label": "S01-CBL-012",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1007,
+     "object": {
+      "name": "ethernet1/7",
+      "device": {
+       "id": 7,
+       "name": "S01-FW-ITOT-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2008,
+     "object": {
+      "name": "ethernet1/7",
+      "device": {
+       "id": 8,
+       "name": "S01-FW-ITOT-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "label": "S01-CBL-013",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1010,
+     "object": {
+      "name": "Gi1/0/20",
+      "device": {
+       "id": 10,
+       "name": "S01-OT-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2012,
+     "object": {
+      "name": "eno1",
+      "device": {
+       "id": 12,
+       "name": "S01-OT-HV01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "label": "S01-CBL-014",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1011,
+     "object": {
+      "name": "Gi2/0/24",
+      "device": {
+       "id": 11,
+       "name": "S01-OT-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2013,
+     "object": {
+      "name": "Gi1/1/1",
+      "device": {
+       "id": 13,
+       "name": "S01-OT-OOB-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "label": "S01-CBL-015",
+   "type": "smf-os2",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1010,
+     "object": {
+      "name": "Gi1/0/11",
+      "device": {
+       "id": 10,
+       "name": "S01-OT-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2014,
+     "object": {
+      "name": "Gi1/1",
+      "device": {
+       "id": 14,
+       "name": "S01-C01-IE01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "label": "S01-CBL-016",
+   "type": "smf-os2",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1011,
+     "object": {
+      "name": "Gi2/0/11",
+      "device": {
+       "id": 11,
+       "name": "S01-OT-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2015,
+     "object": {
+      "name": "Gi1/1",
+      "device": {
+       "id": 15,
+       "name": "S01-C01-IE02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "label": "S01-CBL-017",
+   "type": "smf-os2",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1014,
+     "object": {
+      "name": "Gi1/2",
+      "device": {
+       "id": 14,
+       "name": "S01-C01-IE01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2015,
+     "object": {
+      "name": "Gi1/2",
+      "device": {
+       "id": 15,
+       "name": "S01-C01-IE02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "label": "S01-CBL-018",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1014,
+     "object": {
+      "name": "Gi1/3",
+      "device": {
+       "id": 14,
+       "name": "S01-C01-IE01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2016,
+     "object": {
+      "name": "A1",
+      "device": {
+       "id": 16,
+       "name": "S01-C01-PLC01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "label": "S01-CBL-019",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1015,
+     "object": {
+      "name": "Gi1/3",
+      "device": {
+       "id": 15,
+       "name": "S01-C01-IE02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2017,
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 17,
+       "name": "S01-C01-HMI01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "label": "S01-CBL-020",
+   "type": "smf-os2",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1010,
+     "object": {
+      "name": "Gi1/0/12",
+      "device": {
+       "id": 10,
+       "name": "S01-OT-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2018,
+     "object": {
+      "name": "Gi1/1",
+      "device": {
+       "id": 18,
+       "name": "S01-C02-IE01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "label": "S01-CBL-021",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1018,
+     "object": {
+      "name": "Gi1/3",
+      "device": {
+       "id": 18,
+       "name": "S01-C02-IE01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2019,
+     "object": {
+      "name": "X1P1",
+      "device": {
+       "id": 19,
+       "name": "S01-C02-PLC01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "label": "S01-CBL-022",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1007,
+     "object": {
+      "name": "ethernet1/8",
+      "device": {
+       "id": 7,
+       "name": "S01-FW-ITOT-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2020,
+     "object": {
+      "name": "Gi1/1",
+      "device": {
+       "id": 20,
+       "name": "S01-SIS-SW01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "label": "S01-CBL-023",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 1020,
+     "object": {
+      "name": "Gi1/3",
+      "device": {
+       "id": 20,
+       "name": "S01-SIS-SW01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object_id": 2021,
+     "object": {
+      "name": "NET1",
+      "device": {
+       "id": 21,
+       "name": "S01-SIS-PLC01"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "vlans": [
+  {
+   "id": 1,
+   "vid": 110,
+   "name": "CORP-USERS",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "IT-ENT \u00b7 Site enterprise",
+     "slug": "zone-it-ent"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "vid": 130,
+   "name": "CORP-WIFI",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "IT-ENT \u00b7 Site enterprise",
+     "slug": "zone-it-ent"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "vid": 199,
+   "name": "IT-NETMGMT",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "IT-ENT \u00b7 Site enterprise",
+     "slug": "zone-it-ent"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "vid": 210,
+   "name": "IDMZ-SERVICES",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "IDMZ",
+     "slug": "zone-idmz"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "vid": 299,
+   "name": "IDMZ-MGMT",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "IDMZ",
+     "slug": "zone-idmz"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "vid": 310,
+   "name": "OT-SERVERS",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "OT-OPS \u00b7 Site operations",
+     "slug": "zone-ot-ops"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "vid": 320,
+   "name": "OT-ENGINEERING",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "OT-OPS \u00b7 Site operations",
+     "slug": "zone-ot-ops"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "vid": 390,
+   "name": "OT-NETMGMT",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "OT-MGMT \u00b7 Network management",
+     "slug": "zone-ot-mgmt"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "vid": 510,
+   "name": "CELL01-CONTROL",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "CELL01 \u00b7 Assembly",
+     "slug": "zone-cell01"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "vid": 520,
+   "name": "CELL02-CONTROL",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "CELL02 \u00b7 Packaging",
+     "slug": "zone-cell02"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "vid": 590,
+   "name": "SIS",
+   "status": {
+    "value": "active"
+   },
+   "role": null,
+   "tags": [
+    {
+     "name": "SIS \u00b7 Safety",
+     "slug": "zone-sis"
+    }
+   ]
+  }
+ ],
+ "prefixes": [
+  {
+   "id": 1,
+   "prefix": "10.1.10.0/23",
+   "vlan": {
+    "id": 1,
+    "vid": 110,
+    "name": "CORP-USERS"
+   },
+   "vrf": {
+    "name": "CORP"
+   }
+  },
+  {
+   "id": 2,
+   "prefix": "10.1.30.0/23",
+   "vlan": {
+    "id": 2,
+    "vid": 130,
+    "name": "CORP-WIFI"
+   },
+   "vrf": {
+    "name": "CORP"
+   }
+  },
+  {
+   "id": 3,
+   "prefix": "10.1.99.0/24",
+   "vlan": {
+    "id": 3,
+    "vid": 199,
+    "name": "IT-NETMGMT"
+   },
+   "vrf": {
+    "name": "CORP"
+   }
+  },
+  {
+   "id": 4,
+   "prefix": "10.250.1.0/26",
+   "vlan": {
+    "id": 4,
+    "vid": 210,
+    "name": "IDMZ-SERVICES"
+   },
+   "vrf": null
+  },
+  {
+   "id": 5,
+   "prefix": "10.250.1.224/27",
+   "vlan": {
+    "id": 5,
+    "vid": 299,
+    "name": "IDMZ-MGMT"
+   },
+   "vrf": null
+  },
+  {
+   "id": 6,
+   "prefix": "10.101.10.0/24",
+   "vlan": {
+    "id": 6,
+    "vid": 310,
+    "name": "OT-SERVERS"
+   },
+   "vrf": {
+    "name": "OT-OPS"
+   }
+  },
+  {
+   "id": 7,
+   "prefix": "10.101.20.0/24",
+   "vlan": {
+    "id": 7,
+    "vid": 320,
+    "name": "OT-ENGINEERING"
+   },
+   "vrf": {
+    "name": "OT-OPS"
+   }
+  },
+  {
+   "id": 8,
+   "prefix": "10.101.90.0/24",
+   "vlan": {
+    "id": 8,
+    "vid": 390,
+    "name": "OT-NETMGMT"
+   },
+   "vrf": {
+    "name": "OT-MGMT"
+   }
+  },
+  {
+   "id": 9,
+   "prefix": "10.101.51.0/24",
+   "vlan": {
+    "id": 9,
+    "vid": 510,
+    "name": "CELL01-CONTROL"
+   },
+   "vrf": {
+    "name": "CELL01"
+   }
+  },
+  {
+   "id": 10,
+   "prefix": "10.101.52.0/24",
+   "vlan": {
+    "id": 10,
+    "vid": 520,
+    "name": "CELL02-CONTROL"
+   },
+   "vrf": {
+    "name": "CELL02"
+   }
+  },
+  {
+   "id": 11,
+   "prefix": "10.101.59.0/28",
+   "vlan": {
+    "id": 11,
+    "vid": 590,
+    "name": "SIS"
+   },
+   "vrf": null
+  }
+ ],
+ "circuits": []
+}

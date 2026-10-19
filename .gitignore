@@ -1,0 +1,9 @@
+__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/
+*.drawio
+!examples/*.drawio
+!src/netdiagrams/data/*.drawio
+*-netbox.json

@@ -1,0 +1,5944 @@
+{
+ "format": "netdiagrams-export/1",
+ "netbox_version": "sample",
+ "netbox_url": "",
+ "exported_at": "2026-10-17T06:00:00+00:00",
+ "site": {
+  "id": 2,
+  "name": "Northgate Cross-Dock",
+  "slug": "w02",
+  "custom_fields": {
+   "monitoring": "alerting",
+   "monitored_by": "LibreNMS"
+  }
+ },
+ "locations": [
+  {
+   "id": 6,
+   "name": "Dock doors",
+   "slug": "dock-doors",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "locked-cabinet",
+    "data_classification": "confidential",
+    "last_verified": "2026-07-22"
+   }
+  },
+  {
+   "id": 8,
+   "name": "IDF-1",
+   "slug": "idf-1",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "locked-room",
+    "data_classification": "internal",
+    "last_verified": "2026-09-15"
+   }
+  },
+  {
+   "id": 10,
+   "name": "MDF-01",
+   "slug": "mdf-01",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "badge-camera",
+    "data_classification": "internal",
+    "last_verified": "2026-09-15"
+   }
+  },
+  {
+   "id": 15,
+   "name": "Office",
+   "slug": "office",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "locked-cabinet",
+    "data_classification": "internal"
+   }
+  },
+  {
+   "id": 16,
+   "name": "Pick aisles",
+   "slug": "pick-aisles",
+   "parent": null,
+   "custom_fields": {
+    "data_classification": "internal"
+   }
+  }
+ ],
+ "contact_assignments": [
+  {
+   "id": 1,
+   "object_type": "dcim.site",
+   "object_id": 1,
+   "contact": {
+    "id": 1,
+    "name": "Priya Shah"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 2,
+   "object_type": "dcim.site",
+   "object_id": 1,
+   "contact": {
+    "id": 2,
+    "name": "DC IT team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 13,
+   "object_type": "dcim.location",
+   "object_id": 6,
+   "contact": {
+    "id": 4,
+    "name": "Elena Ruiz"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 14,
+   "object_type": "dcim.location",
+   "object_id": 6,
+   "contact": {
+    "id": 5,
+    "name": "MHE controls team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 17,
+   "object_type": "dcim.location",
+   "object_id": 8,
+   "contact": {
+    "id": 3,
+    "name": "Marcus Bell"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 18,
+   "object_type": "dcim.location",
+   "object_id": 8,
+   "contact": {
+    "id": 2,
+    "name": "DC IT team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 21,
+   "object_type": "dcim.location",
+   "object_id": 10,
+   "contact": {
+    "id": 3,
+    "name": "Marcus Bell"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 22,
+   "object_type": "dcim.location",
+   "object_id": 10,
+   "contact": {
+    "id": 2,
+    "name": "DC IT team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 31,
+   "object_type": "dcim.location",
+   "object_id": 15,
+   "contact": {
+    "id": 3,
+    "name": "Marcus Bell"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 32,
+   "object_type": "dcim.location",
+   "object_id": 15,
+   "contact": {
+    "id": 2,
+    "name": "DC IT team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 33,
+   "object_type": "dcim.location",
+   "object_id": 16,
+   "contact": {
+    "id": 3,
+    "name": "Marcus Bell"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 34,
+   "object_type": "dcim.location",
+   "object_id": 16,
+   "contact": {
+    "id": 2,
+    "name": "DC IT team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 41,
+   "object_type": "dcim.device",
+   "object_id": 20,
+   "contact": {
+    "id": 4,
+    "name": "Elena Ruiz"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 42,
+   "object_type": "dcim.device",
+   "object_id": 20,
+   "contact": {
+    "id": 5,
+    "name": "MHE controls team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 49,
+   "object_type": "dcim.device",
+   "object_id": 24,
+   "contact": {
+    "id": 4,
+    "name": "Elena Ruiz"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 50,
+   "object_type": "dcim.device",
+   "object_id": 24,
+   "contact": {
+    "id": 5,
+    "name": "MHE controls team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 55,
+   "object_type": "dcim.device",
+   "object_id": 30,
+   "contact": {
+    "id": 4,
+    "name": "Elena Ruiz"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 56,
+   "object_type": "dcim.device",
+   "object_id": 30,
+   "contact": {
+    "id": 5,
+    "name": "MHE controls team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  }
+ ],
+ "device_types": [
+  {
+   "id": 1,
+   "model": "PA-1410",
+   "manufacturer": {
+    "name": "Palo Alto Networks",
+    "slug": "palo-alto-networks"
+   },
+   "slug": "pa-1410",
+   "custom_fields": {
+    "end_of_sale": "2030-06-30",
+    "end_of_support": "2035-06-30"
+   }
+  },
+  {
+   "id": 3,
+   "model": "Catalyst 9500-24Y4C",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "catalyst-9500-24y4c",
+   "custom_fields": {
+    "end_of_sale": "2028-10-30",
+    "end_of_support": "2033-10-31"
+   }
+  },
+  {
+   "id": 4,
+   "model": "Catalyst 9300-48UXM",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "catalyst-9300-48uxm",
+   "custom_fields": {
+    "end_of_sale": "2028-10-30",
+    "end_of_support": "2033-10-31"
+   }
+  },
+  {
+   "id": 5,
+   "model": "Catalyst 9800-L-F",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "catalyst-9800-l-f",
+   "custom_fields": {
+    "end_of_sale": "2029-04-30",
+    "end_of_support": "2034-04-30"
+   }
+  },
+  {
+   "id": 9,
+   "model": "PA-450",
+   "manufacturer": {
+    "name": "Palo Alto Networks",
+    "slug": "palo-alto-networks"
+   },
+   "slug": "pa-450",
+   "custom_fields": {
+    "end_of_sale": "2028-06-30",
+    "end_of_support": "2033-06-30"
+   }
+  },
+  {
+   "id": 12,
+   "model": "Catalyst 9300-24S",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "catalyst-9300-24s",
+   "custom_fields": {
+    "end_of_sale": "2028-10-30",
+    "end_of_support": "2033-10-31"
+   }
+  },
+  {
+   "id": 16,
+   "model": "IE-3400-8T2S",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "ie-3400-8t2s",
+   "custom_fields": {
+    "end_of_sale": "2029-07-31",
+    "end_of_support": "2034-07-31"
+   }
+  },
+  {
+   "id": 17,
+   "model": "HMI panel",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "hmi-panel",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 18,
+   "model": "PLC",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "plc",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 27,
+   "model": "CW9166I",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "cw9166i",
+   "custom_fields": {
+    "end_of_sale": "2030-01-31",
+    "end_of_support": "2035-01-31"
+   }
+  },
+  {
+   "id": 29,
+   "model": "IW9167EH",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "iw9167eh",
+   "custom_fields": {
+    "end_of_sale": "2030-01-31",
+    "end_of_support": "2035-01-31"
+   }
+  }
+ ],
+ "devices": [
+  {
+   "id": 1,
+   "name": "W02-FW-EDGE-01",
+   "role": {
+    "name": "firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "PA-1410",
+    "manufacturer": {
+     "name": "Palo Alto Networks",
+     "slug": "palo-alto-networks"
+    },
+    "id": 1
+   },
+   "platform": {
+    "name": "panos",
+    "slug": "panos"
+   },
+   "serial": "0xxxxxxxx01",
+   "asset_tag": "A-0001",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "MDF-01",
+    "slug": "mdf-01"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 38.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.2.99.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Internet edge FW (active)",
+   "tags": [
+    {
+     "name": "zone-it-ent",
+     "slug": "zone-it-ent"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "PAN-OS 11.1.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-16",
+    "last_patched": "2026-09-24",
+    "install_date": "2023-05-15",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 5,
+   "name": "W02-IT-CORE-1",
+   "role": {
+    "name": "core-switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "Catalyst 9500-24Y4C",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "cisco-ios-xe",
+    "slug": "cisco-ios-xe"
+   },
+   "serial": "FDOxxxxxx11",
+   "asset_tag": "A-0005",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "MDF-01",
+    "slug": "mdf-01"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 40.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.2.99.2/24"
+   },
+   "virtual_chassis": {
+    "name": "W02-IT-CORE",
+    "slug": "w01-it-core"
+   },
+   "vc_position": 1,
+   "description": "IT collapsed core (SVL active)",
+   "tags": [
+    {
+     "name": "zone-it-ent",
+     "slug": "zone-it-ent"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS-XE 17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-16",
+    "last_patched": "2026-08-19",
+    "install_date": "2023-05-15",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 7,
+   "name": "W02-IT-ACC-IDF1-1",
+   "role": {
+    "name": "access-switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "Catalyst 9300-48UXM",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "cisco-ios-xe",
+    "slug": "cisco-ios-xe"
+   },
+   "serial": "FOCxxxxx11",
+   "asset_tag": "A-0011",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "IDF-1",
+    "slug": "idf-1"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 42.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.2.99.21/24"
+   },
+   "virtual_chassis": {
+    "name": "W02-IT-ACC-IDF1",
+    "slug": "w01-it-acc-idf1"
+   },
+   "vc_position": 1,
+   "description": "Access stack member 1 (active)",
+   "tags": [
+    {
+     "name": "zone-it-ent",
+     "slug": "zone-it-ent"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS-XE 17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-16",
+    "last_patched": "2026-08-19",
+    "install_date": "2023-05-15",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 14,
+   "name": "W02-WLC-01",
+   "role": {
+    "name": "wireless-controller",
+    "slug": "wireless-controller"
+   },
+   "device_type": {
+    "model": "Catalyst 9800-L-F",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 5
+   },
+   "platform": {
+    "name": "cisco-ios-xe",
+    "slug": "cisco-ios-xe"
+   },
+   "serial": "FCWxxxxxx01",
+   "asset_tag": "A-0030",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "MDF-01",
+    "slug": "mdf-01"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.2.99.30/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Wireless controller (active) \u00b7 CORP + GUEST",
+   "tags": [
+    {
+     "name": "zone-it-ent",
+     "slug": "zone-it-ent"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS-XE 17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-16",
+    "last_patched": "2026-08-19",
+    "install_date": "2023-05-15",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 20,
+   "name": "W02-FW-ITOT-01",
+   "role": {
+    "name": "firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "PA-450",
+    "manufacturer": {
+     "name": "Palo Alto Networks",
+     "slug": "palo-alto-networks"
+    },
+    "id": 9
+   },
+   "platform": {
+    "name": "panos",
+    "slug": "panos"
+   },
+   "serial": "0xxxxxxxx11",
+   "asset_tag": "A-0040",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "MDF-01",
+    "slug": "mdf-01"
+   },
+   "rack": {
+    "name": "R03",
+    "slug": "r03"
+   },
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.250.2.226/27"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "IT/IDMZ/OT boundary FW (active)",
+   "tags": [
+    {
+     "name": "zone-boundary",
+     "slug": "zone-boundary"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "PAN-OS 11.1.x",
+    "support_contract": "PAN Premium + Threat/URL/WF",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-16",
+    "last_patched": "2026-09-24",
+    "install_date": "2023-05-15",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 24,
+   "name": "W02-OT-CORE-1",
+   "role": {
+    "name": "core-switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "Catalyst 9300-24S",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 12
+   },
+   "platform": {
+    "name": "cisco-ios-xe",
+    "slug": "cisco-ios-xe"
+   },
+   "serial": "FOCxxxxxx51",
+   "asset_tag": "A-0050",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "MDF-01",
+    "slug": "mdf-01"
+   },
+   "rack": {
+    "name": "R04",
+    "slug": "r04"
+   },
+   "position": 40.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.102.90.2/24"
+   },
+   "virtual_chassis": {
+    "name": "W02-OT-CORE",
+    "slug": "w01-ot-core"
+   },
+   "vc_position": 1,
+   "description": "OT collapsed core (stack active)",
+   "tags": [
+    {
+     "name": "zone-ot-ops",
+     "slug": "zone-ot-ops"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS-XE 17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-16",
+    "last_patched": "2026-08-19",
+    "install_date": "2023-05-15",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 30,
+   "name": "W02-OT-WLC-01",
+   "role": {
+    "name": "wireless-controller",
+    "slug": "wireless-controller"
+   },
+   "device_type": {
+    "model": "Catalyst 9800-L-F",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 5
+   },
+   "platform": {
+    "name": "cisco-ios-xe",
+    "slug": "cisco-ios-xe"
+   },
+   "serial": "FCWxxxxxx11",
+   "asset_tag": "A-0071",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "MDF-01",
+    "slug": "mdf-01"
+   },
+   "rack": {
+    "name": "R04",
+    "slug": "r04"
+   },
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.102.90.30/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "OT wireless controller (active) \u00b7 handheld and AMR SSIDs",
+   "tags": [
+    {
+     "name": "zone-ot-mgmt",
+     "slug": "zone-ot-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS-XE 17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-16",
+    "last_patched": "2026-08-19",
+    "install_date": "2023-05-15",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 44,
+   "name": "W02-C03-IE01",
+   "role": {
+    "name": "industrial-switch",
+    "slug": "industrial-switch"
+   },
+   "device_type": {
+    "model": "IE-3400-8T2S",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 16
+   },
+   "platform": {
+    "name": "cisco-ios-xe",
+    "slug": "cisco-ios-xe"
+   },
+   "serial": "FDOxxxx031",
+   "asset_tag": "A-1031",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "Dock doors",
+    "slug": "dock-doors"
+   },
+   "rack": {
+    "name": "DK-301",
+    "slug": "dk-301"
+   },
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.102.90.31/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Dock access (REP ring)",
+   "tags": [
+    {
+     "name": "zone-cell03",
+     "slug": "zone-cell03"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS-XE 17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-16",
+    "last_patched": "2026-07-29",
+    "install_date": "2022-09-12",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 46,
+   "name": "W02-C03-IE02",
+   "role": {
+    "name": "industrial-switch",
+    "slug": "industrial-switch"
+   },
+   "device_type": {
+    "model": "IE-3400-8T2S",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 16
+   },
+   "platform": {
+    "name": "cisco-ios-xe",
+    "slug": "cisco-ios-xe"
+   },
+   "serial": "FDOxxxx032",
+   "asset_tag": "A-1032",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "Dock doors",
+    "slug": "dock-doors"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Dock access (REP ring)",
+   "tags": [
+    {
+     "name": "zone-cell03",
+     "slug": "zone-cell03"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS-XE 17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-16",
+    "last_patched": "2026-07-29",
+    "install_date": "2022-09-12",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 47,
+   "name": "W02-C03-HMI01",
+   "role": {
+    "name": "hmi",
+    "slug": "hmi"
+   },
+   "device_type": {
+    "model": "HMI panel",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 17
+   },
+   "platform": null,
+   "serial": "",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "Dock doors",
+    "slug": "dock-doors"
+   },
+   "rack": {
+    "name": "DK-301",
+    "slug": "dk-301"
+   },
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "HMI (endpoint)",
+   "tags": [
+    {
+     "name": "zone-cell03",
+     "slug": "zone-cell03"
+    }
+   ],
+   "custom_fields": {
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-07-02",
+    "last_patched": "2026-08-05",
+    "install_date": "2022-09-12",
+    "monitoring": "passive",
+    "monitored_by": "OT sensor on the area SPAN port",
+    "log_forwarding": "local"
+   }
+  },
+  {
+   "id": 48,
+   "name": "W02-C03-PLC01",
+   "role": {
+    "name": "plc",
+    "slug": "plc"
+   },
+   "device_type": {
+    "model": "PLC",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 18
+   },
+   "platform": null,
+   "serial": "",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "Dock doors",
+    "slug": "dock-doors"
+   },
+   "rack": {
+    "name": "DK-301",
+    "slug": "dk-301"
+   },
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "PLC (endpoint)",
+   "tags": [
+    {
+     "name": "zone-cell03",
+     "slug": "zone-cell03"
+    }
+   ],
+   "custom_fields": {
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-05",
+    "install_date": "2021-11-08",
+    "monitoring": "passive",
+    "monitored_by": "OT sensor on the area SPAN port",
+    "log_forwarding": "local"
+   }
+  },
+  {
+   "id": 59,
+   "name": "W02-AP-OF-01",
+   "role": {
+    "name": "access-point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "CW9166I",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 27
+   },
+   "platform": null,
+   "serial": "TBD",
+   "asset_tag": "A-OF-01",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "Office",
+    "slug": "office"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "AP \u00b7 Office \u00b7 1F east \u00b7 Local \u00b7 W02-WLC",
+   "tags": [
+    {
+     "name": "zone-it-ent",
+     "slug": "zone-it-ent"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "local",
+    "wireless_controller": {
+     "id": 14,
+     "name": "W02-WLC-01"
+    },
+    "sw_version": "17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "policy_tag": "PT-W02-CORP",
+    "site_tag": "ST-W02-CENTRAL",
+    "rf_tag": "RT-W02-OFFICE",
+    "criticality": "medium",
+    "install_date": "2024-02-20",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 66,
+   "name": "W02-AP-OT-01",
+   "role": {
+    "name": "access-point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "IW9167EH",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 29
+   },
+   "platform": null,
+   "serial": "TBD",
+   "asset_tag": "A-OT-01",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "Pick aisles",
+    "slug": "pick-aisles"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "AP \u00b7 Pick aisles \u00b7 north \u00b7 Local \u00b7 W02-OT-WLC",
+   "tags": [
+    {
+     "name": "zone-ot-mgmt",
+     "slug": "zone-ot-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "local",
+    "wireless_controller": {
+     "id": 30,
+     "name": "W02-OT-WLC-01"
+    },
+    "sw_version": "17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "policy_tag": "PT-W02-OT",
+    "site_tag": "ST-W02-OT",
+    "rf_tag": "RT-W02-FLOOR",
+    "criticality": "medium",
+    "install_date": "2024-02-20",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 67,
+   "name": "W02-AP-OT-02",
+   "role": {
+    "name": "access-point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "IW9167EH",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 29
+   },
+   "platform": null,
+   "serial": "",
+   "asset_tag": "A-OT-02",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Northgate Cross-Dock",
+    "slug": "W02"
+   },
+   "location": {
+    "name": "Pick aisles",
+    "slug": "pick-aisles"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": null,
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "AP \u00b7 Pick aisles \u00b7 south \u00b7 Local \u00b7 W02-OT-WLC",
+   "tags": [
+    {
+     "name": "zone-ot-mgmt",
+     "slug": "zone-ot-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "local",
+    "wireless_controller": {
+     "id": 30,
+     "name": "W02-OT-WLC-01"
+    },
+    "sw_version": "17.12.x",
+    "support_contract": "SNTC 8x5xNBD",
+    "lifecycle": "In support",
+    "policy_tag": "PT-W02-OT",
+    "site_tag": "ST-W02-OT",
+    "rf_tag": "RT-W02-FLOOR",
+    "criticality": "medium",
+    "install_date": "2024-02-20",
+    "support_contract_end": "2027-06-30"
+   }
+  }
+ ],
+ "virtual_chassis": [],
+ "cables": [
+  {
+   "id": 11,
+   "label": "",
+   "type": "mmf-om1",
+   "status": {
+    "value": "connected"
+   },
+   "color": "ff9800",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "GigabitEthernet1/2",
+      "device": {
+       "id": 44,
+       "name": "W02-C03-IE01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "GigabitEthernet1/1",
+      "device": {
+       "id": 46,
+       "name": "W02-C03-IE02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "label": "",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 47,
+       "name": "W02-C03-HMI01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "GigabitEthernet1/3",
+      "device": {
+       "id": 44,
+       "name": "W02-C03-IE01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "label": "W02-CBL-067",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 48,
+       "name": "W02-C03-PLC01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "GigabitEthernet1/3",
+      "device": {
+       "id": 46,
+       "name": "W02-C03-IE02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "label": "W02-CBL-007",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "00bcd4",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "ethernet1/19",
+      "device": {
+       "id": 1,
+       "name": "W02-FW-EDGE-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "TwentyFiveGigE1/0/1",
+      "device": {
+       "id": 5,
+       "name": "W02-IT-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "label": "W02-CBL-018",
+   "type": "smf-os2",
+   "status": {
+    "value": "connected"
+   },
+   "color": "ffeb3b",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "TenGigabitEthernet1/1/1",
+      "device": {
+       "id": 7,
+       "name": "W02-IT-ACC-IDF1-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "TwentyFiveGigE1/0/13",
+      "device": {
+       "id": 5,
+       "name": "W02-IT-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "label": "W02-CBL-022",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "00bcd4",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "TenGigabitEthernet0/1/0",
+      "device": {
+       "id": 14,
+       "name": "W02-WLC-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "TwentyFiveGigE1/0/15",
+      "device": {
+       "id": 5,
+       "name": "W02-IT-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "label": "W02-CBL-024",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "ethernet1/1",
+      "device": {
+       "id": 20,
+       "name": "W02-FW-ITOT-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "TwentyFiveGigE1/0/11",
+      "device": {
+       "id": 5,
+       "name": "W02-IT-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 58,
+   "label": "W02-CBL-036",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "ethernet1/3",
+      "device": {
+       "id": 20,
+       "name": "W02-FW-ITOT-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "GigabitEthernet1/0/1",
+      "device": {
+       "id": 24,
+       "name": "W02-OT-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 72,
+   "label": "W02-CBL-062",
+   "type": "smf-os2",
+   "status": {
+    "value": "connected"
+   },
+   "color": "ffeb3b",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "GigabitEthernet1/1",
+      "device": {
+       "id": 44,
+       "name": "W02-C03-IE01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "GigabitEthernet1/0/13",
+      "device": {
+       "id": 24,
+       "name": "W02-OT-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 75,
+   "label": "W02-CBL-076",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "00bcd4",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "TenGigabitEthernet0/1/0",
+      "device": {
+       "id": 30,
+       "name": "W02-OT-WLC-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "TenGigabitEthernet1/1/3",
+      "device": {
+       "id": 24,
+       "name": "W02-OT-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 82,
+   "label": "W02-CBL-090",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "GigabitEthernet0",
+      "device": {
+       "id": 59,
+       "name": "W02-AP-OF-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "TenGigabitEthernet1/0/37",
+      "device": {
+       "id": 7,
+       "name": "W02-IT-ACC-IDF1-1"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "modules": [
+  {
+   "id": 1,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "module_bay": {
+    "id": 7,
+    "name": "Network Module"
+   },
+   "module_type": {
+    "model": "C9300-NM-8X",
+    "part_number": "C9300-NM-8X",
+    "manufacturer": {
+     "name": "Cisco"
+    }
+   },
+   "status": {
+    "value": "active"
+   },
+   "serial": "FOCxxxxx162",
+   "asset_tag": null,
+   "description": ""
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "module_bay": {
+    "id": 15,
+    "name": "Network Module"
+   },
+   "module_type": {
+    "model": "C9300-NM-8X",
+    "part_number": "C9300-NM-8X",
+    "manufacturer": {
+     "name": "Cisco"
+    }
+   },
+   "status": {
+    "value": "active"
+   },
+   "serial": "FOCxxxxx170",
+   "asset_tag": null,
+   "description": ""
+  }
+ ],
+ "module_bays": [
+  {
+   "id": 7,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "Network Module",
+   "position": "1",
+   "installed_module": {
+    "id": 1
+   }
+  },
+  {
+   "id": 15,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "Network Module",
+   "position": "1",
+   "installed_module": {
+    "id": 9
+   }
+  }
+ ],
+ "inventory_items": [
+  {
+   "id": 1,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx01",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 1,
+    "name": "TwentyFiveGigE1/0/1"
+   }
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx02",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 2,
+    "name": "TwentyFiveGigE1/0/2"
+   }
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "GLC-TE",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-TE",
+   "serial": "AVxxxxx03",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 3,
+    "name": "TwentyFiveGigE1/0/3"
+   }
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "GLC-TE",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-TE",
+   "serial": "AVxxxxx04",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 4,
+    "name": "TwentyFiveGigE1/0/4"
+   }
+  },
+  {
+   "id": 5,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "GLC-TE",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-TE",
+   "serial": "AVxxxxx05",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 11,
+    "name": "TwentyFiveGigE1/0/11"
+   }
+  },
+  {
+   "id": 6,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "GLC-TE",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-TE",
+   "serial": "AVxxxxx06",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 12,
+    "name": "TwentyFiveGigE1/0/12"
+   }
+  },
+  {
+   "id": 7,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "SFP-10G-LR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-LR-S",
+   "serial": "AVxxxxx07",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 13,
+    "name": "TwentyFiveGigE1/0/13"
+   }
+  },
+  {
+   "id": 8,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "SFP-10G-LR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-LR-S",
+   "serial": "AVxxxxx08",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 14,
+    "name": "TwentyFiveGigE1/0/14"
+   }
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx09",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 15,
+    "name": "TwentyFiveGigE1/0/15"
+   }
+  },
+  {
+   "id": 10,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx10",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 16,
+    "name": "TwentyFiveGigE1/0/16"
+   }
+  },
+  {
+   "id": 11,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "SFP-25G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-25G-SR-S",
+   "serial": "AVxxxxx11",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 24,
+    "name": "TwentyFiveGigE1/0/24"
+   }
+  },
+  {
+   "id": 12,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "QSFP-100G-AOC5M",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "QSFP-100G-AOC5M",
+   "serial": "AVxxxxx12",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 25,
+    "name": "HundredGigE1/0/25"
+   }
+  },
+  {
+   "id": 13,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "QSFP-100G-AOC5M",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "QSFP-100G-AOC5M",
+   "serial": "AVxxxxx13",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 26,
+    "name": "HundredGigE1/0/26"
+   }
+  },
+  {
+   "id": 28,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GLC-TE",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-TE",
+   "serial": "AVxxxxx28",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 57,
+    "name": "GigabitEthernet1/0/1"
+   }
+  },
+  {
+   "id": 29,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GLC-TE",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-TE",
+   "serial": "AVxxxxx29",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 58,
+    "name": "GigabitEthernet1/0/2"
+   }
+  },
+  {
+   "id": 30,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GLC-LH-SMD",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-LH-SMD",
+   "serial": "AVxxxxx30",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 67,
+    "name": "GigabitEthernet1/0/11"
+   }
+  },
+  {
+   "id": 31,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GLC-LH-SMD",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-LH-SMD",
+   "serial": "AVxxxxx31",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 68,
+    "name": "GigabitEthernet1/0/12"
+   }
+  },
+  {
+   "id": 32,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GLC-LH-SMD",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-LH-SMD",
+   "serial": "AVxxxxx32",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 69,
+    "name": "GigabitEthernet1/0/13"
+   }
+  },
+  {
+   "id": 33,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "SFP-H10GB-CU3M",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-H10GB-CU3M",
+   "serial": "AVxxxxx33",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 81,
+    "name": "TenGigabitEthernet1/1/1"
+   }
+  },
+  {
+   "id": 34,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx34",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 82,
+    "name": "TenGigabitEthernet1/1/2"
+   }
+  },
+  {
+   "id": 36,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx36",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 84,
+    "name": "TenGigabitEthernet1/1/4"
+   }
+  },
+  {
+   "id": 47,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "SFP-10G-LR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-LR-S",
+   "serial": "AVxxxxx47",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 134,
+    "name": "TenGigabitEthernet1/1/1"
+   }
+  },
+  {
+   "id": 59,
+   "device": {
+    "id": 44,
+    "name": "W02-C03-IE01"
+   },
+   "name": "GLC-SX-MM-RGD",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-SX-MM-RGD",
+   "serial": "AVxxxxx59",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "GigabitEthernet1/2"
+   }
+  },
+  {
+   "id": 60,
+   "device": {
+    "id": 46,
+    "name": "W02-C03-IE02"
+   },
+   "name": "GLC-SX-MM-RGD",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-SX-MM-RGD",
+   "serial": "AVxxxxx60",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "GigabitEthernet1/1"
+   }
+  },
+  {
+   "id": 61,
+   "device": {
+    "id": 46,
+    "name": "W02-C03-IE02"
+   },
+   "name": "GLC-SX-MM-RGD",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-SX-MM-RGD",
+   "serial": "AVxxxxx61",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "GigabitEthernet1/2"
+   }
+  },
+  {
+   "id": 63,
+   "device": {
+    "id": 1,
+    "name": "W02-FW-EDGE-01"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx63",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "ethernet1/19"
+   }
+  },
+  {
+   "id": 64,
+   "device": {
+    "id": 1,
+    "name": "W02-FW-EDGE-01"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx64",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "ethernet1/20"
+   }
+  },
+  {
+   "id": 69,
+   "device": {
+    "id": 14,
+    "name": "W02-WLC-01"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx69",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "TenGigabitEthernet0/1/0"
+   }
+  },
+  {
+   "id": 70,
+   "device": {
+    "id": 14,
+    "name": "W02-WLC-01"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx70",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "TenGigabitEthernet0/1/1"
+   }
+  },
+  {
+   "id": 79,
+   "device": {
+    "id": 44,
+    "name": "W02-C03-IE01"
+   },
+   "name": "GLC-LX-SM-RGD",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "GLC-LX-SM-RGD",
+   "serial": "AVxxxxx79",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "GigabitEthernet1/1"
+   }
+  },
+  {
+   "id": 82,
+   "device": {
+    "id": 30,
+    "name": "W02-OT-WLC-01"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx82",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "TenGigabitEthernet0/1/0"
+   }
+  },
+  {
+   "id": 83,
+   "device": {
+    "id": 30,
+    "name": "W02-OT-WLC-01"
+   },
+   "name": "SFP-10G-SR-S",
+   "label": "",
+   "role": {
+    "id": 1,
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": null,
+   "part_id": "SFP-10G-SR-S",
+   "serial": "AVxxxxx83",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": null,
+    "name": "TenGigabitEthernet0/1/1"
+   }
+  },
+  {
+   "id": 86,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "C9K-PWR-650WAC-R",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "C9K-PWR-650WAC-R",
+   "serial": "ARTxxxxx86",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 87,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "C9K-PWR-650WAC-R",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "C9K-PWR-650WAC-R",
+   "serial": "ARTxxxxx87",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 88,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "C9K-T1-FANTRAY",
+   "label": "",
+   "role": {
+    "id": 3,
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": null,
+   "part_id": "C9K-T1-FANTRAY",
+   "serial": "ARTxxxxx88",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 92,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "PWR-C1-350WAC-P",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "PWR-C1-350WAC-P",
+   "serial": "ARTxxxxx92",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 93,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "PWR-C1-350WAC-P",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "PWR-C1-350WAC-P",
+   "serial": "ARTxxxxx93",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 94,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "FAN-T1",
+   "label": "",
+   "role": {
+    "id": 3,
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": null,
+   "part_id": "FAN-T1",
+   "serial": "ARTxxxxx94",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 95,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "FAN-T1",
+   "label": "",
+   "role": {
+    "id": 3,
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": null,
+   "part_id": "FAN-T1",
+   "serial": "ARTxxxxx95",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 96,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "FAN-T1",
+   "label": "",
+   "role": {
+    "id": 3,
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": null,
+   "part_id": "FAN-T1",
+   "serial": "ARTxxxxx96",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 102,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "PWR-C1-1100WAC-P",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "PWR-C1-1100WAC-P",
+   "serial": "ARTxxxxx102",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 103,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "PWR-C1-1100WAC-P",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "PWR-C1-1100WAC-P",
+   "serial": "ARTxxxxx103",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 122,
+   "device": {
+    "id": 1,
+    "name": "W02-FW-EDGE-01"
+   },
+   "name": "AC PSU",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "ARTxxxxx122",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 123,
+   "device": {
+    "id": 1,
+    "name": "W02-FW-EDGE-01"
+   },
+   "name": "AC PSU",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "ARTxxxxx123",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 126,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "AC adapter",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "ARTxxxxx126",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 132,
+   "device": {
+    "id": 14,
+    "name": "W02-WLC-01"
+   },
+   "name": "Internal AC",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "ARTxxxxx132",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 134,
+   "device": {
+    "id": 30,
+    "name": "W02-OT-WLC-01"
+   },
+   "name": "Internal AC",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "ARTxxxxx134",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 155,
+   "device": {
+    "id": 44,
+    "name": "W02-C03-IE01"
+   },
+   "name": "Dual 24 VDC",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "ARTxxxxx155",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 156,
+   "device": {
+    "id": 44,
+    "name": "W02-C03-IE01"
+   },
+   "name": "SD-IE-4GB",
+   "label": "",
+   "role": null,
+   "manufacturer": null,
+   "part_id": "SD-IE-4GB",
+   "serial": "ARTxxxxx156",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 159,
+   "device": {
+    "id": 46,
+    "name": "W02-C03-IE02"
+   },
+   "name": "Dual 24 VDC",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "ARTxxxxx159",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 160,
+   "device": {
+    "id": 46,
+    "name": "W02-C03-IE02"
+   },
+   "name": "SD-IE-4GB",
+   "label": "",
+   "role": null,
+   "manufacturer": null,
+   "part_id": "SD-IE-4GB",
+   "serial": "ARTxxxxx160",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  }
+ ],
+ "vlans": [
+  {
+   "id": 1,
+   "vid": 110,
+   "name": "CORP-USERS",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-it-ent",
+     "name": "zone-it-ent"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "vid": 130,
+   "name": "CORP-WIFI",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-it-ent",
+     "name": "zone-it-ent"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "vid": 135,
+   "name": "IT-AP-MGMT",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-it-ent",
+     "name": "zone-it-ent"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "vid": 191,
+   "name": "TR-ITOT",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-it-ent",
+     "name": "zone-it-ent"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "vid": 190,
+   "name": "GUEST-WIFI",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-guest",
+     "name": "zone-guest"
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "vid": 310,
+   "name": "WCS-SERVERS",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-ot-ops",
+     "name": "zone-ot-ops"
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "vid": 350,
+   "name": "RF-HANDHELD",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-ot-ops",
+     "name": "zone-ot-ops"
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "vid": 392,
+   "name": "TR-OPS",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-ot-ops",
+     "name": "zone-ot-ops"
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "vid": 390,
+   "name": "OT-NETMGMT",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-ot-mgmt",
+     "name": "zone-ot-mgmt"
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "vid": 395,
+   "name": "OT-AP-MGMT",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-ot-mgmt",
+     "name": "zone-ot-mgmt"
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "vid": 399,
+   "name": "TR-MGMT",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-ot-mgmt",
+     "name": "zone-ot-mgmt"
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "vid": 530,
+   "name": "C03-CTRL",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-cell03",
+     "name": "zone-cell03"
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "vid": 531,
+   "name": "C03-IO",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-cell03",
+     "name": "zone-cell03"
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "vid": 539,
+   "name": "TR-C03",
+   "role": null,
+   "tags": [
+    {
+     "slug": "zone-cell03",
+     "name": "zone-cell03"
+    }
+   ]
+  }
+ ],
+ "prefixes": [
+  {
+   "id": 1,
+   "prefix": "10.2.10.0/24",
+   "vlan": {
+    "id": 1,
+    "vid": 110
+   },
+   "vrf": {
+    "name": "CORP"
+   }
+  },
+  {
+   "id": 3,
+   "prefix": "10.2.30.0/23",
+   "vlan": {
+    "id": 3,
+    "vid": 130
+   },
+   "vrf": {
+    "name": "CORP"
+   }
+  },
+  {
+   "id": 4,
+   "prefix": "10.2.35.0/24",
+   "vlan": {
+    "id": 4,
+    "vid": 135
+   },
+   "vrf": {
+    "name": "CORP"
+   }
+  },
+  {
+   "id": 10,
+   "prefix": "10.2.191.0/29",
+   "vlan": {
+    "id": 10,
+    "vid": 191
+   },
+   "vrf": null
+  },
+  {
+   "id": 11,
+   "prefix": "172.31.1.0/24",
+   "vlan": {
+    "id": 11,
+    "vid": 190
+   },
+   "vrf": {
+    "name": "GUEST"
+   }
+  },
+  {
+   "id": 19,
+   "prefix": "10.102.10.0/24",
+   "vlan": {
+    "id": 19,
+    "vid": 310
+   },
+   "vrf": {
+    "name": "OT-OPS"
+   }
+  },
+  {
+   "id": 23,
+   "prefix": "10.102.50.0/24",
+   "vlan": {
+    "id": 23,
+    "vid": 350
+   },
+   "vrf": {
+    "name": "OT-OPS"
+   }
+  },
+  {
+   "id": 25,
+   "prefix": "10.102.252.0/29",
+   "vlan": {
+    "id": 25,
+    "vid": 392
+   },
+   "vrf": null
+  },
+  {
+   "id": 26,
+   "prefix": "10.102.90.0/24",
+   "vlan": {
+    "id": 26,
+    "vid": 390
+   },
+   "vrf": {
+    "name": "OT-MGMT"
+   }
+  },
+  {
+   "id": 27,
+   "prefix": "10.102.95.0/24",
+   "vlan": {
+    "id": 27,
+    "vid": 395
+   },
+   "vrf": {
+    "name": "OT-MGMT"
+   }
+  },
+  {
+   "id": 28,
+   "prefix": "10.102.252.32/29",
+   "vlan": {
+    "id": 28,
+    "vid": 399
+   },
+   "vrf": null
+  },
+  {
+   "id": 35,
+   "prefix": "10.102.130.0/24",
+   "vlan": {
+    "id": 35,
+    "vid": 530
+   },
+   "vrf": {
+    "name": "CELL03"
+   }
+  },
+  {
+   "id": 36,
+   "prefix": "10.102.131.0/24",
+   "vlan": {
+    "id": 36,
+    "vid": 531
+   },
+   "vrf": {
+    "name": "CELL03"
+   }
+  },
+  {
+   "id": 37,
+   "prefix": "10.102.252.80/29",
+   "vlan": {
+    "id": 37,
+    "vid": 539
+   },
+   "vrf": null
+  }
+ ],
+ "circuits": [
+  {
+   "id": 1,
+   "cid": "W02-ISP-A-01",
+   "status": {
+    "value": "active"
+   }
+  },
+  {
+   "id": 3,
+   "cid": "W02-WAN-A-01",
+   "status": {
+    "value": "active"
+   }
+  }
+ ],
+ "interfaces": [
+  {
+   "id": 1,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/1",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel1"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-FW-EDGE-01 ethernet1/19",
+   "vrf": null,
+   "speed": 10000000
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/2",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel2"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-FW-EDGE-02 ethernet1/19",
+   "vrf": null,
+   "speed": 10000000
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/3",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel3"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-SDWAN-01 GigabitEthernet0/0/2",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/4",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel4"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-SDWAN-02 GigabitEthernet0/0/2",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 5,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/5",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 6,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/6",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 7,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/7",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 8,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/8",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/9",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 10,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/10",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 11,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/11",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel11"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-FW-ITOT-01 ethernet1/1",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 12,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/12",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel12"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-FW-ITOT-02 ethernet1/1",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 13,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/13",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel101"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IT-ACC-IDF1-1 TenGigabitEthernet1/1/1",
+   "vrf": null,
+   "speed": 10000000
+  },
+  {
+   "id": 14,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/14",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel102"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IT-ACC-IDF2-1 TenGigabitEthernet1/1/1",
+   "vrf": null,
+   "speed": 10000000
+  },
+  {
+   "id": 15,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/15",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel103"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-WLC-01 TenGigabitEthernet0/1/0",
+   "vrf": null,
+   "speed": 10000000
+  },
+  {
+   "id": 16,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/16",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel104"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-WLC-02 TenGigabitEthernet0/1/0",
+   "vrf": null,
+   "speed": 10000000
+  },
+  {
+   "id": 17,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/17",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 18,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/18",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 19,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/19",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 20,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/20",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 21,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/21",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 22,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/22",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 23,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/23",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 24,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "TwentyFiveGigE1/0/24",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IT-CORE-2 TwentyFiveGigE2/0/24",
+   "vrf": null
+  },
+  {
+   "id": 25,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "HundredGigE1/0/25",
+   "type": {
+    "value": "100gbase-x-qsfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IT-CORE-2 HundredGigE2/0/25",
+   "vrf": null
+  },
+  {
+   "id": 26,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "HundredGigE1/0/26",
+   "type": {
+    "value": "100gbase-x-qsfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IT-CORE-2 HundredGigE2/0/26",
+   "vrf": null
+  },
+  {
+   "id": 27,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "HundredGigE1/0/27",
+   "type": {
+    "value": "100gbase-x-qsfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 28,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "HundredGigE1/0/28",
+   "type": {
+    "value": "100gbase-x-qsfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 57,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/1",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel21"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-FW-ITOT-01 ethernet1/3",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 58,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/2",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel22"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-FW-ITOT-02 ethernet1/3",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 59,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/3",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 60,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/4",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 61,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/5",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 62,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/6",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 63,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/7",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 64,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/8",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 65,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/9",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 66,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/10",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 67,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/11",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 999
+   },
+   "tagged_vlans": [
+    {
+     "vid": 510
+    },
+    {
+     "vid": 511
+    },
+    {
+     "vid": 390
+    }
+   ],
+   "description": "\u2192 W02-C01-IE01 GigabitEthernet1/1",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 68,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/12",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 999
+   },
+   "tagged_vlans": [
+    {
+     "vid": 520
+    },
+    {
+     "vid": 521
+    },
+    {
+     "vid": 390
+    }
+   ],
+   "description": "\u2192 W02-C02-IE01 GigabitEthernet1/1",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 69,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/13",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 999
+   },
+   "tagged_vlans": [
+    {
+     "vid": 530
+    },
+    {
+     "vid": 531
+    },
+    {
+     "vid": 390
+    }
+   ],
+   "description": "\u2192 W02-C03-IE01 GigabitEthernet1/1",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 70,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/14",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 71,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/15",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 72,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/16",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 73,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/17",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 74,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/18",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 75,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/19",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 76,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/20",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 77,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/21",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 78,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/22",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 79,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/23",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 80,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "GigabitEthernet1/0/24",
+   "type": {
+    "value": "1000base-x-sfp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 81,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "TenGigabitEthernet1/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel201"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-OT-HCI-01 vmnic0",
+   "vrf": null,
+   "speed": 10000000
+  },
+  {
+   "id": 82,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "TenGigabitEthernet1/1/2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel202"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-OT-ACC-01-1 TenGigabitEthernet1/1/1",
+   "vrf": null
+  },
+  {
+   "id": 83,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "TenGigabitEthernet1/1/3",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel203"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-OT-WLC-01 TenGigabitEthernet0/1/0",
+   "vrf": null
+  },
+  {
+   "id": 84,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "TenGigabitEthernet1/1/4",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel204"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-OT-WLC-02 TenGigabitEthernet0/1/0",
+   "vrf": null
+  },
+  {
+   "id": 85,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "TenGigabitEthernet1/1/5",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 86,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "TenGigabitEthernet1/1/6",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 87,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "TenGigabitEthernet1/1/7",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 88,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "TenGigabitEthernet1/1/8",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 89,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "StackPort1/1",
+   "type": {
+    "value": "cisco-stackwise"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-OT-CORE-2 StackPort2/2",
+   "vrf": null
+  },
+  {
+   "id": 90,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "StackPort1/2",
+   "type": {
+    "value": "cisco-stackwise"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-OT-CORE-2 StackPort2/1",
+   "vrf": null
+  },
+  {
+   "id": 125,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ethernet1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "ae1"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IT-CORE-1 TwentyFiveGigE1/0/11",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 126,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ethernet1/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "ae1"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IT-CORE-2 TwentyFiveGigE2/0/11",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 127,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ethernet1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "ae2"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-OT-CORE-1 GigabitEthernet1/0/1",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 128,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ethernet1/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "ae2"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-OT-CORE-2 GigabitEthernet2/0/1",
+   "vrf": null,
+   "speed": 1000000
+  },
+  {
+   "id": 129,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ethernet1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "ae3"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IDMZ-SW-01 GigabitEthernet1/0/1",
+   "vrf": null
+  },
+  {
+   "id": 130,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ethernet1/6",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "ae3"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IDMZ-SW-01 GigabitEthernet1/0/2",
+   "vrf": null
+  },
+  {
+   "id": 131,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ethernet1/7",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-FW-ITOT-02 ethernet1/7",
+   "vrf": null
+  },
+  {
+   "id": 132,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ethernet1/8",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-FW-ITOT-02 ethernet1/8",
+   "vrf": null
+  },
+  {
+   "id": 133,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "management",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-OOB-SW-01 GigabitEthernet1/0/1",
+   "vrf": null
+  },
+  {
+   "id": 134,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "TenGigabitEthernet1/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Port-channel101"
+   },
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "\u2192 W02-IT-CORE-1 TwentyFiveGigE1/0/13",
+   "vrf": null,
+   "speed": 10000000
+  },
+  {
+   "id": 135,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "TenGigabitEthernet1/1/2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 136,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "TenGigabitEthernet1/1/3",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 137,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "TenGigabitEthernet1/1/4",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 138,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "TenGigabitEthernet1/1/5",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 139,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "TenGigabitEthernet1/1/6",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "TenGigabitEthernet1/1/7",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 141,
+   "device": {
+    "id": 7,
+    "name": "W02-IT-ACC-IDF1-1"
+   },
+   "name": "TenGigabitEthernet1/1/8",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 200,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "Port-channel1",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 181
+    },
+    {
+     "vid": 189
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 202,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "Port-channel2",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 181
+    },
+    {
+     "vid": 189
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 204,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "Port-channel3",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 182
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 206,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "Port-channel4",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 182
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 208,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ae1",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 191
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 209,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "Port-channel11",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 191
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 211,
+   "device": {
+    "id": 5,
+    "name": "W02-IT-CORE-1"
+   },
+   "name": "Port-channel12",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 191
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 213,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ae3",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 210
+    },
+    {
+     "vid": 211
+    },
+    {
+     "vid": 212
+    },
+    {
+     "vid": 213
+    },
+    {
+     "vid": 214
+    },
+    {
+     "vid": 215
+    },
+    {
+     "vid": 216
+    },
+    {
+     "vid": 217
+    },
+    {
+     "vid": 218
+    },
+    {
+     "vid": 219
+    },
+    {
+     "vid": 220
+    },
+    {
+     "vid": 221
+    },
+    {
+     "vid": 222
+    },
+    {
+     "vid": 223
+    },
+    {
+     "vid": 224
+    },
+    {
+     "vid": 225
+    },
+    {
+     "vid": 226
+    },
+    {
+     "vid": 227
+    },
+    {
+     "vid": 228
+    },
+    {
+     "vid": 229
+    },
+    {
+     "vid": 230
+    },
+    {
+     "vid": 231
+    },
+    {
+     "vid": 232
+    },
+    {
+     "vid": 233
+    },
+    {
+     "vid": 234
+    },
+    {
+     "vid": 235
+    },
+    {
+     "vid": 236
+    },
+    {
+     "vid": 237
+    },
+    {
+     "vid": 238
+    },
+    {
+     "vid": 239
+    },
+    {
+     "vid": 240
+    },
+    {
+     "vid": 241
+    },
+    {
+     "vid": 242
+    },
+    {
+     "vid": 243
+    },
+    {
+     "vid": 244
+    },
+    {
+     "vid": 245
+    },
+    {
+     "vid": 246
+    },
+    {
+     "vid": 247
+    },
+    {
+     "vid": 248
+    },
+    {
+     "vid": 249
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 214,
+   "device": {
+    "id": 20,
+    "name": "W02-FW-ITOT-01"
+   },
+   "name": "ae2",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 392
+    },
+    {
+     "vid": 399
+    },
+    {
+     "vid": 519
+    },
+    {
+     "vid": 529
+    },
+    {
+     "vid": 539
+    },
+    {
+     "vid": 590
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 215,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "Port-channel21",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 392
+    },
+    {
+     "vid": 399
+    },
+    {
+     "vid": 519
+    },
+    {
+     "vid": 529
+    },
+    {
+     "vid": 539
+    },
+    {
+     "vid": 590
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 217,
+   "device": {
+    "id": 24,
+    "name": "W02-OT-CORE-1"
+   },
+   "name": "Port-channel22",
+   "type": {
+    "value": "lag"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 392
+    },
+    {
+     "vid": 399
+    },
+    {
+     "vid": 519
+    },
+    {
+     "vid": 529
+    },
+    {
+     "vid": 539
+    },
+    {
+     "vid": 590
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 219,
+   "device": {
+    "id": 59,
+    "name": "W02-AP-OF-01"
+   },
+   "name": "GigabitEthernet0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type3-ieee802.3bt",
+    "label": "802.3bt (Type 3)"
+   }
+  },
+  {
+   "id": 220,
+   "device": {
+    "id": 59,
+    "name": "W02-AP-OF-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "GUEST"
+    }
+   ],
+   "rf_channel": {
+    "value": "2.4g-1-2412-22",
+    "label": "1 (2412 MHz)"
+   },
+   "rf_channel_frequency": 2412,
+   "rf_channel_width": 22
+  },
+  {
+   "id": 221,
+   "device": {
+    "id": 59,
+    "name": "W02-AP-OF-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "CORP"
+    },
+    {
+     "id": 2,
+     "ssid": "GUEST"
+    }
+   ],
+   "rf_channel": {
+    "value": "5g-38-5190-40",
+    "label": "38 (5190/40 MHz)"
+   },
+   "rf_channel_frequency": 5190,
+   "rf_channel_width": 40
+  },
+  {
+   "id": 240,
+   "device": {
+    "id": 66,
+    "name": "W02-AP-OT-01"
+   },
+   "name": "GigabitEthernet0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 241,
+   "device": {
+    "id": 66,
+    "name": "W02-AP-OT-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap"
+   },
+   "wireless_lans": [],
+   "rf_channel": {
+    "value": "2.4g-1-2412-22",
+    "label": "1 (2412 MHz)"
+   },
+   "rf_channel_frequency": 2412,
+   "rf_channel_width": 22
+  },
+  {
+   "id": 242,
+   "device": {
+    "id": 66,
+    "name": "W02-AP-OT-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "WH-SCAN"
+    }
+   ],
+   "rf_channel": {
+    "value": "5g-149-5745-20",
+    "label": "149 (5745/20 MHz)"
+   },
+   "rf_channel_frequency": 5745,
+   "rf_channel_width": 20
+  },
+  {
+   "id": 243,
+   "device": {
+    "id": 67,
+    "name": "W02-AP-OT-02"
+   },
+   "name": "GigabitEthernet0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 244,
+   "device": {
+    "id": 67,
+    "name": "W02-AP-OT-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap"
+   },
+   "wireless_lans": [],
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437 MHz)"
+   },
+   "rf_channel_frequency": 2437,
+   "rf_channel_width": 22
+  },
+  {
+   "id": 245,
+   "device": {
+    "id": 67,
+    "name": "W02-AP-OT-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "WH-SCAN"
+    }
+   ],
+   "rf_channel": {
+    "value": "5g-157-5785-20",
+    "label": "157 (5785/20 MHz)"
+   },
+   "rf_channel_frequency": 5785,
+   "rf_channel_width": 20
+  }
+ ],
+ "wireless_links": [],
+ "wireless_lans": [
+  {
+   "id": 1,
+   "ssid": "CORP",
+   "group": {
+    "id": 1,
+    "name": "W02-WLAN",
+    "slug": "w02-wlan"
+   },
+   "vlan": {
+    "id": 3,
+    "vid": 130,
+    "name": "CORP-WIFI"
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "description": "802.1X EAP-TLS to Corp ISE \u00b7 office and driver lounge APs",
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_switching": "tunnelled",
+    "wlan_bands": [
+     "5ghz",
+     "6ghz"
+    ],
+    "wlan_eap": "EAP-TLS"
+   },
+   "tags": [],
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Northgate Cross-Dock",
+    "slug": "w01"
+   }
+  },
+  {
+   "id": 2,
+   "ssid": "GUEST",
+   "group": {
+    "id": 1,
+    "name": "W02-WLAN",
+    "slug": "w02-wlan"
+   },
+   "vlan": {
+    "id": 11,
+    "vid": 190,
+    "name": "GUEST-WIFI"
+   },
+   "auth_type": {
+    "value": "open",
+    "label": "Open"
+   },
+   "auth_cipher": null,
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "description": "OWE with a captive portal \u00b7 client isolation \u00b7 internet only \u00b7 office APs and the driver lounge",
+   "custom_fields": {
+    "wlan_security": "owe",
+    "wlan_switching": "tunnelled",
+    "wlan_bands": [
+     "2.4ghz",
+     "5ghz"
+    ],
+    "wlan_client_isolation": true,
+    "wlan_portal": "captive"
+   },
+   "tags": [],
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Northgate Cross-Dock",
+    "slug": "w01"
+   }
+  },
+  {
+   "id": 3,
+   "ssid": "WH-SCAN",
+   "group": {
+    "id": 1,
+    "name": "W02-WLAN",
+    "slug": "w02-wlan"
+   },
+   "vlan": {
+    "id": 23,
+    "vid": 350,
+    "name": "RF-HANDHELD"
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "description": "EAP-TLS \u00b7 802.11r/k/v and OKC \u00b7 5 GHz only \u00b7 Vlan350 inbound ACL: DHCP, DNS, WCS, print and the IDMZ WMS broker only \u00b7 voice picking with WMM voice priority",
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_switching": "tunnelled",
+    "wlan_bands": [
+     "5ghz"
+    ],
+    "wlan_eap": "EAP-TLS"
+   },
+   "tags": [],
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Northgate Cross-Dock",
+    "slug": "w01"
+   }
+  }
+ ],
+ "ip_addresses": [
+  {
+   "id": 1,
+   "address": "10.2.10.1/24",
+   "assigned_object": {
+    "name": "Vlan110",
+    "device": {
+     "id": 5,
+     "name": "W02-IT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 3,
+   "address": "10.2.30.1/23",
+   "assigned_object": {
+    "name": "Vlan130",
+    "device": {
+     "id": 5,
+     "name": "W02-IT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 4,
+   "address": "10.2.35.1/24",
+   "assigned_object": {
+    "name": "Vlan135",
+    "device": {
+     "id": 5,
+     "name": "W02-IT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 10,
+   "address": "10.2.191.1/29",
+   "assigned_object": {
+    "name": "Vlan191",
+    "device": {
+     "id": 5,
+     "name": "W02-IT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 11,
+   "address": "172.31.1.1/24",
+   "assigned_object": {
+    "name": "Vlan190",
+    "device": {
+     "id": 5,
+     "name": "W02-IT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 13,
+   "address": "10.102.10.1/24",
+   "assigned_object": {
+    "name": "Vlan310",
+    "device": {
+     "id": 24,
+     "name": "W02-OT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 17,
+   "address": "10.102.50.1/24",
+   "assigned_object": {
+    "name": "Vlan350",
+    "device": {
+     "id": 24,
+     "name": "W02-OT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 19,
+   "address": "10.102.252.1/29",
+   "assigned_object": {
+    "name": "Vlan392",
+    "device": {
+     "id": 24,
+     "name": "W02-OT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 20,
+   "address": "10.102.90.1/24",
+   "assigned_object": {
+    "name": "Vlan390",
+    "device": {
+     "id": 24,
+     "name": "W02-OT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 21,
+   "address": "10.102.95.1/24",
+   "assigned_object": {
+    "name": "Vlan395",
+    "device": {
+     "id": 24,
+     "name": "W02-OT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 22,
+   "address": "10.102.252.33/29",
+   "assigned_object": {
+    "name": "Vlan399",
+    "device": {
+     "id": 24,
+     "name": "W02-OT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 29,
+   "address": "10.102.130.1/24",
+   "assigned_object": {
+    "name": "Vlan530",
+    "device": {
+     "id": 24,
+     "name": "W02-OT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 30,
+   "address": "10.102.131.1/24",
+   "assigned_object": {
+    "name": "Vlan531",
+    "device": {
+     "id": 24,
+     "name": "W02-OT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 31,
+   "address": "10.102.252.81/29",
+   "assigned_object": {
+    "name": "Vlan539",
+    "device": {
+     "id": 24,
+     "name": "W02-OT-CORE-1"
+    }
+   }
+  },
+  {
+   "id": 32,
+   "address": "10.2.191.2/29",
+   "assigned_object": {
+    "name": "ae1.191",
+    "device": {
+     "id": 20,
+     "name": "W02-FW-ITOT-01"
+    }
+   }
+  },
+  {
+   "id": 33,
+   "address": "10.102.252.2/29",
+   "assigned_object": {
+    "name": "ae2.392",
+    "device": {
+     "id": 20,
+     "name": "W02-FW-ITOT-01"
+    }
+   }
+  },
+  {
+   "id": 34,
+   "address": "10.102.252.34/29",
+   "assigned_object": {
+    "name": "ae2.399",
+    "device": {
+     "id": 20,
+     "name": "W02-FW-ITOT-01"
+    }
+   }
+  },
+  {
+   "id": 37,
+   "address": "10.102.252.82/29",
+   "assigned_object": {
+    "name": "ae2.539",
+    "device": {
+     "id": 20,
+     "name": "W02-FW-ITOT-01"
+    }
+   }
+  },
+  {
+   "id": 39,
+   "address": "10.250.2.226/27",
+   "assigned_object": {
+    "name": "MGT",
+    "device": {
+     "id": 20,
+     "name": "W02-FW-ITOT-01"
+    }
+   }
+  }
+ ]
+}

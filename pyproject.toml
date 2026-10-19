@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "netdiagrams"
+version = "0.1.0"
+description = "NetDiagrams: network diagrams from NetBox, drawn to a consistent standard in draw.io."
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.9"
+dependencies = []
+
+[project.urls]
+Homepage = "https://netdiagrams.com"
+
+[project.scripts]
+netdiagrams = "netdiagrams.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+netdiagrams = ["data/*"]

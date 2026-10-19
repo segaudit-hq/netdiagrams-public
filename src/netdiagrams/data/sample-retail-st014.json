@@ -1,0 +1,5721 @@
+{
+ "format": "netdiagrams-export/1",
+ "netbox_version": "sample",
+ "netbox_url": "",
+ "exported_at": "2026-10-15T09:00:00Z",
+ "site": {
+  "id": 14,
+  "name": "Store 014",
+  "slug": "st014",
+  "facility": "ST014",
+  "description": "Riverside \u00b7 street store \u00b7 2 floors",
+  "custom_fields": {
+   "monitoring": "alerting",
+   "monitored_by": "Store estate monitoring (cloud NMS)",
+   "log_forwarding": "siem",
+   "log_destination": "Central SIEM, syslog over TLS",
+   "log_retention_days": 400,
+   "last_verified": "2026-06-04"
+  }
+ },
+ "locations": [
+  {
+   "id": 1401,
+   "name": "Back office",
+   "slug": "back-office",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "locked-room",
+    "data_classification": "confidential"
+   }
+  },
+  {
+   "id": 1402,
+   "name": "Checkout",
+   "slug": "checkout",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "open",
+    "data_classification": "restricted"
+   }
+  },
+  {
+   "id": 1403,
+   "name": "Rear yard",
+   "slug": "rear-yard",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "open",
+    "data_classification": "internal"
+   }
+  },
+  {
+   "id": 1404,
+   "name": "Sales floor",
+   "slug": "sales-floor",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "open",
+    "data_classification": "internal"
+   }
+  },
+  {
+   "id": 1405,
+   "name": "Sales floor front",
+   "slug": "sales-floor-front",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "open",
+    "data_classification": "internal"
+   }
+  },
+  {
+   "id": 1406,
+   "name": "Sales floor rear",
+   "slug": "sales-floor-rear",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "open",
+    "data_classification": "internal"
+   }
+  },
+  {
+   "id": 1407,
+   "name": "Stockroom",
+   "slug": "stockroom",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "locked-room",
+    "data_classification": "internal"
+   }
+  },
+  {
+   "id": 1408,
+   "name": "Upstairs",
+   "slug": "upstairs",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "locked-room",
+    "data_classification": "internal"
+   }
+  }
+ ],
+ "racks": [
+  {
+   "id": 141,
+   "name": "ST014-CAB-01",
+   "custom_fields": {
+    "physical_access": "locked-cabinet"
+   }
+  }
+ ],
+ "contact_assignments": [
+  {
+   "id": 1401,
+   "object_type": "dcim.site",
+   "object_id": 14,
+   "contact": {
+    "id": 1,
+    "name": "Alex Morgan"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1402,
+   "object_type": "dcim.site",
+   "object_id": 14,
+   "contact": {
+    "id": 2,
+    "name": "Store IT"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1403,
+   "object_type": "dcim.device",
+   "object_id": 14001,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1404,
+   "object_type": "dcim.device",
+   "object_id": 14001,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1405,
+   "object_type": "dcim.device",
+   "object_id": 14002,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1406,
+   "object_type": "dcim.device",
+   "object_id": 14002,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1407,
+   "object_type": "dcim.device",
+   "object_id": 14003,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1408,
+   "object_type": "dcim.device",
+   "object_id": 14003,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1409,
+   "object_type": "dcim.device",
+   "object_id": 14004,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1410,
+   "object_type": "dcim.device",
+   "object_id": 14004,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1411,
+   "object_type": "dcim.device",
+   "object_id": 14005,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1412,
+   "object_type": "dcim.device",
+   "object_id": 14005,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1413,
+   "object_type": "dcim.device",
+   "object_id": 14006,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1414,
+   "object_type": "dcim.device",
+   "object_id": 14006,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1415,
+   "object_type": "dcim.device",
+   "object_id": 14007,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1416,
+   "object_type": "dcim.device",
+   "object_id": 14007,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1417,
+   "object_type": "dcim.device",
+   "object_id": 14008,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1418,
+   "object_type": "dcim.device",
+   "object_id": 14008,
+   "contact": {
+    "id": 3,
+    "name": "Network team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1419,
+   "object_type": "dcim.device",
+   "object_id": 14009,
+   "contact": {
+    "id": 4,
+    "name": "Payments team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1420,
+   "object_type": "dcim.device",
+   "object_id": 14009,
+   "contact": {
+    "id": 5,
+    "name": "POS team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1421,
+   "object_type": "dcim.device",
+   "object_id": 14010,
+   "contact": {
+    "id": 4,
+    "name": "Payments team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1422,
+   "object_type": "dcim.device",
+   "object_id": 14010,
+   "contact": {
+    "id": 5,
+    "name": "POS team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1423,
+   "object_type": "dcim.device",
+   "object_id": 14011,
+   "contact": {
+    "id": 4,
+    "name": "Payments team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1424,
+   "object_type": "dcim.device",
+   "object_id": 14011,
+   "contact": {
+    "id": 5,
+    "name": "POS team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1425,
+   "object_type": "dcim.device",
+   "object_id": 14012,
+   "contact": {
+    "id": 4,
+    "name": "Payments team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1426,
+   "object_type": "dcim.device",
+   "object_id": 14012,
+   "contact": {
+    "id": 5,
+    "name": "POS team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1427,
+   "object_type": "dcim.device",
+   "object_id": 14013,
+   "contact": {
+    "id": 4,
+    "name": "Payments team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1428,
+   "object_type": "dcim.device",
+   "object_id": 14013,
+   "contact": {
+    "id": 5,
+    "name": "POS team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1429,
+   "object_type": "dcim.device",
+   "object_id": 14014,
+   "contact": {
+    "id": 4,
+    "name": "Payments team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1430,
+   "object_type": "dcim.device",
+   "object_id": 14014,
+   "contact": {
+    "id": 5,
+    "name": "POS team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1431,
+   "object_type": "dcim.device",
+   "object_id": 14015,
+   "contact": {
+    "id": 4,
+    "name": "Payments team"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 1432,
+   "object_type": "dcim.device",
+   "object_id": 14015,
+   "contact": {
+    "id": 5,
+    "name": "POS team"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  }
+ ],
+ "device_types": [
+  {
+   "id": 1,
+   "model": "FortiGate 61F",
+   "manufacturer": {
+    "name": "Fortinet",
+    "slug": "fortinet"
+   },
+   "slug": "fortigate-61f",
+   "custom_fields": {
+    "end_of_sale": "2028-06-30",
+    "end_of_support": "2033-06-30"
+   }
+  },
+  {
+   "id": 2,
+   "model": "IX20",
+   "manufacturer": {
+    "name": "Digi",
+    "slug": "digi"
+   },
+   "slug": "ix20",
+   "custom_fields": {
+    "end_of_sale": "2027-12-31",
+    "end_of_support": "2031-12-31"
+   }
+  },
+  {
+   "id": 3,
+   "model": "CX 6100 24G PoE",
+   "manufacturer": {
+    "name": "HPE Aruba",
+    "slug": "hpe-aruba"
+   },
+   "slug": "cx-6100-24g-poe",
+   "custom_fields": {
+    "end_of_sale": "2029-10-31",
+    "end_of_support": "2034-10-31"
+   }
+  },
+  {
+   "id": 4,
+   "model": "CX 6000 12G PoE",
+   "manufacturer": {
+    "name": "HPE Aruba",
+    "slug": "hpe-aruba"
+   },
+   "slug": "cx-6000-12g-poe",
+   "custom_fields": {
+    "end_of_sale": "2029-10-31",
+    "end_of_support": "2034-10-31"
+   }
+  },
+  {
+   "id": 5,
+   "model": "AP-515",
+   "manufacturer": {
+    "name": "HPE Aruba",
+    "slug": "hpe-aruba"
+   },
+   "slug": "ap-515",
+   "custom_fields": {
+    "end_of_sale": "2027-06-30",
+    "end_of_support": "2032-06-30"
+   }
+  },
+  {
+   "id": 6,
+   "model": "POS terminal 15in",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "pos-terminal-15in",
+   "custom_fields": {
+    "end_of_sale": "2029-01-31",
+    "end_of_support": "2032-01-31"
+   }
+  },
+  {
+   "id": 7,
+   "model": "PIN pad (P2PE)",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "pin-pad-p2pe",
+   "custom_fields": {
+    "end_of_sale": "2027-09-30",
+    "end_of_support": "2030-09-30"
+   }
+  },
+  {
+   "id": 8,
+   "model": "Store server 1U",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "store-server-1u",
+   "custom_fields": {
+    "end_of_sale": "2028-03-31",
+    "end_of_support": "2031-03-31"
+   }
+  },
+  {
+   "id": 9,
+   "model": "Desktop PC",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "desktop-pc",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 10,
+   "model": "Laser printer",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "laser-printer",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 11,
+   "model": "NVR 16-channel",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "nvr-16-channel",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 12,
+   "model": "IP camera dome",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "ip-camera-dome",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 13,
+   "model": "IP camera bullet",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "ip-camera-bullet",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 14,
+   "model": "Signage player",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "signage-player",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 15,
+   "model": "Refrigeration monitor",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "refrigeration-monitor",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 16,
+   "model": "Door counter",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "door-counter",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  }
+ ],
+ "regions": [
+  {
+   "name": "Retail estate",
+   "slug": "retail-estate",
+   "custom_fields": {
+    "netdiagrams": {
+     "profile": "retail"
+    },
+    "wireless_management": "cloud",
+    "wireless_manager": "Store Wi-Fi cloud dashboard"
+   }
+  }
+ ],
+ "devices": [
+  {
+   "id": 14001,
+   "name": "ST014-FW-01",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "FortiGate 61F",
+    "manufacturer": {
+     "name": "Fortinet",
+     "slug": "fortinet"
+    },
+    "id": 1
+   },
+   "platform": {
+    "name": "fortios",
+    "slug": "fortios"
+   },
+   "serial": "0140001",
+   "asset_tag": "ST014-A001",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Back office",
+    "slug": "back-office"
+   },
+   "rack": {
+    "name": "ST014-CAB-01",
+    "slug": "st014-cab-01"
+   },
+   "position": 10.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.14.99.1/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Store firewall and SD-WAN edge",
+   "tags": [
+    {
+     "name": "EDGE \u00b7 Store WAN edge",
+     "slug": "zone-edge"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   },
+   "custom_fields": {
+    "sw_version": "FortiOS 7.4.x",
+    "criticality": "critical",
+    "compliance_scope": [
+     "pci-connected"
+    ],
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-23",
+    "install_date": "2023-03-14",
+    "support_contract": "Hardware and firmware, next business day",
+    "support_contract_end": "2027-03-31"
+   }
+  },
+  {
+   "id": 14002,
+   "name": "ST014-LTE-01",
+   "role": {
+    "name": "LTE router",
+    "slug": "lte-router"
+   },
+   "device_type": {
+    "model": "IX20",
+    "manufacturer": {
+     "name": "Digi",
+     "slug": "digi"
+    },
+    "id": 2
+   },
+   "platform": {
+    "name": "digi-os",
+    "slug": "digi-os"
+   },
+   "serial": "0140002",
+   "asset_tag": "ST014-A002",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Back office",
+    "slug": "back-office"
+   },
+   "rack": {
+    "name": "ST014-CAB-01",
+    "slug": "st014-cab-01"
+   },
+   "position": 9.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.14.98.2/30"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "LTE backup router",
+   "tags": [
+    {
+     "name": "EDGE \u00b7 Store WAN edge",
+     "slug": "zone-edge"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   },
+   "custom_fields": {
+    "sw_version": "DAL 24.x",
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-27",
+    "install_date": "2023-03-14",
+    "support_contract": "Hardware replacement, 3 years",
+    "support_contract_end": "2027-03-31"
+   }
+  },
+  {
+   "id": 14003,
+   "name": "ST014-SW-01",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "CX 6100 24G PoE",
+    "manufacturer": {
+     "name": "HPE Aruba",
+     "slug": "hpe-aruba"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "aoscx",
+    "slug": "aoscx"
+   },
+   "serial": "0140003",
+   "asset_tag": "ST014-A003",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Back office",
+    "slug": "back-office"
+   },
+   "rack": {
+    "name": "ST014-CAB-01",
+    "slug": "st014-cab-01"
+   },
+   "position": 8.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.14.99.2/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Store switch",
+   "tags": [
+    {
+     "name": "MGMT \u00b7 Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   },
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13",
+    "criticality": "critical",
+    "compliance_scope": [
+     "pci-connected"
+    ],
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-23",
+    "install_date": "2023-03-14",
+    "support_contract": "Limited lifetime warranty"
+   }
+  },
+  {
+   "id": 14004,
+   "name": "ST014-SW-02",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "CX 6000 12G PoE",
+    "manufacturer": {
+     "name": "HPE Aruba",
+     "slug": "hpe-aruba"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "aoscx",
+    "slug": "aoscx"
+   },
+   "serial": "0140004",
+   "asset_tag": "ST014-A004",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Checkout",
+    "slug": "checkout"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.99.3/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Counter switch (under the checkout)",
+   "tags": [
+    {
+     "name": "MGMT \u00b7 Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   },
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13",
+    "criticality": "critical",
+    "compliance_scope": [
+     "pci-connected"
+    ],
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-23",
+    "install_date": "2023-03-14",
+    "support_contract": "Limited lifetime warranty"
+   }
+  },
+  {
+   "id": 14005,
+   "name": "ST014-AP-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-515",
+    "manufacturer": {
+     "name": "HPE Aruba",
+     "slug": "hpe-aruba"
+    },
+    "id": 5
+   },
+   "platform": {
+    "name": "aos10",
+    "slug": "aos10"
+   },
+   "serial": "0140005",
+   "asset_tag": "ST014-A005",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Sales floor front",
+    "slug": "sales-floor-front"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.99.11/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Access point \u00b7 Sales floor front",
+   "tags": [
+    {
+     "name": "MGMT \u00b7 Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   },
+   "custom_fields": {
+    "sw_version": "AOS 10.6",
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-05-20"
+   }
+  },
+  {
+   "id": 14006,
+   "name": "ST014-AP-02",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-515",
+    "manufacturer": {
+     "name": "HPE Aruba",
+     "slug": "hpe-aruba"
+    },
+    "id": 5
+   },
+   "platform": {
+    "name": "aos10",
+    "slug": "aos10"
+   },
+   "serial": "0140006",
+   "asset_tag": "ST014-A006",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Sales floor rear",
+    "slug": "sales-floor-rear"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.99.12/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Access point \u00b7 Sales floor rear",
+   "tags": [
+    {
+     "name": "MGMT \u00b7 Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   },
+   "custom_fields": {
+    "sw_version": "AOS 10.6",
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-05-20"
+   }
+  },
+  {
+   "id": 14007,
+   "name": "ST014-AP-03",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-515",
+    "manufacturer": {
+     "name": "HPE Aruba",
+     "slug": "hpe-aruba"
+    },
+    "id": 5
+   },
+   "platform": {
+    "name": "aos10",
+    "slug": "aos10"
+   },
+   "serial": "0140007",
+   "asset_tag": "ST014-A007",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Stockroom",
+    "slug": "stockroom"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.99.13/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Access point \u00b7 Stockroom",
+   "tags": [
+    {
+     "name": "MGMT \u00b7 Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   },
+   "custom_fields": {
+    "sw_version": "AOS 10.6",
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-05-20"
+   }
+  },
+  {
+   "id": 14008,
+   "name": "ST014-AP-04",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-515",
+    "manufacturer": {
+     "name": "HPE Aruba",
+     "slug": "hpe-aruba"
+    },
+    "id": 5
+   },
+   "platform": {
+    "name": "aos10",
+    "slug": "aos10"
+   },
+   "serial": "0140008",
+   "asset_tag": "ST014-A008",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Upstairs",
+    "slug": "upstairs"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.99.14/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Access point \u00b7 Upstairs",
+   "tags": [
+    {
+     "name": "MGMT \u00b7 Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   },
+   "custom_fields": {
+    "sw_version": "AOS 10.6",
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-05-20"
+   }
+  },
+  {
+   "id": 14009,
+   "name": "ST014-POS-01",
+   "role": {
+    "name": "POS terminal",
+    "slug": "pos-terminal"
+   },
+   "device_type": {
+    "model": "POS terminal 15in",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 6
+   },
+   "platform": null,
+   "serial": "0140009",
+   "asset_tag": "ST014-A009",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Checkout",
+    "slug": "checkout"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.20.11/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Register 1",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-10-06",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14010,
+   "name": "ST014-POS-02",
+   "role": {
+    "name": "POS terminal",
+    "slug": "pos-terminal"
+   },
+   "device_type": {
+    "model": "POS terminal 15in",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 6
+   },
+   "platform": null,
+   "serial": "0140010",
+   "asset_tag": "ST014-A010",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Checkout",
+    "slug": "checkout"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.20.12/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Register 2",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-10-06",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14011,
+   "name": "ST014-POS-03",
+   "role": {
+    "name": "POS terminal",
+    "slug": "pos-terminal"
+   },
+   "device_type": {
+    "model": "POS terminal 15in",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 6
+   },
+   "platform": null,
+   "serial": "0140011",
+   "asset_tag": "ST014-A011",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Checkout",
+    "slug": "checkout"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.20.13/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Register 3",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-10-06",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14012,
+   "name": "ST014-PED-01",
+   "role": {
+    "name": "PIN pad",
+    "slug": "pin-pad"
+   },
+   "device_type": {
+    "model": "PIN pad (P2PE)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 7
+   },
+   "platform": null,
+   "serial": "0140012",
+   "asset_tag": "ST014-A012",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Checkout",
+    "slug": "checkout"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.21.11/27"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "PIN pad, register 1",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-15",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14013,
+   "name": "ST014-PED-02",
+   "role": {
+    "name": "PIN pad",
+    "slug": "pin-pad"
+   },
+   "device_type": {
+    "model": "PIN pad (P2PE)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 7
+   },
+   "platform": null,
+   "serial": "0140013",
+   "asset_tag": "ST014-A013",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Checkout",
+    "slug": "checkout"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.21.12/27"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "PIN pad, register 2",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-15",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14014,
+   "name": "ST014-PED-03",
+   "role": {
+    "name": "PIN pad",
+    "slug": "pin-pad"
+   },
+   "device_type": {
+    "model": "PIN pad (P2PE)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 7
+   },
+   "platform": null,
+   "serial": "0140014",
+   "asset_tag": "ST014-A014",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Checkout",
+    "slug": "checkout"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.21.13/27"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "PIN pad, register 3",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-15",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14015,
+   "name": "ST014-POS-SRV-01",
+   "role": {
+    "name": "POS server",
+    "slug": "pos-server"
+   },
+   "device_type": {
+    "model": "Store server 1U",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 8
+   },
+   "platform": null,
+   "serial": "0140015",
+   "asset_tag": "ST014-A015",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Back office",
+    "slug": "back-office"
+   },
+   "rack": {
+    "name": "ST014-CAB-01",
+    "slug": "st014-cab-01"
+   },
+   "position": 6.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.14.22.5/28"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Store POS server (transactions, store-and-forward)",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "criticality": "critical",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-10-06",
+    "install_date": "2023-03-14",
+    "log_forwarding": "siem",
+    "monitoring": "alerting",
+    "support_contract": "POS vendor support, 4-hour on site",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 14016,
+   "name": "ST014-BO-PC-01",
+   "role": {
+    "name": "Workstation",
+    "slug": "workstation"
+   },
+   "device_type": {
+    "model": "Desktop PC",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 9
+   },
+   "platform": null,
+   "serial": "0140016",
+   "asset_tag": "ST014-A016",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Back office",
+    "slug": "back-office"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.10.20/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Manager's PC",
+   "tags": [
+    {
+     "name": "STORE \u00b7 Store business",
+     "slug": "zone-store"
+    }
+   ],
+   "tenant": {
+    "name": "Store IT",
+    "slug": "store-it"
+   },
+   "custom_fields": {
+    "criticality": "medium",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14017,
+   "name": "ST014-PRN-01",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "Laser printer",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 10
+   },
+   "platform": null,
+   "serial": "0140017",
+   "asset_tag": "ST014-A017",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Back office",
+    "slug": "back-office"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.10.30/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Office printer",
+   "tags": [
+    {
+     "name": "STORE \u00b7 Store business",
+     "slug": "zone-store"
+    }
+   ],
+   "tenant": {
+    "name": "Store IT",
+    "slug": "store-it"
+   },
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14018,
+   "name": "ST014-NVR-01",
+   "role": {
+    "name": "NVR",
+    "slug": "nvr"
+   },
+   "device_type": {
+    "model": "NVR 16-channel",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 11
+   },
+   "platform": null,
+   "serial": "0140018",
+   "asset_tag": "ST014-A018",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Back office",
+    "slug": "back-office"
+   },
+   "rack": {
+    "name": "ST014-CAB-01",
+    "slug": "st014-cab-01"
+   },
+   "position": 4.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.14.40.5/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Video recorder",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   },
+   "custom_fields": {
+    "criticality": "medium",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14019,
+   "name": "ST014-CAM-01",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "IP camera dome",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 12
+   },
+   "platform": null,
+   "serial": "0140019",
+   "asset_tag": "ST014-A019",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Sales floor",
+    "slug": "sales-floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.40.11/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Entrance",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   },
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14020,
+   "name": "ST014-CAM-02",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "IP camera dome",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 12
+   },
+   "platform": null,
+   "serial": "0140020",
+   "asset_tag": "ST014-A020",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Checkout",
+    "slug": "checkout"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.40.12/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Checkout",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   },
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14021,
+   "name": "ST014-CAM-03",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "IP camera dome",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 12
+   },
+   "platform": null,
+   "serial": "0140021",
+   "asset_tag": "ST014-A021",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Stockroom",
+    "slug": "stockroom"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.40.13/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Stockroom door",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   },
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14022,
+   "name": "ST014-CAM-04",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "IP camera bullet",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 13
+   },
+   "platform": null,
+   "serial": "0140022",
+   "asset_tag": "ST014-A022",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Rear yard",
+    "slug": "rear-yard"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.40.14/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Delivery door",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   },
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14023,
+   "name": "ST014-SIGN-01",
+   "role": {
+    "name": "Signage player",
+    "slug": "signage"
+   },
+   "device_type": {
+    "model": "Signage player",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "0140023",
+   "asset_tag": "ST014-A023",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Sales floor",
+    "slug": "sales-floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.41.10/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Window display",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   },
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14024,
+   "name": "ST014-BMS-01",
+   "role": {
+    "name": "Building controller",
+    "slug": "building-controller"
+   },
+   "device_type": {
+    "model": "Refrigeration monitor",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 15
+   },
+   "platform": null,
+   "serial": "0140024",
+   "asset_tag": "ST014-A024",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Stockroom",
+    "slug": "stockroom"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.41.20/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Chiller and freezer alarms",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   },
+   "custom_fields": {
+    "criticality": "medium",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  },
+  {
+   "id": 14025,
+   "name": "ST014-CNT-01",
+   "role": {
+    "name": "Sensor",
+    "slug": "sensor"
+   },
+   "device_type": {
+    "model": "Door counter",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 16
+   },
+   "platform": null,
+   "serial": "0140025",
+   "asset_tag": "ST014-A025",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "location": {
+    "name": "Sales floor",
+    "slug": "sales-floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.14.41.30/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Footfall counter",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   },
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-12",
+    "install_date": "2023-03-14"
+   }
+  }
+ ],
+ "virtual_chassis": [],
+ "cables": [
+  {
+   "id": 14001,
+   "label": "ST014-FW01-INT1",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "internal1",
+      "device": {
+       "id": 14001,
+       "name": "ST014-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/24",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14002,
+   "label": "ST014-FW01-WAN2",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "wan2",
+      "device": {
+       "id": 14001,
+       "name": "ST014-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth1",
+      "device": {
+       "id": 14002,
+       "name": "ST014-LTE-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14003,
+   "label": "ST014-SW01-P23",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/23",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/12",
+      "device": {
+       "id": 14004,
+       "name": "ST014-SW-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14004,
+   "label": "ST014-SW01-P01",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/1",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14005,
+       "name": "ST014-AP-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14005,
+   "label": "ST014-SW01-P02",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/2",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14006,
+       "name": "ST014-AP-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14006,
+   "label": "ST014-SW01-P03",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/3",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14007,
+       "name": "ST014-AP-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14007,
+   "label": "ST014-SW01-P04",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/4",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14008,
+       "name": "ST014-AP-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14008,
+   "label": "ST014-SW02-P01",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/1",
+      "device": {
+       "id": 14004,
+       "name": "ST014-SW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14009,
+       "name": "ST014-POS-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14009,
+   "label": "ST014-SW02-P02",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/2",
+      "device": {
+       "id": 14004,
+       "name": "ST014-SW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14010,
+       "name": "ST014-POS-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14010,
+   "label": "ST014-SW02-P03",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/3",
+      "device": {
+       "id": 14004,
+       "name": "ST014-SW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14011,
+       "name": "ST014-POS-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14011,
+   "label": "ST014-SW02-P05",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/5",
+      "device": {
+       "id": 14004,
+       "name": "ST014-SW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14012,
+       "name": "ST014-PED-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14012,
+   "label": "ST014-SW02-P06",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/6",
+      "device": {
+       "id": 14004,
+       "name": "ST014-SW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14013,
+       "name": "ST014-PED-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14013,
+   "label": "ST014-SW02-P07",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/7",
+      "device": {
+       "id": 14004,
+       "name": "ST014-SW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14014,
+       "name": "ST014-PED-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14014,
+   "label": "ST014-SW02-P09",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/9",
+      "device": {
+       "id": 14004,
+       "name": "ST014-SW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14015,
+       "name": "ST014-POS-SRV-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14015,
+   "label": "ST014-SW01-P13",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/13",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14016,
+       "name": "ST014-BO-PC-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14016,
+   "label": "ST014-SW01-P14",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/14",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14017,
+       "name": "ST014-PRN-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14017,
+   "label": "ST014-SW01-P11",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/11",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14018,
+       "name": "ST014-NVR-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14018,
+   "label": "ST014-SW01-P05",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/5",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14019,
+       "name": "ST014-CAM-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14019,
+   "label": "ST014-SW01-P06",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/6",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14020,
+       "name": "ST014-CAM-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14020,
+   "label": "ST014-SW01-P07",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/7",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14021,
+       "name": "ST014-CAM-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14021,
+   "label": "ST014-SW01-P08",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/8",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14022,
+       "name": "ST014-CAM-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14022,
+   "label": "ST014-SW01-P15",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/15",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14023,
+       "name": "ST014-SIGN-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14023,
+   "label": "ST014-SW01-P16",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/16",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14024,
+       "name": "ST014-BMS-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14024,
+   "label": "ST014-SW01-P17",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "1/1/17",
+      "device": {
+       "id": 14003,
+       "name": "ST014-SW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "name": "eth0",
+      "device": {
+       "id": 14025,
+       "name": "ST014-CNT-01"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "vlans": [
+  {
+   "id": 1401,
+   "vid": 10,
+   "name": "STORE-DATA",
+   "role": null,
+   "description": "Back office PC, printers",
+   "tags": [
+    {
+     "name": "STORE \u00b7 Store business",
+     "slug": "zone-store"
+    }
+   ],
+   "tenant": {
+    "name": "Store IT",
+    "slug": "store-it"
+   }
+  },
+  {
+   "id": 1402,
+   "vid": 30,
+   "name": "STAFF-WIFI",
+   "role": null,
+   "description": "Handhelds and tablets",
+   "tags": [
+    {
+     "name": "STORE \u00b7 Store business",
+     "slug": "zone-store"
+    }
+   ],
+   "tenant": {
+    "name": "Store IT",
+    "slug": "store-it"
+   }
+  },
+  {
+   "id": 1403,
+   "vid": 20,
+   "name": "POS",
+   "role": null,
+   "description": "Registers",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   }
+  },
+  {
+   "id": 1404,
+   "vid": 21,
+   "name": "PIN-PAD",
+   "role": null,
+   "description": "PIN pads (P2PE)",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   }
+  },
+  {
+   "id": 1405,
+   "vid": 22,
+   "name": "POS-SRV",
+   "role": null,
+   "description": "Store POS server",
+   "tags": [
+    {
+     "name": "CDE \u00b7 Cardholder data environment",
+     "slug": "zone-cde"
+    }
+   ],
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   }
+  },
+  {
+   "id": 1406,
+   "vid": 50,
+   "name": "GUEST",
+   "role": null,
+   "description": "Customer Wi-Fi, internet only",
+   "tags": [
+    {
+     "name": "GUEST \u00b7 Customer Wi-Fi",
+     "slug": "zone-guest"
+    }
+   ],
+   "tenant": {
+    "name": "Marketing",
+    "slug": "marketing"
+   }
+  },
+  {
+   "id": 1407,
+   "vid": 40,
+   "name": "IOT-CCTV",
+   "role": null,
+   "description": "Cameras and NVR",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   }
+  },
+  {
+   "id": 1408,
+   "vid": 41,
+   "name": "IOT-BLDG",
+   "role": null,
+   "description": "Signage, refrigeration, door counter",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   }
+  },
+  {
+   "id": 1409,
+   "vid": 42,
+   "name": "IOT-WIFI",
+   "role": null,
+   "description": "Shelf labels, scales and handheld scanners' cradles on Wi-Fi",
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ],
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   }
+  },
+  {
+   "id": 1410,
+   "vid": 99,
+   "name": "NET-MGMT",
+   "role": null,
+   "description": "Switch and AP management",
+   "tags": [
+    {
+     "name": "MGMT \u00b7 Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   }
+  },
+  {
+   "id": 1411,
+   "vid": 98,
+   "name": "WAN2-LTE",
+   "role": null,
+   "description": "Firewall to LTE router",
+   "tags": [
+    {
+     "name": "EDGE \u00b7 Store WAN edge",
+     "slug": "zone-edge"
+    }
+   ],
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   }
+  }
+ ],
+ "prefixes": [
+  {
+   "id": 1401,
+   "prefix": "10.14.10.0/24",
+   "vlan": {
+    "id": 1401,
+    "vid": 10
+   },
+   "vrf": null,
+   "description": "Back office PC, printers",
+   "tenant": {
+    "name": "Store IT",
+    "slug": "store-it"
+   }
+  },
+  {
+   "id": 1402,
+   "prefix": "10.14.30.0/24",
+   "vlan": {
+    "id": 1402,
+    "vid": 30
+   },
+   "vrf": null,
+   "description": "Handhelds and tablets",
+   "tenant": {
+    "name": "Store IT",
+    "slug": "store-it"
+   }
+  },
+  {
+   "id": 1403,
+   "prefix": "10.14.20.0/26",
+   "vlan": {
+    "id": 1403,
+    "vid": 20
+   },
+   "vrf": null,
+   "description": "Registers",
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "compliance_scope": [
+     "pci-cde"
+    ],
+    "data_classification": "restricted"
+   }
+  },
+  {
+   "id": 1404,
+   "prefix": "10.14.21.0/27",
+   "vlan": {
+    "id": 1404,
+    "vid": 21
+   },
+   "vrf": null,
+   "description": "PIN pads (P2PE)",
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "compliance_scope": [
+     "pci-cde"
+    ],
+    "data_classification": "restricted"
+   }
+  },
+  {
+   "id": 1405,
+   "prefix": "10.14.22.0/28",
+   "vlan": {
+    "id": 1405,
+    "vid": 22
+   },
+   "vrf": null,
+   "description": "Store POS server",
+   "tenant": {
+    "name": "POS team",
+    "slug": "pos-team"
+   },
+   "custom_fields": {
+    "compliance_scope": [
+     "pci-cde"
+    ],
+    "data_classification": "restricted"
+   }
+  },
+  {
+   "id": 1406,
+   "prefix": "10.14.50.0/23",
+   "vlan": {
+    "id": 1406,
+    "vid": 50
+   },
+   "vrf": null,
+   "description": "Customer Wi-Fi, internet only",
+   "tenant": {
+    "name": "Marketing",
+    "slug": "marketing"
+   }
+  },
+  {
+   "id": 1407,
+   "prefix": "10.14.40.0/24",
+   "vlan": {
+    "id": 1407,
+    "vid": 40
+   },
+   "vrf": null,
+   "description": "Cameras and NVR",
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   }
+  },
+  {
+   "id": 1408,
+   "prefix": "10.14.41.0/26",
+   "vlan": {
+    "id": 1408,
+    "vid": 41
+   },
+   "vrf": null,
+   "description": "Signage, refrigeration, door counter",
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   }
+  },
+  {
+   "id": 1409,
+   "prefix": "10.14.42.0/26",
+   "vlan": {
+    "id": 1409,
+    "vid": 42
+   },
+   "vrf": null,
+   "description": "Shelf labels, scales and handheld scanners' cradles on Wi-Fi",
+   "tenant": {
+    "name": "Facilities",
+    "slug": "facilities"
+   }
+  },
+  {
+   "id": 1410,
+   "prefix": "10.14.99.0/26",
+   "vlan": {
+    "id": 1410,
+    "vid": 99
+   },
+   "vrf": null,
+   "description": "Switch and AP management",
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   }
+  },
+  {
+   "id": 1411,
+   "prefix": "10.14.98.0/30",
+   "vlan": {
+    "id": 1411,
+    "vid": 98
+   },
+   "vrf": null,
+   "description": "Firewall to LTE router",
+   "tenant": {
+    "name": "Network team",
+    "slug": "network-team"
+   }
+  }
+ ],
+ "circuits": [
+  {
+   "id": 141,
+   "cid": "ST014-BB-01",
+   "description": "Broadband 500M (primary)",
+   "provider": {
+    "name": "ISP-A"
+   },
+   "status": {
+    "value": "active"
+   }
+  },
+  {
+   "id": 142,
+   "cid": "ST014-LTE-01",
+   "description": "LTE backup",
+   "provider": {
+    "name": "Carrier-B"
+   },
+   "status": {
+    "value": "active"
+   }
+  }
+ ],
+ "interfaces": [
+  {
+   "id": 140251,
+   "device": {
+    "id": 14001,
+    "name": "ST014-FW-01"
+   },
+   "name": "internal1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "id": 1401,
+     "vid": 10,
+     "name": "STORE-DATA"
+    },
+    {
+     "id": 1403,
+     "vid": 20,
+     "name": "POS"
+    },
+    {
+     "id": 1404,
+     "vid": 21,
+     "name": "PIN-PAD"
+    },
+    {
+     "id": 1405,
+     "vid": 22,
+     "name": "POS-SRV"
+    },
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1407,
+     "vid": 40,
+     "name": "IOT-CCTV"
+    },
+    {
+     "id": 1408,
+     "vid": 41,
+     "name": "IOT-BLDG"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    },
+    {
+     "id": 1410,
+     "vid": 99,
+     "name": "NET-MGMT"
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140252,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/24",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "id": 1401,
+     "vid": 10,
+     "name": "STORE-DATA"
+    },
+    {
+     "id": 1403,
+     "vid": 20,
+     "name": "POS"
+    },
+    {
+     "id": 1404,
+     "vid": 21,
+     "name": "PIN-PAD"
+    },
+    {
+     "id": 1405,
+     "vid": 22,
+     "name": "POS-SRV"
+    },
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1407,
+     "vid": 40,
+     "name": "IOT-CCTV"
+    },
+    {
+     "id": 1408,
+     "vid": 41,
+     "name": "IOT-BLDG"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    },
+    {
+     "id": 1410,
+     "vid": 99,
+     "name": "NET-MGMT"
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140253,
+   "device": {
+    "id": 14001,
+    "name": "ST014-FW-01"
+   },
+   "name": "wan2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1411,
+    "vid": 98,
+    "name": "WAN2-LTE"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140254,
+   "device": {
+    "id": 14002,
+    "name": "ST014-LTE-01"
+   },
+   "name": "eth1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1411,
+    "vid": 98,
+    "name": "WAN2-LTE"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140255,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/23",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "id": 1403,
+     "vid": 20,
+     "name": "POS"
+    },
+    {
+     "id": 1404,
+     "vid": 21,
+     "name": "PIN-PAD"
+    },
+    {
+     "id": 1405,
+     "vid": 22,
+     "name": "POS-SRV"
+    },
+    {
+     "id": 1410,
+     "vid": 99,
+     "name": "NET-MGMT"
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140256,
+   "device": {
+    "id": 14004,
+    "name": "ST014-SW-02"
+   },
+   "name": "1/1/12",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "id": 1403,
+     "vid": 20,
+     "name": "POS"
+    },
+    {
+     "id": 1404,
+     "vid": 21,
+     "name": "PIN-PAD"
+    },
+    {
+     "id": 1405,
+     "vid": 22,
+     "name": "POS-SRV"
+    },
+    {
+     "id": 1410,
+     "vid": 99,
+     "name": "NET-MGMT"
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140257,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "id": 1410,
+    "vid": 99,
+    "name": "NET-MGMT"
+   },
+   "tagged_vlans": [
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pse",
+    "label": "PSE"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 140258,
+   "device": {
+    "id": 14005,
+    "name": "ST014-AP-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "id": 1410,
+    "vid": 99,
+    "name": "NET-MGMT"
+   },
+   "tagged_vlans": [
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 140259,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "id": 1410,
+    "vid": 99,
+    "name": "NET-MGMT"
+   },
+   "tagged_vlans": [
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pse",
+    "label": "PSE"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 140260,
+   "device": {
+    "id": 14006,
+    "name": "ST014-AP-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "id": 1410,
+    "vid": 99,
+    "name": "NET-MGMT"
+   },
+   "tagged_vlans": [
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 140261,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "id": 1410,
+    "vid": 99,
+    "name": "NET-MGMT"
+   },
+   "tagged_vlans": [
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pse",
+    "label": "PSE"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 140262,
+   "device": {
+    "id": 14007,
+    "name": "ST014-AP-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "id": 1410,
+    "vid": 99,
+    "name": "NET-MGMT"
+   },
+   "tagged_vlans": [
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 140263,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "id": 1410,
+    "vid": 99,
+    "name": "NET-MGMT"
+   },
+   "tagged_vlans": [
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pse",
+    "label": "PSE"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 140264,
+   "device": {
+    "id": 14008,
+    "name": "ST014-AP-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "id": 1410,
+    "vid": 99,
+    "name": "NET-MGMT"
+   },
+   "tagged_vlans": [
+    {
+     "id": 1402,
+     "vid": 30,
+     "name": "STAFF-WIFI"
+    },
+    {
+     "id": 1409,
+     "vid": 42,
+     "name": "IOT-WIFI"
+    },
+    {
+     "id": 1406,
+     "vid": 50,
+     "name": "GUEST"
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 140265,
+   "device": {
+    "id": 14004,
+    "name": "ST014-SW-02"
+   },
+   "name": "1/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1403,
+    "vid": 20,
+    "name": "POS"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140266,
+   "device": {
+    "id": 14009,
+    "name": "ST014-POS-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1403,
+    "vid": 20,
+    "name": "POS"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140267,
+   "device": {
+    "id": 14004,
+    "name": "ST014-SW-02"
+   },
+   "name": "1/1/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1403,
+    "vid": 20,
+    "name": "POS"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140268,
+   "device": {
+    "id": 14010,
+    "name": "ST014-POS-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1403,
+    "vid": 20,
+    "name": "POS"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140269,
+   "device": {
+    "id": 14004,
+    "name": "ST014-SW-02"
+   },
+   "name": "1/1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1403,
+    "vid": 20,
+    "name": "POS"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140270,
+   "device": {
+    "id": 14011,
+    "name": "ST014-POS-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1403,
+    "vid": 20,
+    "name": "POS"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140271,
+   "device": {
+    "id": 14004,
+    "name": "ST014-SW-02"
+   },
+   "name": "1/1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1404,
+    "vid": 21,
+    "name": "PIN-PAD"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140272,
+   "device": {
+    "id": 14012,
+    "name": "ST014-PED-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1404,
+    "vid": 21,
+    "name": "PIN-PAD"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140273,
+   "device": {
+    "id": 14004,
+    "name": "ST014-SW-02"
+   },
+   "name": "1/1/6",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1404,
+    "vid": 21,
+    "name": "PIN-PAD"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140274,
+   "device": {
+    "id": 14013,
+    "name": "ST014-PED-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1404,
+    "vid": 21,
+    "name": "PIN-PAD"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140275,
+   "device": {
+    "id": 14004,
+    "name": "ST014-SW-02"
+   },
+   "name": "1/1/7",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1404,
+    "vid": 21,
+    "name": "PIN-PAD"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140276,
+   "device": {
+    "id": 14014,
+    "name": "ST014-PED-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1404,
+    "vid": 21,
+    "name": "PIN-PAD"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140277,
+   "device": {
+    "id": 14004,
+    "name": "ST014-SW-02"
+   },
+   "name": "1/1/9",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1405,
+    "vid": 22,
+    "name": "POS-SRV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140278,
+   "device": {
+    "id": 14015,
+    "name": "ST014-POS-SRV-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1405,
+    "vid": 22,
+    "name": "POS-SRV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140279,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/13",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1401,
+    "vid": 10,
+    "name": "STORE-DATA"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140280,
+   "device": {
+    "id": 14016,
+    "name": "ST014-BO-PC-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1401,
+    "vid": 10,
+    "name": "STORE-DATA"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140281,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/14",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1401,
+    "vid": 10,
+    "name": "STORE-DATA"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140282,
+   "device": {
+    "id": 14017,
+    "name": "ST014-PRN-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1401,
+    "vid": 10,
+    "name": "STORE-DATA"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140283,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/11",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140284,
+   "device": {
+    "id": 14018,
+    "name": "ST014-NVR-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140285,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140286,
+   "device": {
+    "id": 14019,
+    "name": "ST014-CAM-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140287,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/6",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140288,
+   "device": {
+    "id": 14020,
+    "name": "ST014-CAM-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140289,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/7",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140290,
+   "device": {
+    "id": 14021,
+    "name": "ST014-CAM-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140291,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/8",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140292,
+   "device": {
+    "id": 14022,
+    "name": "ST014-CAM-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1407,
+    "vid": 40,
+    "name": "IOT-CCTV"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140293,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/15",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1408,
+    "vid": 41,
+    "name": "IOT-BLDG"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140294,
+   "device": {
+    "id": 14023,
+    "name": "ST014-SIGN-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1408,
+    "vid": 41,
+    "name": "IOT-BLDG"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140295,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/16",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1408,
+    "vid": 41,
+    "name": "IOT-BLDG"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140296,
+   "device": {
+    "id": 14024,
+    "name": "ST014-BMS-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1408,
+    "vid": 41,
+    "name": "IOT-BLDG"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140297,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "1/1/17",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1408,
+    "vid": 41,
+    "name": "IOT-BLDG"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140298,
+   "device": {
+    "id": 14025,
+    "name": "ST014-CNT-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "id": 1408,
+    "vid": 41,
+    "name": "IOT-BLDG"
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 140299,
+   "device": {
+    "id": 14005,
+    "name": "ST014-AP-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax",
+    "label": "IEEE 802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "vrf": null,
+   "description": "5 GHz radio",
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-38-5190-40",
+    "label": "38 (5190/40 MHz)"
+   },
+   "rf_channel_frequency": 5190.0,
+   "rf_channel_width": 40.0,
+   "tx_power": 14,
+   "wireless_lans": [
+    {
+     "id": 141,
+     "ssid": "STORE-STAFF"
+    },
+    {
+     "id": 142,
+     "ssid": "STORE-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 140300,
+   "device": {
+    "id": 14005,
+    "name": "ST014-AP-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax",
+    "label": "IEEE 802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "vrf": null,
+   "description": "2.4 GHz radio",
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-1-2412-22",
+    "label": "1 (2412/22 MHz)"
+   },
+   "rf_channel_frequency": 2412.0,
+   "rf_channel_width": 22.0,
+   "tx_power": 8,
+   "wireless_lans": [
+    {
+     "id": 141,
+     "ssid": "STORE-STAFF"
+    },
+    {
+     "id": 142,
+     "ssid": "STORE-GUEST"
+    },
+    {
+     "id": 143,
+     "ssid": "STORE-IOT"
+    }
+   ]
+  },
+  {
+   "id": 140301,
+   "device": {
+    "id": 14006,
+    "name": "ST014-AP-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax",
+    "label": "IEEE 802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "vrf": null,
+   "description": "5 GHz radio",
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-54-5270-40",
+    "label": "54 (5270/40 MHz)"
+   },
+   "rf_channel_frequency": 5270.0,
+   "rf_channel_width": 40.0,
+   "tx_power": 14,
+   "wireless_lans": [
+    {
+     "id": 141,
+     "ssid": "STORE-STAFF"
+    },
+    {
+     "id": 142,
+     "ssid": "STORE-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 140302,
+   "device": {
+    "id": 14006,
+    "name": "ST014-AP-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax",
+    "label": "IEEE 802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "vrf": null,
+   "description": "2.4 GHz radio",
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22 MHz)"
+   },
+   "rf_channel_frequency": 2437.0,
+   "rf_channel_width": 22.0,
+   "tx_power": 8,
+   "wireless_lans": [
+    {
+     "id": 141,
+     "ssid": "STORE-STAFF"
+    },
+    {
+     "id": 142,
+     "ssid": "STORE-GUEST"
+    },
+    {
+     "id": 143,
+     "ssid": "STORE-IOT"
+    }
+   ]
+  },
+  {
+   "id": 140303,
+   "device": {
+    "id": 14007,
+    "name": "ST014-AP-03"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax",
+    "label": "IEEE 802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "vrf": null,
+   "description": "5 GHz radio",
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-102-5510-40",
+    "label": "102 (5510/40 MHz)"
+   },
+   "rf_channel_frequency": 5510.0,
+   "rf_channel_width": 40.0,
+   "tx_power": 14,
+   "wireless_lans": [
+    {
+     "id": 141,
+     "ssid": "STORE-STAFF"
+    },
+    {
+     "id": 142,
+     "ssid": "STORE-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 140304,
+   "device": {
+    "id": 14007,
+    "name": "ST014-AP-03"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax",
+    "label": "IEEE 802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "vrf": null,
+   "description": "2.4 GHz radio",
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-11-2462-22",
+    "label": "11 (2462/22 MHz)"
+   },
+   "rf_channel_frequency": 2462.0,
+   "rf_channel_width": 22.0,
+   "tx_power": 8,
+   "wireless_lans": [
+    {
+     "id": 141,
+     "ssid": "STORE-STAFF"
+    },
+    {
+     "id": 142,
+     "ssid": "STORE-GUEST"
+    },
+    {
+     "id": 143,
+     "ssid": "STORE-IOT"
+    }
+   ]
+  },
+  {
+   "id": 140305,
+   "device": {
+    "id": 14008,
+    "name": "ST014-AP-04"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax",
+    "label": "IEEE 802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "vrf": null,
+   "description": "5 GHz radio",
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-118-5590-40",
+    "label": "118 (5590/40 MHz)"
+   },
+   "rf_channel_frequency": 5590.0,
+   "rf_channel_width": 40.0,
+   "tx_power": 14,
+   "wireless_lans": [
+    {
+     "id": 141,
+     "ssid": "STORE-STAFF"
+    },
+    {
+     "id": 142,
+     "ssid": "STORE-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 140306,
+   "device": {
+    "id": 14008,
+    "name": "ST014-AP-04"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax",
+    "label": "IEEE 802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "vrf": null,
+   "description": "2.4 GHz radio",
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-1-2412-22",
+    "label": "1 (2412/22 MHz)"
+   },
+   "rf_channel_frequency": 2412.0,
+   "rf_channel_width": 22.0,
+   "tx_power": 8,
+   "wireless_lans": [
+    {
+     "id": 141,
+     "ssid": "STORE-STAFF"
+    },
+    {
+     "id": 142,
+     "ssid": "STORE-GUEST"
+    },
+    {
+     "id": 143,
+     "ssid": "STORE-IOT"
+    }
+   ]
+  }
+ ],
+ "wireless_links": [],
+ "wireless_lans": [
+  {
+   "id": 141,
+   "ssid": "STORE-STAFF",
+   "group": {
+    "name": "R01 estate",
+    "slug": "r01-estate"
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   },
+   "auth_psk": "",
+   "description": "802.1X via HQ1 RADIUS (F15)",
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "2.4ghz",
+     "5ghz"
+    ],
+    "wlan_client_isolation": false,
+    "wlan_portal": "none"
+   },
+   "vlan": {
+    "id": 1402,
+    "vid": 30
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 14,
+   "scope": {
+    "id": 14,
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "tags": [
+    {
+     "name": "STORE \u00b7 Store business",
+     "slug": "zone-store"
+    }
+   ]
+  },
+  {
+   "id": 142,
+   "ssid": "STORE-GUEST",
+   "group": {
+    "name": "R01 estate",
+    "slug": "r01-estate"
+   },
+   "auth_type": {
+    "value": "open",
+    "label": "Open"
+   },
+   "auth_cipher": null,
+   "auth_psk": "",
+   "description": "internet only \u00b7 10 Mb/s per client",
+   "custom_fields": {
+    "wlan_security": "open-portal",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "2.4ghz",
+     "5ghz"
+    ],
+    "wlan_client_isolation": true,
+    "wlan_portal": "captive"
+   },
+   "vlan": {
+    "id": 1406,
+    "vid": 50
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 14,
+   "scope": {
+    "id": 14,
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "tags": [
+    {
+     "name": "GUEST \u00b7 Customer Wi-Fi",
+     "slug": "zone-guest"
+    }
+   ]
+  },
+  {
+   "id": 143,
+   "ssid": "STORE-IOT",
+   "group": {
+    "name": "R01 estate",
+    "slug": "r01-estate"
+   },
+   "auth_type": {
+    "value": "wpa-personal",
+    "label": "WPA Personal"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   },
+   "auth_psk": "",
+   "description": "named vendor clouds only (F20)",
+   "custom_fields": {
+    "wlan_security": "mpsk",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "2.4ghz"
+    ],
+    "wlan_client_isolation": true,
+    "wlan_portal": "none"
+   },
+   "vlan": {
+    "id": 1409,
+    "vid": 42
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 14,
+   "scope": {
+    "id": 14,
+    "name": "Store 014",
+    "slug": "st014"
+   },
+   "status": {
+    "value": "active",
+    "label": "Active"
+   },
+   "tags": [
+    {
+     "name": "IOT \u00b7 Store devices",
+     "slug": "zone-iot"
+    }
+   ]
+  }
+ ],
+ "ip_addresses": [
+  {
+   "id": 140307,
+   "address": "10.14.10.1/24",
+   "assigned_object": {
+    "name": "internal1.10",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140308,
+   "address": "10.14.30.1/24",
+   "assigned_object": {
+    "name": "internal1.30",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140309,
+   "address": "10.14.20.1/26",
+   "assigned_object": {
+    "name": "internal1.20",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140310,
+   "address": "10.14.21.1/27",
+   "assigned_object": {
+    "name": "internal1.21",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140311,
+   "address": "10.14.22.1/28",
+   "assigned_object": {
+    "name": "internal1.22",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140312,
+   "address": "10.14.50.1/23",
+   "assigned_object": {
+    "name": "internal1.50",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140313,
+   "address": "10.14.40.1/24",
+   "assigned_object": {
+    "name": "internal1.40",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140314,
+   "address": "10.14.41.1/26",
+   "assigned_object": {
+    "name": "internal1.41",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140315,
+   "address": "10.14.42.1/26",
+   "assigned_object": {
+    "name": "internal1.42",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140316,
+   "address": "10.14.99.1/26",
+   "assigned_object": {
+    "name": "internal1.99",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  },
+  {
+   "id": 140317,
+   "address": "10.14.98.1/30",
+   "assigned_object": {
+    "name": "wan2",
+    "device": {
+     "id": 14001,
+     "name": "ST014-FW-01"
+    }
+   }
+  }
+ ],
+ "modules": [],
+ "module_bays": [],
+ "inventory_items": [
+  {
+   "id": 1401,
+   "device": {
+    "id": 14001,
+    "name": "ST014-FW-01"
+   },
+   "name": "AC adapter 12 V",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "014P001",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 1402,
+   "device": {
+    "id": 14002,
+    "name": "ST014-LTE-01"
+   },
+   "name": "AC adapter 12 V",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "014P002",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 1403,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "Internal PSU 370 W",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "014P003",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 1404,
+   "device": {
+    "id": 14003,
+    "name": "ST014-SW-01"
+   },
+   "name": "Fan tray",
+   "label": "",
+   "role": {
+    "id": 3,
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "014F004",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 1405,
+   "device": {
+    "id": 14004,
+    "name": "ST014-SW-02"
+   },
+   "name": "Internal PSU 139 W",
+   "label": "",
+   "role": {
+    "id": 2,
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": null,
+   "part_id": "",
+   "serial": "014P005",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  }
+ ]
+}

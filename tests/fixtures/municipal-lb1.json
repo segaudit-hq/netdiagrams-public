@@ -1,0 +1,2065 @@
+{
+ "format": "netdiagrams-export/1",
+ "netbox_version": "sample",
+ "netbox_url": "",
+ "exported_at": "2026-10-18T08:00:00Z",
+ "site": {
+  "id": 2,
+  "name": "Halvern Main Library",
+  "slug": "lb1",
+  "facility": "LB1",
+  "custom_fields": {
+   "netdiagrams": {
+    "profile": "municipal"
+   },
+   "wireless_management": "cloud",
+   "wireless_manager": "Cloud Wi-Fi dashboard",
+   "monitoring": "alerting",
+   "monitored_by": "City IT monitoring",
+   "log_forwarding": "siem",
+   "log_destination": "City SIEM service, syslog over TLS",
+   "log_retention_days": 365,
+   "last_verified": "2026-08-28"
+  }
+ },
+ "locations": [
+  {
+   "id": 1,
+   "name": "LB1-MDF",
+   "slug": "lb1-mdf",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "locked-room",
+    "data_classification": "internal",
+    "last_verified": "2026-08-28"
+   }
+  },
+  {
+   "id": 2,
+   "name": "Reading room",
+   "slug": "reading-room",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "open",
+    "data_classification": "public"
+   }
+  }
+ ],
+ "devices": [
+  {
+   "id": 1,
+   "name": "LB1-FW-01",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "PA-445",
+    "manufacturer": {
+     "name": "Palo Alto Networks",
+     "slug": "palo-alto-networks"
+    },
+    "id": 1
+   },
+   "platform": {
+    "name": "panos",
+    "slug": "panos"
+   },
+   "serial": "PAxxxxxxxx21",
+   "asset_tag": "HV-0201",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 1,
+    "name": "LB1-MDF",
+    "slug": "lb1-mdf"
+   },
+   "rack": {
+    "name": "CAB-1",
+    "slug": "cab-1"
+   },
+   "position": 12.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.40.99.2/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Library firewall: patron internet breakout and filter; staff to City Hall",
+   "tags": [
+    {
+     "name": "Firewall and remote access",
+     "slug": "zone-edge"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "PAN-OS 11.1.x",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-09-24",
+    "install_date": "2024-06-10"
+   }
+  },
+  {
+   "id": 2,
+   "name": "LB1-ACC-1",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "C9300-48P",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 2
+   },
+   "platform": {
+    "name": "ios-xe",
+    "slug": "ios-xe"
+   },
+   "serial": "FOCxxxxx41",
+   "asset_tag": "HV-0202",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 1,
+    "name": "LB1-MDF",
+    "slug": "lb1-mdf"
+   },
+   "rack": {
+    "name": "CAB-1",
+    "slug": "cab-1"
+   },
+   "position": 10.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.40.99.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Library access switch",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS XE 17.12.x",
+    "criticality": "high",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-06-10"
+   }
+  },
+  {
+   "id": 3,
+   "name": "LB1-AP-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxLB-01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 2,
+    "name": "Reading room",
+    "slug": "reading-room"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.40.99.101/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Reading room ceiling AP 1",
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 4,
+   "name": "LB1-AP-02",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxLB-02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 2,
+    "name": "Reading room",
+    "slug": "reading-room"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.40.99.102/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Reading room ceiling AP 2",
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 5,
+   "name": "LB1-AP-03",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxLB-03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 2,
+    "name": "Reading room",
+    "slug": "reading-room"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.40.99.103/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Reading room ceiling AP 3",
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 6,
+   "name": "LB1-PC-01",
+   "role": {
+    "name": "Public PC",
+    "slug": "public-pc"
+   },
+   "device_type": {
+    "model": "OptiPlex 7020",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    },
+    "id": 4
+   },
+   "platform": null,
+   "serial": "SVCTAGxx81",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 2,
+    "name": "Reading room",
+    "slug": "reading-room"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "172.21.8.11/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Public computer 1 (reimaged at every logoff)",
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-12",
+    "last_patched": "2026-10-12",
+    "install_date": "2025-06-30"
+   }
+  },
+  {
+   "id": 7,
+   "name": "LB1-PC-02",
+   "role": {
+    "name": "Public PC",
+    "slug": "public-pc"
+   },
+   "device_type": {
+    "model": "OptiPlex 7020",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    },
+    "id": 4
+   },
+   "platform": null,
+   "serial": "SVCTAGxx82",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 2,
+    "name": "Reading room",
+    "slug": "reading-room"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "172.21.8.12/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Public computer 2 (reimaged at every logoff)",
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-12",
+    "last_patched": "2026-10-12",
+    "install_date": "2025-06-30"
+   }
+  },
+  {
+   "id": 8,
+   "name": "LB1-PC-03",
+   "role": {
+    "name": "Public PC",
+    "slug": "public-pc"
+   },
+   "device_type": {
+    "model": "OptiPlex 7020",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    },
+    "id": 4
+   },
+   "platform": null,
+   "serial": "SVCTAGxx83",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 2,
+    "name": "Reading room",
+    "slug": "reading-room"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "172.21.8.13/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Public computer 3 (reimaged at every logoff)",
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-12",
+    "last_patched": "2026-10-12",
+    "install_date": "2025-06-30"
+   }
+  },
+  {
+   "id": 9,
+   "name": "LB1-PC-04",
+   "role": {
+    "name": "Public PC",
+    "slug": "public-pc"
+   },
+   "device_type": {
+    "model": "OptiPlex 7020",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    },
+    "id": 4
+   },
+   "platform": null,
+   "serial": "SVCTAGxx84",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 2,
+    "name": "Reading room",
+    "slug": "reading-room"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "172.21.8.14/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Public computer 4 (reimaged at every logoff)",
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-12",
+    "last_patched": "2026-10-12",
+    "install_date": "2025-06-30"
+   }
+  },
+  {
+   "id": 10,
+   "name": "LB1-PRN-01",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "TASKalfa 3554ci",
+    "manufacturer": {
+     "name": "Kyocera",
+     "slug": "kyocera"
+    },
+    "id": 5
+   },
+   "platform": null,
+   "serial": "KYxxxxxLB1",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "location": {
+    "id": 2,
+    "name": "Reading room",
+    "slug": "reading-room"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "172.21.8.50/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Patron print release printer",
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-30",
+    "install_date": "2025-02-03"
+   }
+  }
+ ],
+ "device_types": [
+  {
+   "id": 1,
+   "model": "PA-445",
+   "manufacturer": {
+    "name": "Palo Alto Networks",
+    "slug": "palo-alto-networks"
+   },
+   "slug": "pa-445",
+   "custom_fields": {
+    "end_of_sale": "2030-06-30",
+    "end_of_support": "2035-06-30"
+   }
+  },
+  {
+   "id": 2,
+   "model": "C9300-48P",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "c9300-48p",
+   "custom_fields": {
+    "end_of_sale": "2028-10-31",
+    "end_of_support": "2033-10-31"
+   }
+  },
+  {
+   "id": 3,
+   "model": "MR46",
+   "manufacturer": {
+    "name": "Cisco Meraki",
+    "slug": "cisco-meraki"
+   },
+   "slug": "mr46",
+   "custom_fields": {
+    "end_of_sale": "2027-07-31",
+    "end_of_support": "2032-07-31"
+   }
+  },
+  {
+   "id": 4,
+   "model": "OptiPlex 7020",
+   "manufacturer": {
+    "name": "Dell",
+    "slug": "dell"
+   },
+   "slug": "optiplex-7020",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 5,
+   "model": "TASKalfa 3554ci",
+   "manufacturer": {
+    "name": "Kyocera",
+    "slug": "kyocera"
+   },
+   "slug": "taskalfa-3554ci",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  }
+ ],
+ "virtual_chassis": [],
+ "cables": [
+  {
+   "id": 1,
+   "label": "LB1-CBL-00001",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 1,
+      "name": "ethernet1/2",
+      "device": {
+       "id": 1,
+       "name": "LB1-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 2,
+      "name": "Te1/1/1",
+      "device": {
+       "id": 2,
+       "name": "LB1-ACC-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "label": "LB1-CBL-00011",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 3,
+      "name": "Gi1/0/1",
+      "device": {
+       "id": 2,
+       "name": "LB1-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 4,
+      "name": "eth0",
+      "device": {
+       "id": 3,
+       "name": "LB1-AP-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "label": "LB1-CBL-00012",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 5,
+      "name": "Gi1/0/2",
+      "device": {
+       "id": 2,
+       "name": "LB1-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 6,
+      "name": "eth0",
+      "device": {
+       "id": 4,
+       "name": "LB1-AP-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "label": "LB1-CBL-00013",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 7,
+      "name": "Gi1/0/3",
+      "device": {
+       "id": 2,
+       "name": "LB1-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 8,
+      "name": "eth0",
+      "device": {
+       "id": 5,
+       "name": "LB1-AP-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "label": "LB1-CBL-00021",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "ff9800",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 9,
+      "name": "Gi1/0/11",
+      "device": {
+       "id": 2,
+       "name": "LB1-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 10,
+      "name": "eth0",
+      "device": {
+       "id": 6,
+       "name": "LB1-PC-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "label": "LB1-CBL-00022",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "ff9800",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 11,
+      "name": "Gi1/0/12",
+      "device": {
+       "id": 2,
+       "name": "LB1-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 12,
+      "name": "eth0",
+      "device": {
+       "id": 7,
+       "name": "LB1-PC-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "label": "LB1-CBL-00023",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "ff9800",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 13,
+      "name": "Gi1/0/13",
+      "device": {
+       "id": 2,
+       "name": "LB1-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 14,
+      "name": "eth0",
+      "device": {
+       "id": 8,
+       "name": "LB1-PC-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "label": "LB1-CBL-00024",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "ff9800",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 15,
+      "name": "Gi1/0/14",
+      "device": {
+       "id": 2,
+       "name": "LB1-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 16,
+      "name": "eth0",
+      "device": {
+       "id": 9,
+       "name": "LB1-PC-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "label": "LB1-CBL-00031",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "ff9800",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 17,
+      "name": "Gi1/0/20",
+      "device": {
+       "id": 2,
+       "name": "LB1-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 18,
+      "name": "eth0",
+      "device": {
+       "id": 10,
+       "name": "LB1-PRN-01"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "modules": [],
+ "module_bays": [],
+ "inventory_items": [],
+ "vlans": [
+  {
+   "id": 1,
+   "vid": 10,
+   "name": "STAFF",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "lb1"
+   },
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "vid": 20,
+   "name": "VOICE",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "lb1"
+   },
+   "tags": [
+    {
+     "name": "Voice",
+     "slug": "zone-voice"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "vid": 70,
+   "name": "PATRON-WIFI",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "lb1"
+   },
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "vid": 71,
+   "name": "PUBLIC-PCS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "lb1"
+   },
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "vid": 99,
+   "name": "NET-MGMT",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "lb1"
+   },
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ]
+  }
+ ],
+ "prefixes": [
+  {
+   "id": 1,
+   "prefix": "10.40.10.0/24",
+   "vlan": {
+    "id": 1,
+    "vid": 10
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 2,
+   "prefix": "10.40.20.0/24",
+   "vlan": {
+    "id": 2,
+    "vid": 20
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Voice",
+     "slug": "zone-voice"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 3,
+   "prefix": "172.21.0.0/22",
+   "vlan": {
+    "id": 3,
+    "vid": 70
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1",
+    "data_classification": "public"
+   }
+  },
+  {
+   "id": 4,
+   "prefix": "172.21.8.0/24",
+   "vlan": {
+    "id": 4,
+    "vid": 71
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1",
+    "data_classification": "public"
+   }
+  },
+  {
+   "id": 5,
+   "prefix": "10.40.99.0/24",
+   "vlan": {
+    "id": 5,
+    "vid": 99
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  }
+ ],
+ "circuits": [
+  {
+   "id": 1,
+   "cid": "LB1-ISP-01",
+   "provider": {
+    "name": "Provider C"
+   },
+   "type": {
+    "name": "Filtered internet (E-rate)"
+   },
+   "commit_rate": 1000000,
+   "status": {
+    "value": "active"
+   },
+   "description": "Patron internet · content filtered"
+  },
+  {
+   "id": 2,
+   "cid": "LB1-FIBER-01",
+   "provider": {
+    "name": "City of Halvern"
+   },
+   "type": {
+    "name": "City-owned dark fiber"
+   },
+   "commit_rate": 1000000,
+   "status": {
+    "value": "active"
+   },
+   "description": "City fiber to CH1 · staff only"
+  }
+ ],
+ "interfaces": [
+  {
+   "id": 1,
+   "device": {
+    "id": 1,
+    "name": "LB1-FW-01"
+   },
+   "name": "ethernet1/2",
+   "type": {
+    "value": "10gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 71
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 2,
+    "name": "LB1-ACC-1"
+   },
+   "name": "Te1/1/1",
+   "type": {
+    "value": "10gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 71
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 2,
+    "name": "LB1-ACC-1"
+   },
+   "name": "Gi1/0/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 3,
+    "name": "LB1-AP-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 5,
+   "device": {
+    "id": 2,
+    "name": "LB1-ACC-1"
+   },
+   "name": "Gi1/0/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 6,
+   "device": {
+    "id": 4,
+    "name": "LB1-AP-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 7,
+   "device": {
+    "id": 2,
+    "name": "LB1-ACC-1"
+   },
+   "name": "Gi1/0/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 8,
+   "device": {
+    "id": 5,
+    "name": "LB1-AP-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 2,
+    "name": "LB1-ACC-1"
+   },
+   "name": "Gi1/0/11",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 10,
+   "device": {
+    "id": 6,
+    "name": "LB1-PC-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 11,
+   "device": {
+    "id": 2,
+    "name": "LB1-ACC-1"
+   },
+   "name": "Gi1/0/12",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 12,
+   "device": {
+    "id": 7,
+    "name": "LB1-PC-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 13,
+   "device": {
+    "id": 2,
+    "name": "LB1-ACC-1"
+   },
+   "name": "Gi1/0/13",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 14,
+   "device": {
+    "id": 8,
+    "name": "LB1-PC-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 15,
+   "device": {
+    "id": 2,
+    "name": "LB1-ACC-1"
+   },
+   "name": "Gi1/0/14",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 16,
+   "device": {
+    "id": 9,
+    "name": "LB1-PC-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 17,
+   "device": {
+    "id": 2,
+    "name": "LB1-ACC-1"
+   },
+   "name": "Gi1/0/20",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 18,
+   "device": {
+    "id": 10,
+    "name": "LB1-PRN-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 71
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 19,
+   "device": {
+    "id": 3,
+    "name": "LB1-AP-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-LIBRARY"
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "device": {
+    "id": 3,
+    "name": "LB1-AP-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-LIBRARY"
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "device": {
+    "id": 4,
+    "name": "LB1-AP-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-LIBRARY"
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "device": {
+    "id": 4,
+    "name": "LB1-AP-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-LIBRARY"
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "device": {
+    "id": 5,
+    "name": "LB1-AP-03"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-LIBRARY"
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "device": {
+    "id": 5,
+    "name": "LB1-AP-03"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-LIBRARY"
+    }
+   ]
+  }
+ ],
+ "wireless_links": [],
+ "wireless_lans": [
+  {
+   "id": 1,
+   "ssid": "HALVERN-STAFF",
+   "description": "Library staff; same SSID as City Hall",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 1,
+    "vid": 10,
+    "name": "STAFF"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 2,
+   "scope": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_eap": "EAP-TLS",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "5ghz"
+    ]
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   }
+  },
+  {
+   "id": 2,
+   "ssid": "HALVERN-LIBRARY",
+   "description": "Patrons; filtered, local internet line",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 3,
+    "vid": 70,
+    "name": "PATRON-WIFI"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 2,
+   "scope": {
+    "id": 2,
+    "name": "Halvern Main Library",
+    "slug": "lb1"
+   },
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "open-portal",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "2.4ghz",
+     "5ghz"
+    ],
+    "wlan_client_isolation": true,
+    "wlan_portal": "captive"
+   },
+   "auth_type": {
+    "value": "open",
+    "label": "Open"
+   },
+   "auth_cipher": null
+  }
+ ],
+ "ip_addresses": [],
+ "contact_assignments": [
+  {
+   "id": 1,
+   "object_type": "dcim.site",
+   "object_id": 2,
+   "contact": {
+    "id": 21,
+    "name": "Library director"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 2,
+   "object_type": "dcim.site",
+   "object_id": 2,
+   "contact": {
+    "id": 22,
+    "name": "City IT"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  }
+ ]
+}

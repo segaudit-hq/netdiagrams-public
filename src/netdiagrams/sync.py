@@ -2590,7 +2590,9 @@ def _vlan_rows(g, table, header, nb: NetBoxIndex):
             "NAME": (" · ".join([v.get("name", "")] + [f"SSID {s}" for s in ssids.get(v.get("id"), [])]).strip(" ·"),
                      "", False, "The wireless LAN on this VLAN" if ssids.get(v.get("id")) else ""),
             "SUBNET": (" · ".join(p.get("prefix", "") for p in prefixes), subnet_link),
-            "GATEWAY": (" · ".join(x for x in (" / ".join(g for g in gws if g), vrf) if x), ""),
+            # A table with its own VRF column keeps the VRF out of the gateway cell.
+            "GATEWAY": (" · ".join(x for x in (" / ".join(g for g in gws if g), "" if "VRF" in header else vrf) if x), ""),
+            "VRF": (vrf, ""),
         }
         rows.append([values.get(next((k for k in values if col.startswith(k)), ""), ("", "")) for col in header])
     return rows

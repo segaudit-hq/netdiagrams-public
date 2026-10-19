@@ -40,13 +40,18 @@ The sample is only a demo. NetDiagrams never uses it unless you ask for it.
 
 Every kind of site groups its zones differently, so each industry has its own template, stencils and example site:
 
-| Profile | For |
-|---|---|
-| `manufacturing` (default) | Plants, with Purdue levels, an industrial DMZ and production cells |
-| `warehouse` | Distribution centers, cross-docks and 3PL sites |
-| `education` | School districts and campuses |
-| `retail` | Stores, with the payment zone kept apart |
-| `office` | Offices and branches |
+| Profile | For | Book |
+|---|---|---|
+| `manufacturing` (default) | Plants, with Purdue levels, an industrial DMZ and production cells | [Book 1](https://netdiagrams.com/books/manufacturing-network-diagrams/) |
+| `education` | School districts and campuses | [Book 2](https://netdiagrams.com/books/school-network-diagrams/) |
+| `warehouse` | Distribution centers, cross-docks and 3PL sites | [Book 3](https://netdiagrams.com/books/warehouse-network-diagrams/) |
+| `retail` | Stores, with the payment zone kept apart | [Book 4](https://netdiagrams.com/books/retail-network-diagrams/) |
+| `office` | Offices and branches | [Book 5](https://netdiagrams.com/books/small-office-network-diagrams/) |
+| `bank` | Banks and credit unions, with teller, wire and card zones and the core processor's link | [Book 6](https://netdiagrams.com/books/bank-network-diagrams/) |
+| `municipal` | Cities, towns and counties, with police (CJIS), public Wi-Fi and the utility boundary kept apart | [Book 7](https://netdiagrams.com/books/local-government-network-diagrams/) |
+| `hotel` | Hotels, with payments, guests, guest rooms and building systems kept apart | [Book 8](https://netdiagrams.com/books/hotel-network-diagrams/) |
+| `corporate` | Headquarters campuses and multi-site companies, with VRFs, a data center and branch WAN | [Book 9](https://netdiagrams.com/books/corporate-network-diagrams/) |
+| `dealership` | Car dealerships, with F&I, the shop and the manufacturer's router kept apart | [Book 10](https://netdiagrams.com/books/car-dealership-network-diagrams/) |
 
 ```bash
 netdiagrams --profile retail
@@ -72,7 +77,7 @@ The full guide to every option, setting and sheet is in [docs/reference.md](docs
 
 ## Learn the method
 
-The drawings follow a method for documenting segmented networks: what to draw on each sheet, how to name zones, and how to keep drawings current. It is written up as a series of industry guides at [netdiagrams.com](https://netdiagrams.com), with free chapters and worksheets.
+The drawings follow a method for documenting segmented networks: what to draw on each sheet, how to name zones, and how to keep drawings current. It is written up as a series of ten industry guides at [netdiagrams.com](https://netdiagrams.com), one for each profile above, each with a free chapter and worksheets.
 
 Once your zones are drawn, [SegAudit](https://segaudit.com) checks that your firewall configuration actually enforces them.
 

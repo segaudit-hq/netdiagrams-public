@@ -1,0 +1,2612 @@
+{
+ "format": "netdiagrams-export/1",
+ "netbox_version": "sample",
+ "netbox_url": "",
+ "exported_at": "2026-10-15T08:00:00Z",
+ "site": {
+  "id": 2,
+  "name": "Alder Bay Airport",
+  "slug": "h02",
+  "facility": "H02",
+  "custom_fields": {
+   "netdiagrams": {
+    "profile": "hotel"
+   },
+   "wireless_management": "cloud",
+   "wireless_manager": "Cloud Wi-Fi dashboard",
+   "monitoring": "alerting",
+   "monitored_by": "Kestrel monitoring (NOC)",
+   "log_forwarding": "siem",
+   "log_destination": "Kestrel SIEM, syslog over TLS",
+   "log_retention_days": 365,
+   "last_verified": "2026-08-27"
+  }
+ },
+ "locations": [
+  {
+   "id": 1,
+   "name": "Main building",
+   "slug": "main-building",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 2,
+   "name": "Floor 1",
+   "slug": "floor-1",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  },
+  {
+   "id": 3,
+   "name": "Floor 2",
+   "slug": "floor-2",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  },
+  {
+   "id": 4,
+   "name": "Floor 3",
+   "slug": "floor-3",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  },
+  {
+   "id": 5,
+   "name": "Floor 4",
+   "slug": "floor-4",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  },
+  {
+   "id": 6,
+   "name": "MDF",
+   "slug": "mdf",
+   "parent": {
+    "id": 2,
+    "name": "Floor 1"
+   },
+   "custom_fields": {
+    "physical_access": "locked-room",
+    "data_classification": "internal",
+    "last_verified": "2026-08-27"
+   }
+  },
+  {
+   "id": 7,
+   "name": "Front desk",
+   "slug": "front-desk",
+   "parent": {
+    "id": 2,
+    "name": "Floor 1"
+   },
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 8,
+   "name": "Market pantry",
+   "slug": "market-pantry",
+   "parent": {
+    "id": 2,
+    "name": "Floor 1"
+   },
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  }
+ ],
+ "devices": [
+  {
+   "id": 1,
+   "name": "H02-FW-01",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "FortiGate 120G",
+    "manufacturer": {
+     "name": "Fortinet",
+     "slug": "fortinet"
+    },
+    "id": 1
+   },
+   "platform": {
+    "name": "fortios",
+    "slug": "fortios"
+   },
+   "serial": "FGxxxxxxxx21",
+   "asset_tag": "AB-2001",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 6,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 40.0,
+   "face": {
+    "value": "front"
+   },
+   "tenant": null,
+   "primary_ip4": {
+    "address": "10.41.99.2/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Property firewall (single)",
+   "tags": [
+    {
+     "name": "Firewall pair",
+     "slug": "zone-edge"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "FortiOS 7.4.x",
+    "support_contract": "FortiCare 8x5",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "compliance_scope": [
+     "pci-connected"
+    ],
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-24",
+    "install_date": "2024-05-06"
+   }
+  },
+  {
+   "id": 2,
+   "name": "H02-BRAND-RTR-01",
+   "role": {
+    "name": "Router",
+    "slug": "router"
+   },
+   "device_type": {
+    "model": "Brand-managed router",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 2
+   },
+   "platform": null,
+   "serial": "BRxxxxxx21",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 6,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 42.0,
+   "face": {
+    "value": "front"
+   },
+   "tenant": {
+    "name": "Larkline Hotels",
+    "slug": "larkline-hotels"
+   },
+   "primary_ip4": {
+    "address": "10.41.250.2/29"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Owned and managed by Larkline Hotels (brand); the hotel has no login",
+   "tags": [
+    {
+     "name": "Brand and management company",
+     "slug": "zone-brand"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_patched": "2026-09-01",
+    "install_date": "2024-05-06"
+   }
+  },
+  {
+   "id": 3,
+   "name": "H02-GW-01",
+   "role": {
+    "name": "Guest gateway",
+    "slug": "guest-gateway"
+   },
+   "device_type": {
+    "model": "Guest gateway GW-1000",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 3
+   },
+   "platform": null,
+   "serial": "GWxxxxxx21",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 6,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 36.0,
+   "face": {
+    "value": "front"
+   },
+   "tenant": {
+    "name": "Guest Wi-Fi vendor",
+    "slug": "guest-wi-fi-vendor"
+   },
+   "primary_ip4": {
+    "address": "10.41.99.6/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Owned and run by the guest wi-fi vendor",
+   "tags": [
+    {
+     "name": "Guests",
+     "slug": "zone-guest"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "critical",
+    "last_patched": "2026-09-15",
+    "install_date": "2024-05-20"
+   }
+  },
+  {
+   "id": 4,
+   "name": "H02-CORE-1",
+   "role": {
+    "name": "Core switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "CX 6300F 48G Class4 PoE",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "aos-cx",
+    "slug": "aos-cx"
+   },
+   "serial": "SGxxxxxx21",
+   "asset_tag": "AB-2010",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 6,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 38.0,
+   "face": {
+    "value": "front"
+   },
+   "tenant": null,
+   "primary_ip4": {
+    "address": "10.41.99.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Core switch",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13.x",
+    "criticality": "critical",
+    "compliance_scope": [
+     "pci-connected"
+    ],
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-05-06"
+   }
+  },
+  {
+   "id": 5,
+   "name": "H02-POS-01",
+   "role": {
+    "name": "POS workstation",
+    "slug": "pos-terminal"
+   },
+   "device_type": {
+    "model": "POS terminal 15in",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 5
+   },
+   "platform": null,
+   "serial": "POSxx21",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 8,
+    "name": "Market pantry",
+    "slug": "market-pantry"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "tenant": null,
+   "primary_ip4": {
+    "address": "10.41.20.21/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Market pantry POS workstation",
+   "tags": [
+    {
+     "name": "Payments",
+     "slug": "zone-payments"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-29",
+    "install_date": "2023-04-17"
+   }
+  },
+  {
+   "id": 6,
+   "name": "H02-PT-FD-01",
+   "role": {
+    "name": "Card terminal",
+    "slug": "payment-terminal"
+   },
+   "device_type": {
+    "model": "Card terminal (P2PE)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 6
+   },
+   "platform": null,
+   "serial": "PTFDxx21",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 7,
+    "name": "Front desk",
+    "slug": "front-desk"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "tenant": null,
+   "primary_ip4": {
+    "address": "10.41.20.11/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Front desk card terminal",
+   "tags": [
+    {
+     "name": "Payments",
+     "slug": "zone-payments"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-29",
+    "install_date": "2025-02-03"
+   }
+  },
+  {
+   "id": 7,
+   "name": "H02-PBX-01",
+   "role": {
+    "name": "Call server",
+    "slug": "call-server"
+   },
+   "device_type": {
+    "model": "Hospitality call server",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 7
+   },
+   "platform": null,
+   "serial": "PBxxxxxx21",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 6,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 24.0,
+   "face": {
+    "value": "front"
+   },
+   "tenant": null,
+   "primary_ip4": {
+    "address": "10.41.40.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Call server",
+   "tags": [
+    {
+     "name": "Voice",
+     "slug": "zone-voice"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-05",
+    "install_date": "2021-09-13"
+   }
+  },
+  {
+   "id": 8,
+   "name": "H02-LOCKGW-01",
+   "role": {
+    "name": "Lock gateway",
+    "slug": "lock-gateway"
+   },
+   "device_type": {
+    "model": "Lock gateway",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 8
+   },
+   "platform": null,
+   "serial": "LGxxxxxx21",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 6,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "tenant": null,
+   "primary_ip4": {
+    "address": "10.41.64.11/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lock gateway (all floors)",
+   "tags": [
+    {
+     "name": "Guest room technology",
+     "slug": "zone-roomtech"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-26",
+    "install_date": "2023-02-20"
+   }
+  },
+  {
+   "id": 9,
+   "name": "H02-AP-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-503H",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 9
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPH201",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 2,
+    "name": "Floor 1",
+    "slug": "floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "tenant": null,
+   "primary_ip4": {
+    "address": "10.41.99.101/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lobby and market AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-05-20"
+   }
+  },
+  {
+   "id": 10,
+   "name": "H02-AP-02",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-503H",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 9
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPH202",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "location": {
+    "id": 3,
+    "name": "Floor 2",
+    "slug": "floor-2"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "tenant": null,
+   "primary_ip4": {
+    "address": "10.41.99.102/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Floor 2 corridor AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-05-20"
+   }
+  }
+ ],
+ "device_types": [
+  {
+   "id": 1,
+   "model": "FortiGate 120G",
+   "manufacturer": {
+    "name": "Fortinet",
+    "slug": "fortinet"
+   },
+   "slug": "fortigate-120g",
+   "custom_fields": {
+    "end_of_sale": "2030-03-31",
+    "end_of_support": "2035-03-31"
+   }
+  },
+  {
+   "id": 2,
+   "model": "Brand-managed router",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "brand-managed-router",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 3,
+   "model": "Guest gateway GW-1000",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "guest-gateway-gw-1000",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 4,
+   "model": "CX 6300F 48G Class4 PoE",
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "slug": "cx-6300f-48g-class4-poe",
+   "custom_fields": {
+    "end_of_sale": "2029-10-31",
+    "end_of_support": "2034-10-31"
+   }
+  },
+  {
+   "id": 5,
+   "model": "POS terminal 15in",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "pos-terminal-15in",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 6,
+   "model": "Card terminal (P2PE)",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "card-terminal-p2pe",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 7,
+   "model": "Hospitality call server",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "hospitality-call-server",
+   "custom_fields": {
+    "end_of_sale": "2026-06-30",
+    "end_of_support": "2028-06-30"
+   }
+  },
+  {
+   "id": 8,
+   "model": "Lock gateway",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "lock-gateway",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 9,
+   "model": "AP-503H",
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "slug": "ap-503h",
+   "custom_fields": {
+    "end_of_sale": "2029-06-30",
+    "end_of_support": "2034-06-30"
+   }
+  }
+ ],
+ "virtual_chassis": [],
+ "cables": [
+  {
+   "id": 1,
+   "label": "H02-CBL-00001",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 1,
+      "name": "internal1",
+      "device": {
+       "id": 1,
+       "name": "H02-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 2,
+      "name": "1/1/1",
+      "device": {
+       "id": 4,
+       "name": "H02-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "label": "H02-CBL-00002",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 3,
+      "name": "lan1",
+      "device": {
+       "id": 2,
+       "name": "H02-BRAND-RTR-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 4,
+      "name": "brand",
+      "device": {
+       "id": 1,
+       "name": "H02-FW-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "label": "H02-CBL-00003",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 5,
+      "name": "dmz-guest",
+      "device": {
+       "id": 1,
+       "name": "H02-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 6,
+      "name": "wan1",
+      "device": {
+       "id": 3,
+       "name": "H02-GW-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "label": "H02-CBL-00004",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 7,
+      "name": "1/1/3",
+      "device": {
+       "id": 4,
+       "name": "H02-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 8,
+      "name": "lan1",
+      "device": {
+       "id": 3,
+       "name": "H02-GW-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "label": "H02-CBL-00011",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 9,
+      "name": "1/1/11",
+      "device": {
+       "id": 4,
+       "name": "H02-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 10,
+      "name": "eth0",
+      "device": {
+       "id": 5,
+       "name": "H02-POS-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "label": "H02-CBL-00012",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 11,
+      "name": "1/1/12",
+      "device": {
+       "id": 4,
+       "name": "H02-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 12,
+      "name": "eth0",
+      "device": {
+       "id": 6,
+       "name": "H02-PT-FD-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "label": "H02-CBL-00013",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 13,
+      "name": "1/1/13",
+      "device": {
+       "id": 4,
+       "name": "H02-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 14,
+      "name": "eth0",
+      "device": {
+       "id": 7,
+       "name": "H02-PBX-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "label": "H02-CBL-00014",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 15,
+      "name": "1/1/14",
+      "device": {
+       "id": 4,
+       "name": "H02-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 16,
+      "name": "eth0",
+      "device": {
+       "id": 8,
+       "name": "H02-LOCKGW-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "label": "H02-CBL-00021",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 17,
+      "name": "1/1/21",
+      "device": {
+       "id": 4,
+       "name": "H02-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 18,
+      "name": "eth0",
+      "device": {
+       "id": 9,
+       "name": "H02-AP-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "label": "H02-CBL-00022",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 19,
+      "name": "1/1/22",
+      "device": {
+       "id": 4,
+       "name": "H02-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 20,
+      "name": "eth0",
+      "device": {
+       "id": 10,
+       "name": "H02-AP-02"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "modules": [],
+ "module_bays": [],
+ "inventory_items": [
+  {
+   "id": 1,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "JL086A",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL086A",
+   "serial": "SGxxxxx51",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "JL086A",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL086A",
+   "serial": "SGxxxxx52",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "JL669A",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL669A",
+   "serial": "SGxxxxx53",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "JL669A",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL669A",
+   "serial": "SGxxxxx54",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  }
+ ],
+ "vlans": [
+  {
+   "id": 1,
+   "vid": 10,
+   "name": "OPS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Hotel operations",
+     "slug": "zone-ops"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "vid": 20,
+   "name": "PAY",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Payments",
+     "slug": "zone-payments"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "vid": 40,
+   "name": "VOICE",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Voice",
+     "slug": "zone-voice"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "vid": 60,
+   "name": "IPTV",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Guest room technology",
+     "slug": "zone-roomtech"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "vid": 63,
+   "name": "LOCKS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Guest room technology",
+     "slug": "zone-roomtech"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "vid": 70,
+   "name": "BMS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "vid": 80,
+   "name": "CAMERAS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Safety and security",
+     "slug": "zone-safety"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "vid": 99,
+   "name": "NET-MGMT",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "vid": 100,
+   "name": "GUEST",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Guests",
+     "slug": "zone-guest"
+    }
+   ]
+  }
+ ],
+ "prefixes": [
+  {
+   "id": 1,
+   "prefix": "10.41.10.0/24",
+   "vlan": {
+    "id": 1,
+    "vid": 10
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Hotel operations",
+     "slug": "zone-ops"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 2,
+   "prefix": "10.41.20.0/26",
+   "vlan": {
+    "id": 2,
+    "vid": 20
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Payments",
+     "slug": "zone-payments"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1",
+    "compliance_scope": [
+     "pci-cde"
+    ],
+    "data_classification": "restricted"
+   }
+  },
+  {
+   "id": 3,
+   "prefix": "10.41.40.0/24",
+   "vlan": {
+    "id": 3,
+    "vid": 40
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Voice",
+     "slug": "zone-voice"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 4,
+   "prefix": "10.41.60.0/24",
+   "vlan": {
+    "id": 4,
+    "vid": 60
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Guest room technology",
+     "slug": "zone-roomtech"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 5,
+   "prefix": "10.41.64.0/26",
+   "vlan": {
+    "id": 5,
+    "vid": 63
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Guest room technology",
+     "slug": "zone-roomtech"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 6,
+   "prefix": "10.41.70.0/26",
+   "vlan": {
+    "id": 6,
+    "vid": 70
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 7,
+   "prefix": "10.41.80.0/25",
+   "vlan": {
+    "id": 7,
+    "vid": 80
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Safety and security",
+     "slug": "zone-safety"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 8,
+   "prefix": "10.41.99.0/24",
+   "vlan": {
+    "id": 8,
+    "vid": 99
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 9,
+   "prefix": "172.21.0.0/21",
+   "vlan": {
+    "id": 9,
+    "vid": 100
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Guests",
+     "slug": "zone-guest"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "GW-01 .1",
+    "data_classification": "public"
+   }
+  }
+ ],
+ "circuits": [
+  {
+   "id": 1,
+   "cid": "H02-ISP-A-01",
+   "provider": {
+    "name": "Provider C"
+   },
+   "type": {
+    "name": "Business broadband"
+   },
+   "commit_rate": 500000,
+   "status": {
+    "value": "active"
+   },
+   "description": "Broadband 500/50"
+  },
+  {
+   "id": 2,
+   "cid": "H02-BRAND-01",
+   "provider": {
+    "name": "Larkline Hotels"
+   },
+   "type": {
+    "name": "Brand-managed broadband"
+   },
+   "commit_rate": 100000,
+   "status": {
+    "value": "active"
+   },
+   "description": "Brand broadband 100M · the brand's, not the hotel's"
+  }
+ ],
+ "interfaces": [
+  {
+   "id": 1,
+   "device": {
+    "id": 1,
+    "name": "H02-FW-01"
+   },
+   "name": "internal1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 63
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "1/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 63
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 2,
+    "name": "H02-BRAND-RTR-01"
+   },
+   "name": "lan1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 1,
+    "name": "H02-FW-01"
+   },
+   "name": "brand",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 5,
+   "device": {
+    "id": 1,
+    "name": "H02-FW-01"
+   },
+   "name": "dmz-guest",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 6,
+   "device": {
+    "id": 3,
+    "name": "H02-GW-01"
+   },
+   "name": "wan1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 7,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "1/1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 100
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 8,
+   "device": {
+    "id": 3,
+    "name": "H02-GW-01"
+   },
+   "name": "lan1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 100
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "1/1/11",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 20
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 10,
+   "device": {
+    "id": 5,
+    "name": "H02-POS-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 20
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 11,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "1/1/12",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 20
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 12,
+   "device": {
+    "id": 6,
+    "name": "H02-PT-FD-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 20
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 13,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "1/1/13",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 40
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 14,
+   "device": {
+    "id": 7,
+    "name": "H02-PBX-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 40
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 15,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "1/1/14",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 63
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 16,
+   "device": {
+    "id": 8,
+    "name": "H02-LOCKGW-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 63
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 17,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "1/1/21",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 100
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 18,
+   "device": {
+    "id": 9,
+    "name": "H02-AP-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 100
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 19,
+   "device": {
+    "id": 4,
+    "name": "H02-CORE-1"
+   },
+   "name": "1/1/22",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 100
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 20,
+   "device": {
+    "id": 10,
+    "name": "H02-AP-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 100
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 21,
+   "device": {
+    "id": 9,
+    "name": "H02-AP-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "ALDERBAY-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "device": {
+    "id": 9,
+    "name": "H02-AP-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "ALDERBAY-GUEST"
+    },
+    {
+     "id": 2,
+     "ssid": "AB-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "device": {
+    "id": 10,
+    "name": "H02-AP-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "ALDERBAY-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "device": {
+    "id": 10,
+    "name": "H02-AP-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "ALDERBAY-GUEST"
+    },
+    {
+     "id": 2,
+     "ssid": "AB-STAFF"
+    }
+   ]
+  }
+ ],
+ "wireless_links": [],
+ "wireless_lans": [
+  {
+   "id": 1,
+   "ssid": "ALDERBAY-GUEST",
+   "description": "Rooms and lobby; same portal as H01",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 9,
+    "vid": 100,
+    "name": "GUEST"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 2,
+   "scope": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Guests",
+     "slug": "zone-guest"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "open-portal",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "2.4ghz",
+     "5ghz"
+    ],
+    "wlan_client_isolation": true,
+    "wlan_portal": "captive"
+   },
+   "auth_type": {
+    "value": "open",
+    "label": "Open"
+   },
+   "auth_cipher": null
+  },
+  {
+   "id": 2,
+   "ssid": "AB-STAFF",
+   "description": "Front desk and housekeeping tablets",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 1,
+    "vid": 10,
+    "name": "OPS"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 2,
+   "scope": {
+    "id": 2,
+    "name": "Alder Bay Airport",
+    "slug": "h02"
+   },
+   "tags": [
+    {
+     "name": "Hotel operations",
+     "slug": "zone-ops"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_eap": "EAP-TLS",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "5ghz",
+     "6ghz"
+    ]
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   }
+  }
+ ],
+ "ip_addresses": [],
+ "contact_assignments": [
+  {
+   "id": 1,
+   "object_type": "dcim.site",
+   "object_id": 2,
+   "contact": {
+    "id": 21,
+    "name": "Hotel IT manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 2,
+   "object_type": "dcim.site",
+   "object_id": 2,
+   "contact": {
+    "id": 22,
+    "name": "Kestrel Hospitality IT"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 3,
+   "object_type": "dcim.device",
+   "object_id": 2,
+   "contact": {
+    "id": 23,
+    "name": "Larkline Hotels (brand IT)"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 4,
+   "object_type": "dcim.device",
+   "object_id": 2,
+   "contact": {
+    "id": 23,
+    "name": "Larkline Hotels (brand IT)"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 5,
+   "object_type": "dcim.device",
+   "object_id": 3,
+   "contact": {
+    "id": 24,
+    "name": "Guest Wi-Fi vendor"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 6,
+   "object_type": "dcim.device",
+   "object_id": 3,
+   "contact": {
+    "id": 24,
+    "name": "Guest Wi-Fi vendor"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 7,
+   "object_type": "dcim.device",
+   "object_id": 5,
+   "contact": {
+    "id": 25,
+    "name": "F&B director"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 8,
+   "object_type": "dcim.device",
+   "object_id": 5,
+   "contact": {
+    "id": 26,
+    "name": "POS vendor support"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 9,
+   "object_type": "dcim.device",
+   "object_id": 6,
+   "contact": {
+    "id": 27,
+    "name": "Front office manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 10,
+   "object_type": "dcim.device",
+   "object_id": 6,
+   "contact": {
+    "id": 22,
+    "name": "Kestrel Hospitality IT"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  }
+ ]
+}

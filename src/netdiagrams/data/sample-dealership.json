@@ -1,0 +1,10567 @@
+{
+ "format": "netdiagrams-export/1",
+ "netbox_version": "sample",
+ "netbox_url": "",
+ "exported_at": "2026-10-18T08:00:00Z",
+ "site": {
+  "id": 1,
+  "name": "Kestrel Valley Motors",
+  "slug": "d01",
+  "facility": "D01",
+  "custom_fields": {
+   "netdiagrams": {
+    "profile": "dealership"
+   },
+   "wireless_management": "cloud",
+   "wireless_manager": "Cloud Wi-Fi dashboard",
+   "monitoring": "alerting",
+   "monitored_by": "MSP monitoring (RMM)",
+   "log_forwarding": "siem",
+   "log_destination": "MSP SIEM, syslog over TLS",
+   "log_retention_days": 365,
+   "last_verified": "2026-09-20"
+  }
+ },
+ "locations": [
+  {
+   "id": 1,
+   "name": "Main building",
+   "slug": "main-building",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 2,
+   "name": "MDF",
+   "slug": "mdf",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "badge-camera",
+    "data_classification": "internal",
+    "last_verified": "2026-09-20"
+   }
+  },
+  {
+   "id": 3,
+   "name": "Service building",
+   "slug": "service-building",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 4,
+   "name": "IDF-SHOP",
+   "slug": "idf-shop",
+   "parent": {
+    "id": 3,
+    "name": "Service building"
+   },
+   "custom_fields": {
+    "physical_access": "locked-room",
+    "data_classification": "internal",
+    "last_verified": "2026-09-20"
+   }
+  },
+  {
+   "id": 5,
+   "name": "Sales tower",
+   "slug": "sales-tower",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 6,
+   "name": "Showroom",
+   "slug": "showroom",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  },
+  {
+   "id": 7,
+   "name": "F&I offices",
+   "slug": "fi-offices",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "locked-room",
+    "data_classification": "confidential",
+    "last_verified": "2026-09-20"
+   }
+  },
+  {
+   "id": 8,
+   "name": "Upstairs offices",
+   "slug": "upstairs-offices",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 9,
+   "name": "Service drive",
+   "slug": "service-drive",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  },
+  {
+   "id": 10,
+   "name": "Lounge",
+   "slug": "lounge",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  },
+  {
+   "id": 11,
+   "name": "Shop",
+   "slug": "shop",
+   "parent": {
+    "id": 3,
+    "name": "Service building"
+   },
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  },
+  {
+   "id": 12,
+   "name": "Parts",
+   "slug": "parts",
+   "parent": {
+    "id": 1,
+    "name": "Main building"
+   },
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 13,
+   "name": "Lot",
+   "slug": "lot",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  }
+ ],
+ "devices": [
+  {
+   "id": 1,
+   "name": "D01-FW-01",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "FortiGate 120G",
+    "manufacturer": {
+     "name": "Fortinet",
+     "slug": "fortinet"
+    },
+    "id": 1
+   },
+   "platform": {
+    "name": "fortios",
+    "slug": "fortios"
+   },
+   "serial": "FGxxxxxxxxxx01",
+   "asset_tag": "KV-0001",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 40.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.2/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Internet edge and inter-zone firewall (HA primary)",
+   "tags": [
+    {
+     "name": "Firewall and remote access",
+     "slug": "zone-edge"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "FortiOS 7.4.x",
+    "support_contract": "FortiCare 8x5",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-24",
+    "install_date": "2024-03-18",
+    "support_contract_end": "2026-12-31"
+   }
+  },
+  {
+   "id": 2,
+   "name": "D01-FW-02",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "FortiGate 120G",
+    "manufacturer": {
+     "name": "Fortinet",
+     "slug": "fortinet"
+    },
+    "id": 1
+   },
+   "platform": {
+    "name": "fortios",
+    "slug": "fortios"
+   },
+   "serial": "FGxxxxxxxxxx02",
+   "asset_tag": "KV-0002",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 40.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.3/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Internet edge and inter-zone firewall (HA secondary)",
+   "tags": [
+    {
+     "name": "Firewall and remote access",
+     "slug": "zone-edge"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "FortiOS 7.4.x",
+    "support_contract": "FortiCare 8x5",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-24",
+    "install_date": "2024-03-18",
+    "support_contract_end": "2026-12-31"
+   }
+  },
+  {
+   "id": 3,
+   "name": "D01-OOB-01",
+   "role": {
+    "name": "Console server",
+    "slug": "console-server"
+   },
+   "device_type": {
+    "model": "OM1204-4E-L",
+    "manufacturer": {
+     "name": "Opengear",
+     "slug": "opengear"
+    },
+    "id": 2
+   },
+   "platform": {
+    "name": "opengear",
+    "slug": "opengear"
+   },
+   "serial": "OMxxxxxx01",
+   "asset_tag": "KV-0003",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 41.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.5/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Out-of-band console with cellular",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "Opengear 24.x",
+    "criticality": "medium",
+    "last_config_backup": "2026-06-30",
+    "last_patched": "2026-07-15",
+    "install_date": "2024-03-18"
+   }
+  },
+  {
+   "id": 4,
+   "name": "D01-CORE-1",
+   "role": {
+    "name": "Core switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "CX 6300M 24SFP+",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "aos-cx",
+    "slug": "aos-cx"
+   },
+   "serial": "SGxxxxxx11",
+   "asset_tag": "KV-0010",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 38.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.10/24"
+   },
+   "virtual_chassis": {
+    "id": 1,
+    "name": "D01-CORE"
+   },
+   "vc_position": 1,
+   "description": "Core stack member 1 (conductor)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13.x",
+    "support_contract": "Foundation Care NBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-03-18",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 5,
+   "name": "D01-CORE-2",
+   "role": {
+    "name": "Core switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "CX 6300M 24SFP+",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "aos-cx",
+    "slug": "aos-cx"
+   },
+   "serial": "SGxxxxxx12",
+   "asset_tag": "KV-0011",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 38.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": null,
+   "virtual_chassis": {
+    "id": 1,
+    "name": "D01-CORE"
+   },
+   "vc_position": 2,
+   "description": "Core stack member 2 (standby)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13.x",
+    "support_contract": "Foundation Care NBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-03-18",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 6,
+   "name": "D01-ACC-MAIN-1",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "CX 6200F 48G Class4 PoE",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "aos-cx",
+    "slug": "aos-cx"
+   },
+   "serial": "CNxxxxxx21",
+   "asset_tag": "KV-0021",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 36.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.21/24"
+   },
+   "virtual_chassis": {
+    "id": 2,
+    "name": "D01-ACC-MAIN"
+   },
+   "vc_position": 1,
+   "description": "Main building access stack member 1 (conductor)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13.x",
+    "support_contract": "Foundation Care NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-03-18",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 7,
+   "name": "D01-ACC-MAIN-2",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "CX 6200F 48G Class4 PoE",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "aos-cx",
+    "slug": "aos-cx"
+   },
+   "serial": "CNxxxxxx22",
+   "asset_tag": "KV-0022",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 35.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": null,
+   "virtual_chassis": {
+    "id": 2,
+    "name": "D01-ACC-MAIN"
+   },
+   "vc_position": 2,
+   "description": "Main building access stack member 2",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13.x",
+    "support_contract": "Foundation Care NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-03-18",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 8,
+   "name": "D01-ACC-MAIN-3",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "CX 6200F 48G Class4 PoE",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "aos-cx",
+    "slug": "aos-cx"
+   },
+   "serial": "CNxxxxxx23",
+   "asset_tag": "KV-0023",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 34.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": null,
+   "virtual_chassis": {
+    "id": 2,
+    "name": "D01-ACC-MAIN"
+   },
+   "vc_position": 3,
+   "description": "Main building access stack member 3",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13.x",
+    "support_contract": "Foundation Care NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-03-18",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 9,
+   "name": "D01-ACC-SHOP-1",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "CX 6200F 48G Class4 PoE",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "aos-cx",
+    "slug": "aos-cx"
+   },
+   "serial": "CNxxxxxx31",
+   "asset_tag": "KV-0031",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 4,
+    "name": "IDF-SHOP",
+    "slug": "idf-shop"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 21.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.22/24"
+   },
+   "virtual_chassis": {
+    "id": 3,
+    "name": "D01-ACC-SHOP"
+   },
+   "vc_position": 1,
+   "description": "Service building access stack member 1 (conductor)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13.x",
+    "support_contract": "Foundation Care NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-03-18",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 10,
+   "name": "D01-ACC-SHOP-2",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "CX 6200F 48G Class4 PoE",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "aos-cx",
+    "slug": "aos-cx"
+   },
+   "serial": "CNxxxxxx32",
+   "asset_tag": "KV-0032",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 4,
+    "name": "IDF-SHOP",
+    "slug": "idf-shop"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 20.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": null,
+   "virtual_chassis": {
+    "id": 3,
+    "name": "D01-ACC-SHOP"
+   },
+   "vc_position": 2,
+   "description": "Service building access stack member 2",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13.x",
+    "support_contract": "Foundation Care NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-03-18",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 11,
+   "name": "D01-OEM-RTR-01",
+   "role": {
+    "name": "Router",
+    "slug": "router"
+   },
+   "device_type": {
+    "model": "ISR1111-4P",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 5
+   },
+   "platform": null,
+   "serial": "FGLxxxxxxx01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 36.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.65.2/29"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "The manufacturer's router: their box, their circuit, their password",
+   "tags": [
+    {
+     "name": "Manufacturer link",
+     "slug": "zone-oem"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "install_date": "2022-02-14"
+   }
+  },
+  {
+   "id": 12,
+   "name": "D01-NAS-01",
+   "role": {
+    "name": "Storage",
+    "slug": "storage"
+   },
+   "device_type": {
+    "model": "RS2423RP+",
+    "manufacturer": {
+     "name": "Synology",
+     "slug": "synology"
+    },
+    "id": 6
+   },
+   "platform": {
+    "name": "dsm",
+    "slug": "dsm"
+   },
+   "serial": "SYxxxxxx01",
+   "asset_tag": "KV-0042",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 25.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.25.20/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Deal-jacket scans and the office share; encrypted volume, copies to the cloud vault",
+   "tags": [
+    {
+     "name": "Back office",
+     "slug": "zone-office"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "DSM 7.2",
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-02",
+    "install_date": "2023-11-06"
+   }
+  },
+  {
+   "id": 13,
+   "name": "D01-UPS-01",
+   "role": {
+    "name": "UPS",
+    "slug": "ups"
+   },
+   "device_type": {
+    "model": "Smart-UPS SRT 3000",
+    "manufacturer": {
+     "name": "APC",
+     "slug": "apc"
+    },
+    "id": 7
+   },
+   "platform": null,
+   "serial": "ASxxxxxx01",
+   "asset_tag": "KV-0050",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 1.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.41/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Rack R01 UPS (network card)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2025-11-20",
+    "install_date": "2021-07-12"
+   }
+  },
+  {
+   "id": 14,
+   "name": "D01-UPS-02",
+   "role": {
+    "name": "UPS",
+    "slug": "ups"
+   },
+   "device_type": {
+    "model": "Smart-UPS SRT 3000",
+    "manufacturer": {
+     "name": "APC",
+     "slug": "apc"
+    },
+    "id": 7
+   },
+   "platform": null,
+   "serial": "ASxxxxxx02",
+   "asset_tag": "KV-0051",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 1.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.42/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Rack R02 UPS (network card)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2025-11-20",
+    "install_date": "2021-07-12"
+   }
+  },
+  {
+   "id": 15,
+   "name": "D01-NVR-01",
+   "role": {
+    "name": "NVR",
+    "slug": "nvr"
+   },
+   "device_type": {
+    "model": "S3016",
+    "manufacturer": {
+     "name": "Axis",
+     "slug": "axis"
+    },
+    "id": 8
+   },
+   "platform": null,
+   "serial": "AXxxxxxx01",
+   "asset_tag": "KV-0060",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 2,
+    "name": "MDF",
+    "slug": "mdf"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 30.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.80.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Video recorder for 8 lot and building cameras",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "medium",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-05-09"
+   }
+  },
+  {
+   "id": 16,
+   "name": "D01-KEY-01",
+   "role": {
+    "name": "Key cabinet",
+    "slug": "key-cabinet"
+   },
+   "device_type": {
+    "model": "Key cabinet controller",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 9
+   },
+   "platform": null,
+   "serial": "KCxxxxxx01",
+   "asset_tag": "KV-0061",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 5,
+    "name": "Sales tower",
+    "slug": "sales-tower"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.81.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Vehicle key cabinet (sales tower); reports to its vendor's cloud",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "medium",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-03-02",
+    "install_date": "2021-09-27"
+   }
+  },
+  {
+   "id": 17,
+   "name": "D01-AP-MAIN-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxM01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 6,
+    "name": "Showroom",
+    "slug": "showroom"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.101/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Showroom ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 18,
+   "name": "D01-AP-MAIN-02",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxM02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 6,
+    "name": "Showroom",
+    "slug": "showroom"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.102/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Showroom ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 19,
+   "name": "D01-AP-MAIN-03",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxM03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 6,
+    "name": "Showroom",
+    "slug": "showroom"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.103/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Showroom ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 20,
+   "name": "D01-AP-MAIN-04",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxM04",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 5,
+    "name": "Sales tower",
+    "slug": "sales-tower"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.104/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Sales tower ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 21,
+   "name": "D01-AP-MAIN-05",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxM05",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 7,
+    "name": "F&I offices",
+    "slug": "fi-offices"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.105/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "F&I offices ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 22,
+   "name": "D01-AP-MAIN-06",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxM06",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 8,
+    "name": "Upstairs offices",
+    "slug": "upstairs-offices"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.106/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Upstairs offices ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 23,
+   "name": "D01-AP-MAIN-07",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxM07",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 9,
+    "name": "Service drive",
+    "slug": "service-drive"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.107/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Service drive ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 24,
+   "name": "D01-AP-MAIN-08",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxM08",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 10,
+    "name": "Lounge",
+    "slug": "lounge"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.108/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lounge ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 25,
+   "name": "D01-AP-SHOP-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxS01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 11,
+    "name": "Shop",
+    "slug": "shop"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.121/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Shop ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 26,
+   "name": "D01-AP-SHOP-02",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxS02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 11,
+    "name": "Shop",
+    "slug": "shop"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.122/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Shop ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 27,
+   "name": "D01-AP-SHOP-03",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxS03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 11,
+    "name": "Shop",
+    "slug": "shop"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.123/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Shop ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 28,
+   "name": "D01-AP-SHOP-04",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-635",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 10
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxxS04",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 11,
+    "name": "Shop",
+    "slug": "shop"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.124/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Shop ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 29,
+   "name": "D01-PRN-01",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "LaserJet M610",
+    "manufacturer": {
+     "name": "HP",
+     "slug": "hp"
+    },
+    "id": 11
+   },
+   "platform": null,
+   "serial": "HPxxxxx01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 7,
+    "name": "F&I offices",
+    "slug": "fi-offices"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.15.31/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "F&I printer",
+   "tags": [
+    {
+     "name": "Finance and insurance",
+     "slug": "zone-fi"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-30",
+    "install_date": "2025-01-20"
+   }
+  },
+  {
+   "id": 30,
+   "name": "D01-PRN-02",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "LaserJet M610",
+    "manufacturer": {
+     "name": "HP",
+     "slug": "hp"
+    },
+    "id": 11
+   },
+   "platform": null,
+   "serial": "HPxxxxx02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 9,
+    "name": "Service drive",
+    "slug": "service-drive"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.40.31/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Service write-up printer",
+   "tags": [
+    {
+     "name": "Service drive",
+     "slug": "zone-service"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-30",
+    "install_date": "2025-01-20"
+   }
+  },
+  {
+   "id": 31,
+   "name": "D01-PRN-03",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "LaserJet M610",
+    "manufacturer": {
+     "name": "HP",
+     "slug": "hp"
+    },
+    "id": 11
+   },
+   "platform": null,
+   "serial": "HPxxxxx03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 12,
+    "name": "Parts",
+    "slug": "parts"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.55.31/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Parts counter printer",
+   "tags": [
+    {
+     "name": "Parts",
+     "slug": "zone-parts"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-30",
+    "install_date": "2025-01-20"
+   }
+  },
+  {
+   "id": 32,
+   "name": "D01-PRN-04",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "LaserJet M610",
+    "manufacturer": {
+     "name": "HP",
+     "slug": "hp"
+    },
+    "id": 11
+   },
+   "platform": null,
+   "serial": "HPxxxxx04",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 8,
+    "name": "Upstairs offices",
+    "slug": "upstairs-offices"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.20.31/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Office printer",
+   "tags": [
+    {
+     "name": "Back office",
+     "slug": "zone-office"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-30",
+    "install_date": "2025-01-20"
+   }
+  },
+  {
+   "id": 33,
+   "name": "D01-PAY-01",
+   "role": {
+    "name": "Card terminal",
+    "slug": "card-terminal"
+   },
+   "device_type": {
+    "model": "Card terminal (P2PE)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 12
+   },
+   "platform": null,
+   "serial": "PTxxxxx01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 9,
+    "name": "Service drive",
+    "slug": "service-drive"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.30.11/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Card terminal, service cashier",
+   "tags": [
+    {
+     "name": "Card terminals",
+     "slug": "zone-cde"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-15",
+    "install_date": "2025-06-09"
+   }
+  },
+  {
+   "id": 34,
+   "name": "D01-PAY-02",
+   "role": {
+    "name": "Card terminal",
+    "slug": "card-terminal"
+   },
+   "device_type": {
+    "model": "Card terminal (P2PE)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 12
+   },
+   "platform": null,
+   "serial": "PTxxxxx02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 12,
+    "name": "Parts",
+    "slug": "parts"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.30.12/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Card terminal, parts counter",
+   "tags": [
+    {
+     "name": "Card terminals",
+     "slug": "zone-cde"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-15",
+    "install_date": "2025-06-09"
+   }
+  },
+  {
+   "id": 35,
+   "name": "D01-PAY-03",
+   "role": {
+    "name": "Card terminal",
+    "slug": "card-terminal"
+   },
+   "device_type": {
+    "model": "Card terminal (P2PE)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 12
+   },
+   "platform": null,
+   "serial": "PTxxxxx03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 7,
+    "name": "F&I offices",
+    "slug": "fi-offices"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.30.13/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Card terminal, f&i desk",
+   "tags": [
+    {
+     "name": "Card terminals",
+     "slug": "zone-cde"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-15",
+    "install_date": "2025-06-09"
+   }
+  },
+  {
+   "id": 36,
+   "name": "D01-DIAG-01",
+   "role": {
+    "name": "Diagnostic PC",
+    "slug": "diag-tool"
+   },
+   "device_type": {
+    "model": "Diagnostic PC (manufacturer spec)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 13
+   },
+   "platform": null,
+   "serial": "DGxxxxx01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 11,
+    "name": "Shop",
+    "slug": "shop"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.50.11/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Manufacturer diagnostic and programming PC, bay 2",
+   "tags": [
+    {
+     "name": "Shop and technicians",
+     "slug": "zone-shop"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "medium",
+    "last_config_backup": "2026-10-06",
+    "last_patched": "2026-10-06",
+    "install_date": "2025-02-17"
+   }
+  },
+  {
+   "id": 37,
+   "name": "D01-DIAG-02",
+   "role": {
+    "name": "Diagnostic PC",
+    "slug": "diag-tool"
+   },
+   "device_type": {
+    "model": "Diagnostic PC (manufacturer spec)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 13
+   },
+   "platform": null,
+   "serial": "DGxxxxx02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 11,
+    "name": "Shop",
+    "slug": "shop"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.50.12/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Manufacturer diagnostic and programming PC, bay 8",
+   "tags": [
+    {
+     "name": "Shop and technicians",
+     "slug": "zone-shop"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "medium",
+    "last_config_backup": "2026-10-06",
+    "last_patched": "2026-10-06",
+    "install_date": "2025-02-17"
+   }
+  },
+  {
+   "id": 38,
+   "name": "D01-DIAG-03",
+   "role": {
+    "name": "Diagnostic PC",
+    "slug": "diag-tool"
+   },
+   "device_type": {
+    "model": "Diagnostic PC (manufacturer spec)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 13
+   },
+   "platform": null,
+   "serial": "DGxxxxx03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 11,
+    "name": "Shop",
+    "slug": "shop"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.50.13/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Manufacturer diagnostic and programming PC, bay 14",
+   "tags": [
+    {
+     "name": "Shop and technicians",
+     "slug": "zone-shop"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "medium",
+    "last_config_backup": "2026-10-06",
+    "last_patched": "2026-10-06",
+    "install_date": "2025-02-17"
+   }
+  },
+  {
+   "id": 39,
+   "name": "D01-CAM-01",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "P3268-LVE",
+    "manufacturer": {
+     "name": "Axis",
+     "slug": "axis"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "AXCAMxx01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 6,
+    "name": "Showroom",
+    "slug": "showroom"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.21/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lot and building camera",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-05-09"
+   }
+  },
+  {
+   "id": 40,
+   "name": "D01-CAM-02",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "P3268-LVE",
+    "manufacturer": {
+     "name": "Axis",
+     "slug": "axis"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "AXCAMxx02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 9,
+    "name": "Service drive",
+    "slug": "service-drive"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.22/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lot and building camera",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-05-09"
+   }
+  },
+  {
+   "id": 41,
+   "name": "D01-CAM-03",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "P3268-LVE",
+    "manufacturer": {
+     "name": "Axis",
+     "slug": "axis"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "AXCAMxx03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 13,
+    "name": "Lot",
+    "slug": "lot"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.23/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lot and building camera",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-05-09"
+   }
+  },
+  {
+   "id": 42,
+   "name": "D01-CAM-04",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "P3268-LVE",
+    "manufacturer": {
+     "name": "Axis",
+     "slug": "axis"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "AXCAMxx04",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 13,
+    "name": "Lot",
+    "slug": "lot"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.24/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lot and building camera",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-05-09"
+   }
+  },
+  {
+   "id": 43,
+   "name": "D01-CAM-05",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "P3268-LVE",
+    "manufacturer": {
+     "name": "Axis",
+     "slug": "axis"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "AXCAMxx05",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 11,
+    "name": "Shop",
+    "slug": "shop"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.25/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lot and building camera",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-05-09"
+   }
+  },
+  {
+   "id": 44,
+   "name": "D01-CAM-06",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "P3268-LVE",
+    "manufacturer": {
+     "name": "Axis",
+     "slug": "axis"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "AXCAMxx06",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 11,
+    "name": "Shop",
+    "slug": "shop"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.26/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lot and building camera",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-05-09"
+   }
+  },
+  {
+   "id": 45,
+   "name": "D01-CAM-07",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "P3268-LVE",
+    "manufacturer": {
+     "name": "Axis",
+     "slug": "axis"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "AXCAMxx07",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 13,
+    "name": "Lot",
+    "slug": "lot"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.27/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lot and building camera",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-05-09"
+   }
+  },
+  {
+   "id": 46,
+   "name": "D01-CAM-08",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "P3268-LVE",
+    "manufacturer": {
+     "name": "Axis",
+     "slug": "axis"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "AXCAMxx08",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "location": {
+    "id": 13,
+    "name": "Lot",
+    "slug": "lot"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.28/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lot and building camera",
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-05-09"
+   }
+  }
+ ],
+ "device_types": [
+  {
+   "id": 1,
+   "model": "FortiGate 120G",
+   "manufacturer": {
+    "name": "Fortinet",
+    "slug": "fortinet"
+   },
+   "slug": "fortigate-120g",
+   "custom_fields": {
+    "end_of_sale": "2030-03-31",
+    "end_of_support": "2035-03-31"
+   }
+  },
+  {
+   "id": 2,
+   "model": "OM1204-4E-L",
+   "manufacturer": {
+    "name": "Opengear",
+    "slug": "opengear"
+   },
+   "slug": "om1204-4e-l",
+   "custom_fields": {
+    "end_of_sale": "2028-12-31",
+    "end_of_support": "2031-12-31"
+   }
+  },
+  {
+   "id": 3,
+   "model": "CX 6300M 24SFP+",
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "slug": "cx-6300m-24sfp",
+   "custom_fields": {
+    "end_of_sale": "2029-10-31",
+    "end_of_support": "2034-10-31"
+   }
+  },
+  {
+   "id": 4,
+   "model": "CX 6200F 48G Class4 PoE",
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "slug": "cx-6200f-48g-class4-poe",
+   "custom_fields": {
+    "end_of_sale": "2029-10-31",
+    "end_of_support": "2034-10-31"
+   }
+  },
+  {
+   "id": 5,
+   "model": "ISR1111-4P",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "isr1111-4p",
+   "custom_fields": {
+    "end_of_sale": "2027-05-31",
+    "end_of_support": "2032-05-31"
+   }
+  },
+  {
+   "id": 6,
+   "model": "RS2423RP+",
+   "manufacturer": {
+    "name": "Synology",
+    "slug": "synology"
+   },
+   "slug": "rs2423rp",
+   "custom_fields": {
+    "end_of_sale": "2028-06-30",
+    "end_of_support": "2031-06-30"
+   }
+  },
+  {
+   "id": 7,
+   "model": "Smart-UPS SRT 3000",
+   "manufacturer": {
+    "name": "APC",
+    "slug": "apc"
+   },
+   "slug": "smart-ups-srt-3000",
+   "custom_fields": {
+    "end_of_sale": "2028-12-31",
+    "end_of_support": "2031-12-31"
+   }
+  },
+  {
+   "id": 8,
+   "model": "S3016",
+   "manufacturer": {
+    "name": "Axis",
+    "slug": "axis"
+   },
+   "slug": "s3016",
+   "custom_fields": {
+    "end_of_sale": "2029-12-31",
+    "end_of_support": "2034-12-31"
+   }
+  },
+  {
+   "id": 9,
+   "model": "Key cabinet controller",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "key-cabinet-controller",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 10,
+   "model": "AP-635",
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "slug": "ap-635",
+   "custom_fields": {
+    "end_of_sale": "2030-06-30",
+    "end_of_support": "2035-06-30"
+   }
+  },
+  {
+   "id": 11,
+   "model": "LaserJet M610",
+   "manufacturer": {
+    "name": "HP",
+    "slug": "hp"
+   },
+   "slug": "laserjet-m610",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 12,
+   "model": "Card terminal (P2PE)",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "card-terminal-p2pe",
+   "custom_fields": {
+    "end_of_sale": "2027-09-30",
+    "end_of_support": "2030-09-30"
+   }
+  },
+  {
+   "id": 13,
+   "model": "Diagnostic PC (manufacturer spec)",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "diagnostic-pc-manufacturer-spec",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 14,
+   "model": "P3268-LVE",
+   "manufacturer": {
+    "name": "Axis",
+    "slug": "axis"
+   },
+   "slug": "p3268-lve",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  }
+ ],
+ "virtual_chassis": [
+  {
+   "id": 1,
+   "name": "D01-CORE"
+  },
+  {
+   "id": 2,
+   "name": "D01-ACC-MAIN"
+  },
+  {
+   "id": 3,
+   "name": "D01-ACC-SHOP"
+  }
+ ],
+ "cables": [
+  {
+   "id": 1,
+   "label": "D01-CBL-00001",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 1,
+      "name": "x1",
+      "device": {
+       "id": 1,
+       "name": "D01-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 2,
+      "name": "1/1/1",
+      "device": {
+       "id": 4,
+       "name": "D01-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "label": "D01-CBL-00002",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 3,
+      "name": "x2",
+      "device": {
+       "id": 1,
+       "name": "D01-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 4,
+      "name": "2/1/1",
+      "device": {
+       "id": 5,
+       "name": "D01-CORE-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "label": "D01-CBL-00003",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 5,
+      "name": "x1",
+      "device": {
+       "id": 2,
+       "name": "D01-FW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 6,
+      "name": "1/1/2",
+      "device": {
+       "id": 4,
+       "name": "D01-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "label": "D01-CBL-00004",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 7,
+      "name": "x2",
+      "device": {
+       "id": 2,
+       "name": "D01-FW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 8,
+      "name": "2/1/2",
+      "device": {
+       "id": 5,
+       "name": "D01-CORE-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "label": "D01-CBL-00005",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "9e9e9e",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 9,
+      "name": "ha",
+      "device": {
+       "id": 1,
+       "name": "D01-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 10,
+      "name": "ha",
+      "device": {
+       "id": 2,
+       "name": "D01-FW-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "label": "D01-CBL-00011",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 11,
+      "name": "1/1/11",
+      "device": {
+       "id": 4,
+       "name": "D01-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 12,
+      "name": "1/1/49",
+      "device": {
+       "id": 6,
+       "name": "D01-ACC-MAIN-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "label": "D01-CBL-00012",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 13,
+      "name": "2/1/11",
+      "device": {
+       "id": 5,
+       "name": "D01-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 14,
+      "name": "3/1/49",
+      "device": {
+       "id": 8,
+       "name": "D01-ACC-MAIN-3"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "label": "D01-CBL-00013",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "00bcd4",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 15,
+      "name": "1/1/12",
+      "device": {
+       "id": 4,
+       "name": "D01-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 16,
+      "name": "1/1/49",
+      "device": {
+       "id": 9,
+       "name": "D01-ACC-SHOP-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "label": "D01-CBL-00014",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "00bcd4",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 17,
+      "name": "2/1/12",
+      "device": {
+       "id": 5,
+       "name": "D01-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 18,
+      "name": "2/1/49",
+      "device": {
+       "id": 10,
+       "name": "D01-ACC-SHOP-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "label": "D01-CBL-00025",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 19,
+      "name": "1/1/23",
+      "device": {
+       "id": 4,
+       "name": "D01-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 20,
+      "name": "lan1",
+      "device": {
+       "id": 12,
+       "name": "D01-NAS-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "label": "D01-CBL-00026",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 21,
+      "name": "2/1/19",
+      "device": {
+       "id": 5,
+       "name": "D01-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 22,
+      "name": "gi0/1/0",
+      "device": {
+       "id": 11,
+       "name": "D01-OEM-RTR-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "label": "D01-CBL-00031",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 23,
+      "name": "2/1/45",
+      "device": {
+       "id": 7,
+       "name": "D01-ACC-MAIN-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 24,
+      "name": "eth0",
+      "device": {
+       "id": 15,
+       "name": "D01-NVR-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "label": "D01-CBL-00032",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 25,
+      "name": "2/1/46",
+      "device": {
+       "id": 7,
+       "name": "D01-ACC-MAIN-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 26,
+      "name": "eth0",
+      "device": {
+       "id": 16,
+       "name": "D01-KEY-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "label": "D01-CBL-00033",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 27,
+      "name": "1/1/24",
+      "device": {
+       "id": 4,
+       "name": "D01-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 28,
+      "name": "nmc",
+      "device": {
+       "id": 13,
+       "name": "D01-UPS-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "label": "D01-CBL-00034",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 29,
+      "name": "2/1/24",
+      "device": {
+       "id": 5,
+       "name": "D01-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 30,
+      "name": "nmc",
+      "device": {
+       "id": 14,
+       "name": "D01-UPS-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "label": "D01-CBL-00035",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 31,
+      "name": "1/1/20",
+      "device": {
+       "id": 4,
+       "name": "D01-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 32,
+      "name": "net1",
+      "device": {
+       "id": 3,
+       "name": "D01-OOB-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "label": "D01-CBL-00101",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 33,
+      "name": "1/1/1",
+      "device": {
+       "id": 6,
+       "name": "D01-ACC-MAIN-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 34,
+      "name": "eth0",
+      "device": {
+       "id": 17,
+       "name": "D01-AP-MAIN-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "label": "D01-CBL-00102",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 35,
+      "name": "2/1/1",
+      "device": {
+       "id": 7,
+       "name": "D01-ACC-MAIN-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 36,
+      "name": "eth0",
+      "device": {
+       "id": 18,
+       "name": "D01-AP-MAIN-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "label": "D01-CBL-00103",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 37,
+      "name": "3/1/1",
+      "device": {
+       "id": 8,
+       "name": "D01-ACC-MAIN-3"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 38,
+      "name": "eth0",
+      "device": {
+       "id": 19,
+       "name": "D01-AP-MAIN-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "label": "D01-CBL-00104",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 39,
+      "name": "1/1/2",
+      "device": {
+       "id": 6,
+       "name": "D01-ACC-MAIN-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 40,
+      "name": "eth0",
+      "device": {
+       "id": 20,
+       "name": "D01-AP-MAIN-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "label": "D01-CBL-00105",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 41,
+      "name": "2/1/2",
+      "device": {
+       "id": 7,
+       "name": "D01-ACC-MAIN-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 42,
+      "name": "eth0",
+      "device": {
+       "id": 21,
+       "name": "D01-AP-MAIN-05"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "label": "D01-CBL-00106",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 43,
+      "name": "3/1/2",
+      "device": {
+       "id": 8,
+       "name": "D01-ACC-MAIN-3"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 44,
+      "name": "eth0",
+      "device": {
+       "id": 22,
+       "name": "D01-AP-MAIN-06"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "label": "D01-CBL-00107",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 45,
+      "name": "1/1/3",
+      "device": {
+       "id": 6,
+       "name": "D01-ACC-MAIN-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 46,
+      "name": "eth0",
+      "device": {
+       "id": 23,
+       "name": "D01-AP-MAIN-07"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "label": "D01-CBL-00108",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 47,
+      "name": "2/1/3",
+      "device": {
+       "id": 7,
+       "name": "D01-ACC-MAIN-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 48,
+      "name": "eth0",
+      "device": {
+       "id": 24,
+       "name": "D01-AP-MAIN-08"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "label": "D01-CBL-00109",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 49,
+      "name": "1/1/1",
+      "device": {
+       "id": 9,
+       "name": "D01-ACC-SHOP-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 50,
+      "name": "eth0",
+      "device": {
+       "id": 25,
+       "name": "D01-AP-SHOP-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "label": "D01-CBL-00110",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 51,
+      "name": "2/1/1",
+      "device": {
+       "id": 10,
+       "name": "D01-ACC-SHOP-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 52,
+      "name": "eth0",
+      "device": {
+       "id": 26,
+       "name": "D01-AP-SHOP-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "label": "D01-CBL-00111",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 53,
+      "name": "1/1/2",
+      "device": {
+       "id": 9,
+       "name": "D01-ACC-SHOP-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 54,
+      "name": "eth0",
+      "device": {
+       "id": 27,
+       "name": "D01-AP-SHOP-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "label": "D01-CBL-00112",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 55,
+      "name": "2/1/2",
+      "device": {
+       "id": 10,
+       "name": "D01-ACC-SHOP-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 56,
+      "name": "eth0",
+      "device": {
+       "id": 28,
+       "name": "D01-AP-SHOP-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "label": "D01-CBL-00113",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 57,
+      "name": "3/1/3",
+      "device": {
+       "id": 8,
+       "name": "D01-ACC-MAIN-3"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 58,
+      "name": "eth0",
+      "device": {
+       "id": 29,
+       "name": "D01-PRN-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "label": "D01-CBL-00114",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 59,
+      "name": "1/1/4",
+      "device": {
+       "id": 6,
+       "name": "D01-ACC-MAIN-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 60,
+      "name": "eth0",
+      "device": {
+       "id": 30,
+       "name": "D01-PRN-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "label": "D01-CBL-00115",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 61,
+      "name": "2/1/4",
+      "device": {
+       "id": 7,
+       "name": "D01-ACC-MAIN-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 62,
+      "name": "eth0",
+      "device": {
+       "id": 31,
+       "name": "D01-PRN-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "label": "D01-CBL-00116",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 63,
+      "name": "3/1/4",
+      "device": {
+       "id": 8,
+       "name": "D01-ACC-MAIN-3"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 64,
+      "name": "eth0",
+      "device": {
+       "id": 32,
+       "name": "D01-PRN-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "label": "D01-CBL-00117",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 65,
+      "name": "1/1/5",
+      "device": {
+       "id": 6,
+       "name": "D01-ACC-MAIN-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 66,
+      "name": "eth0",
+      "device": {
+       "id": 33,
+       "name": "D01-PAY-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "label": "D01-CBL-00118",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 67,
+      "name": "2/1/5",
+      "device": {
+       "id": 7,
+       "name": "D01-ACC-MAIN-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 68,
+      "name": "eth0",
+      "device": {
+       "id": 34,
+       "name": "D01-PAY-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "label": "D01-CBL-00119",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 69,
+      "name": "3/1/5",
+      "device": {
+       "id": 8,
+       "name": "D01-ACC-MAIN-3"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 70,
+      "name": "eth0",
+      "device": {
+       "id": 35,
+       "name": "D01-PAY-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "label": "D01-CBL-00120",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 71,
+      "name": "1/1/3",
+      "device": {
+       "id": 9,
+       "name": "D01-ACC-SHOP-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 72,
+      "name": "eth0",
+      "device": {
+       "id": 36,
+       "name": "D01-DIAG-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "label": "D01-CBL-00121",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 73,
+      "name": "2/1/3",
+      "device": {
+       "id": 10,
+       "name": "D01-ACC-SHOP-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 74,
+      "name": "eth0",
+      "device": {
+       "id": 37,
+       "name": "D01-DIAG-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "label": "D01-CBL-00122",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 75,
+      "name": "1/1/4",
+      "device": {
+       "id": 9,
+       "name": "D01-ACC-SHOP-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 76,
+      "name": "eth0",
+      "device": {
+       "id": 38,
+       "name": "D01-DIAG-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "label": "D01-CBL-00123",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 77,
+      "name": "1/1/6",
+      "device": {
+       "id": 6,
+       "name": "D01-ACC-MAIN-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 78,
+      "name": "eth0",
+      "device": {
+       "id": 39,
+       "name": "D01-CAM-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "label": "D01-CBL-00124",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 79,
+      "name": "2/1/6",
+      "device": {
+       "id": 7,
+       "name": "D01-ACC-MAIN-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 80,
+      "name": "eth0",
+      "device": {
+       "id": 40,
+       "name": "D01-CAM-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "label": "D01-CBL-00125",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 81,
+      "name": "2/1/4",
+      "device": {
+       "id": 10,
+       "name": "D01-ACC-SHOP-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 82,
+      "name": "eth0",
+      "device": {
+       "id": 41,
+       "name": "D01-CAM-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "label": "D01-CBL-00126",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 83,
+      "name": "1/1/5",
+      "device": {
+       "id": 9,
+       "name": "D01-ACC-SHOP-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 84,
+      "name": "eth0",
+      "device": {
+       "id": 42,
+       "name": "D01-CAM-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "label": "D01-CBL-00127",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 85,
+      "name": "2/1/5",
+      "device": {
+       "id": 10,
+       "name": "D01-ACC-SHOP-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 86,
+      "name": "eth0",
+      "device": {
+       "id": 43,
+       "name": "D01-CAM-05"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 44,
+   "label": "D01-CBL-00128",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 87,
+      "name": "1/1/6",
+      "device": {
+       "id": 9,
+       "name": "D01-ACC-SHOP-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 88,
+      "name": "eth0",
+      "device": {
+       "id": 44,
+       "name": "D01-CAM-06"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "label": "D01-CBL-00129",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 89,
+      "name": "2/1/6",
+      "device": {
+       "id": 10,
+       "name": "D01-ACC-SHOP-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 90,
+      "name": "eth0",
+      "device": {
+       "id": 45,
+       "name": "D01-CAM-07"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "label": "D01-CBL-00130",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 91,
+      "name": "1/1/7",
+      "device": {
+       "id": 9,
+       "name": "D01-ACC-SHOP-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 92,
+      "name": "eth0",
+      "device": {
+       "id": 46,
+       "name": "D01-CAM-08"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "modules": [],
+ "module_bays": [],
+ "inventory_items": [
+  {
+   "id": 1,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "J9150D",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "J9150D",
+   "serial": "SGxxxxx51",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 15,
+    "name": "1/1/12"
+   }
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 9,
+    "name": "D01-ACC-SHOP-1"
+   },
+   "name": "J9150D",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "J9150D",
+   "serial": "CNxxxxx52",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 16,
+    "name": "1/1/49"
+   }
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "J9150D",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "J9150D",
+   "serial": "SGxxxxx53",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 17,
+    "name": "2/1/12"
+   }
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 10,
+    "name": "D01-ACC-SHOP-2"
+   },
+   "name": "J9150D",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "J9150D",
+   "serial": "CNxxxxx54",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 18,
+    "name": "2/1/49"
+   }
+  },
+  {
+   "id": 5,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "JL086A",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL086A",
+   "serial": "SGxxxxx55",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 6,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "JL086A",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL086A",
+   "serial": "SGxxxxx56",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 7,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "JL669A",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL669A",
+   "serial": "SGxxxxx57",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 8,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "JL669A",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL669A",
+   "serial": "SGxxxxx58",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "JL086A",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL086A",
+   "serial": "SGxxxxx59",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 10,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "JL086A",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL086A",
+   "serial": "SGxxxxx60",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 11,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "JL669A",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL669A",
+   "serial": "SGxxxxx61",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 12,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "JL669A",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "part_id": "JL669A",
+   "serial": "SGxxxxx62",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  }
+ ],
+ "vlans": [
+  {
+   "id": 1,
+   "vid": 10,
+   "name": "SALES",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Sales floor",
+     "slug": "zone-sales"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "vid": 11,
+   "name": "SALES-WIFI",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Sales floor",
+     "slug": "zone-sales"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "vid": 15,
+   "name": "FI",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Finance and insurance",
+     "slug": "zone-fi"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "vid": 20,
+   "name": "OFFICE",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Back office",
+     "slug": "zone-office"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "vid": 25,
+   "name": "FILES",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Back office",
+     "slug": "zone-office"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "vid": 30,
+   "name": "CARD",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Card terminals",
+     "slug": "zone-cde"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "vid": 40,
+   "name": "SERVICE",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Service drive",
+     "slug": "zone-service"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "vid": 41,
+   "name": "SERVICE-WIFI",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Service drive",
+     "slug": "zone-service"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "vid": 50,
+   "name": "SHOP",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Shop and technicians",
+     "slug": "zone-shop"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "vid": 51,
+   "name": "SHOP-WIFI",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Shop and technicians",
+     "slug": "zone-shop"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "vid": 55,
+   "name": "PARTS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Parts",
+     "slug": "zone-parts"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "vid": 65,
+   "name": "OEM-LINK",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Manufacturer link",
+     "slug": "zone-oem"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "vid": 70,
+   "name": "GUEST",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Customer Wi-Fi",
+     "slug": "zone-guest"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "vid": 75,
+   "name": "VOICE",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Phones",
+     "slug": "zone-voice"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "vid": 80,
+   "name": "CAMERAS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "vid": 81,
+   "name": "BLDG-SYS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "vid": 99,
+   "name": "NET-MGMT",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ]
+  }
+ ],
+ "prefixes": [
+  {
+   "id": 1,
+   "prefix": "10.30.10.0/24",
+   "vlan": {
+    "id": 1,
+    "vid": 10
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Sales floor",
+     "slug": "zone-sales"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 2,
+   "prefix": "10.30.11.0/24",
+   "vlan": {
+    "id": 2,
+    "vid": 11
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Sales floor",
+     "slug": "zone-sales"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 3,
+   "prefix": "10.30.15.0/24",
+   "vlan": {
+    "id": 3,
+    "vid": 15
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Finance and insurance",
+     "slug": "zone-fi"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "compliance_scope": [
+     "glba"
+    ],
+    "data_classification": "confidential"
+   }
+  },
+  {
+   "id": 4,
+   "prefix": "10.30.20.0/24",
+   "vlan": {
+    "id": 4,
+    "vid": 20
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Back office",
+     "slug": "zone-office"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "compliance_scope": [
+     "glba"
+    ],
+    "data_classification": "confidential"
+   }
+  },
+  {
+   "id": 5,
+   "prefix": "10.30.25.0/24",
+   "vlan": {
+    "id": 5,
+    "vid": 25
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Back office",
+     "slug": "zone-office"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "compliance_scope": [
+     "glba"
+    ],
+    "data_classification": "confidential"
+   }
+  },
+  {
+   "id": 6,
+   "prefix": "10.30.30.0/26",
+   "vlan": {
+    "id": 6,
+    "vid": 30
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Card terminals",
+     "slug": "zone-cde"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "compliance_scope": [
+     "pci-cde"
+    ],
+    "data_classification": "confidential"
+   }
+  },
+  {
+   "id": 7,
+   "prefix": "10.30.40.0/24",
+   "vlan": {
+    "id": 7,
+    "vid": 40
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Service drive",
+     "slug": "zone-service"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 8,
+   "prefix": "10.30.41.0/24",
+   "vlan": {
+    "id": 8,
+    "vid": 41
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Service drive",
+     "slug": "zone-service"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 9,
+   "prefix": "10.30.50.0/24",
+   "vlan": {
+    "id": 9,
+    "vid": 50
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Shop and technicians",
+     "slug": "zone-shop"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 10,
+   "prefix": "10.30.51.0/24",
+   "vlan": {
+    "id": 10,
+    "vid": 51
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Shop and technicians",
+     "slug": "zone-shop"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 11,
+   "prefix": "10.30.55.0/24",
+   "vlan": {
+    "id": 11,
+    "vid": 55
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Parts",
+     "slug": "zone-parts"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 12,
+   "prefix": "10.30.65.0/29",
+   "vlan": {
+    "id": 12,
+    "vid": 65
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Manufacturer link",
+     "slug": "zone-oem"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 13,
+   "prefix": "172.16.70.0/23",
+   "vlan": {
+    "id": 13,
+    "vid": 70
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Customer Wi-Fi",
+     "slug": "zone-guest"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "data_classification": "public"
+   }
+  },
+  {
+   "id": 14,
+   "prefix": "10.30.75.0/24",
+   "vlan": {
+    "id": 14,
+    "vid": 75
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Phones",
+     "slug": "zone-voice"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 15,
+   "prefix": "10.30.80.0/24",
+   "vlan": {
+    "id": 15,
+    "vid": 80
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 16,
+   "prefix": "10.30.81.0/24",
+   "vlan": {
+    "id": 16,
+    "vid": 81
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Building and lot",
+     "slug": "zone-building"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 17,
+   "prefix": "10.30.99.0/24",
+   "vlan": {
+    "id": 17,
+    "vid": 99
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  }
+ ],
+ "circuits": [
+  {
+   "id": 1,
+   "cid": "D01-ISP-A-01",
+   "provider": {
+    "name": "Provider A"
+   },
+   "type": {
+    "name": "Dedicated internet access"
+   },
+   "commit_rate": 1000000,
+   "status": {
+    "value": "active"
+   },
+   "description": "DIA 1G · fiber ONT"
+  },
+  {
+   "id": 2,
+   "cid": "D01-ISP-B-01",
+   "provider": {
+    "name": "Provider B"
+   },
+   "type": {
+    "name": "Business cable"
+   },
+   "commit_rate": 500000,
+   "status": {
+    "value": "active"
+   },
+   "description": "Cable 500/50 · modem"
+  },
+  {
+   "id": 3,
+   "cid": "D01-OEM-01",
+   "provider": {
+    "name": "Manufacturer network"
+   },
+   "type": {
+    "name": "Manufacturer dealer network"
+   },
+   "commit_rate": 100000,
+   "status": {
+    "value": "active"
+   },
+   "description": "Manufacturer's circuit · 100M"
+  }
+ ],
+ "interfaces": [
+  {
+   "id": 1,
+   "device": {
+    "id": 1,
+    "name": "D01-FW-01"
+   },
+   "name": "x1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po1"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 65
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "1/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po1"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 65
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 1,
+    "name": "D01-FW-01"
+   },
+   "name": "x2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po1"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 65
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "2/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po1"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 65
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 5,
+   "device": {
+    "id": 2,
+    "name": "D01-FW-02"
+   },
+   "name": "x1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po2"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 65
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 6,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "1/1/2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po2"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 65
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 7,
+   "device": {
+    "id": 2,
+    "name": "D01-FW-02"
+   },
+   "name": "x2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po2"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 65
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 8,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "2/1/2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po2"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 65
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 1,
+    "name": "D01-FW-01"
+   },
+   "name": "ha",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 10,
+   "device": {
+    "id": 2,
+    "name": "D01-FW-02"
+   },
+   "name": "ha",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 11,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "1/1/11",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po11"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 12,
+   "device": {
+    "id": 6,
+    "name": "D01-ACC-MAIN-1"
+   },
+   "name": "1/1/49",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po11"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 13,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "2/1/11",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po11"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 14,
+   "device": {
+    "id": 8,
+    "name": "D01-ACC-MAIN-3"
+   },
+   "name": "3/1/49",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po11"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 55
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 15,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "1/1/12",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po12"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 16,
+   "device": {
+    "id": 9,
+    "name": "D01-ACC-SHOP-1"
+   },
+   "name": "1/1/49",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po12"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 17,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "2/1/12",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po12"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 18,
+   "device": {
+    "id": 10,
+    "name": "D01-ACC-SHOP-2"
+   },
+   "name": "2/1/49",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po12"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 50
+    },
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 75
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 19,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "1/1/23",
+   "type": {
+    "value": "10gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 25
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 20,
+   "device": {
+    "id": 12,
+    "name": "D01-NAS-01"
+   },
+   "name": "lan1",
+   "type": {
+    "value": "10gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 25
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 21,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "2/1/19",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 65
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 22,
+   "device": {
+    "id": 11,
+    "name": "D01-OEM-RTR-01"
+   },
+   "name": "gi0/1/0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 65
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 23,
+   "device": {
+    "id": 7,
+    "name": "D01-ACC-MAIN-2"
+   },
+   "name": "2/1/45",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 24,
+   "device": {
+    "id": 15,
+    "name": "D01-NVR-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 25,
+   "device": {
+    "id": 7,
+    "name": "D01-ACC-MAIN-2"
+   },
+   "name": "2/1/46",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 81
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 26,
+   "device": {
+    "id": 16,
+    "name": "D01-KEY-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 81
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 27,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "1/1/24",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 28,
+   "device": {
+    "id": 13,
+    "name": "D01-UPS-01"
+   },
+   "name": "nmc",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 29,
+   "device": {
+    "id": 5,
+    "name": "D01-CORE-2"
+   },
+   "name": "2/1/24",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 30,
+   "device": {
+    "id": 14,
+    "name": "D01-UPS-02"
+   },
+   "name": "nmc",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 31,
+   "device": {
+    "id": 4,
+    "name": "D01-CORE-1"
+   },
+   "name": "1/1/20",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 32,
+   "device": {
+    "id": 3,
+    "name": "D01-OOB-01"
+   },
+   "name": "net1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 33,
+   "device": {
+    "id": 6,
+    "name": "D01-ACC-MAIN-1"
+   },
+   "name": "1/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 34,
+   "device": {
+    "id": 17,
+    "name": "D01-AP-MAIN-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 35,
+   "device": {
+    "id": 7,
+    "name": "D01-ACC-MAIN-2"
+   },
+   "name": "2/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 36,
+   "device": {
+    "id": 18,
+    "name": "D01-AP-MAIN-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 37,
+   "device": {
+    "id": 8,
+    "name": "D01-ACC-MAIN-3"
+   },
+   "name": "3/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 38,
+   "device": {
+    "id": 19,
+    "name": "D01-AP-MAIN-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 39,
+   "device": {
+    "id": 6,
+    "name": "D01-ACC-MAIN-1"
+   },
+   "name": "1/1/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 40,
+   "device": {
+    "id": 20,
+    "name": "D01-AP-MAIN-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 41,
+   "device": {
+    "id": 7,
+    "name": "D01-ACC-MAIN-2"
+   },
+   "name": "2/1/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 42,
+   "device": {
+    "id": 21,
+    "name": "D01-AP-MAIN-05"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 43,
+   "device": {
+    "id": 8,
+    "name": "D01-ACC-MAIN-3"
+   },
+   "name": "3/1/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 44,
+   "device": {
+    "id": 22,
+    "name": "D01-AP-MAIN-06"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 45,
+   "device": {
+    "id": 6,
+    "name": "D01-ACC-MAIN-1"
+   },
+   "name": "1/1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 46,
+   "device": {
+    "id": 23,
+    "name": "D01-AP-MAIN-07"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 47,
+   "device": {
+    "id": 7,
+    "name": "D01-ACC-MAIN-2"
+   },
+   "name": "2/1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 48,
+   "device": {
+    "id": 24,
+    "name": "D01-AP-MAIN-08"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 41
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 49,
+   "device": {
+    "id": 9,
+    "name": "D01-ACC-SHOP-1"
+   },
+   "name": "1/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 50,
+   "device": {
+    "id": 25,
+    "name": "D01-AP-SHOP-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 51,
+   "device": {
+    "id": 10,
+    "name": "D01-ACC-SHOP-2"
+   },
+   "name": "2/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 52,
+   "device": {
+    "id": 26,
+    "name": "D01-AP-SHOP-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 53,
+   "device": {
+    "id": 9,
+    "name": "D01-ACC-SHOP-1"
+   },
+   "name": "1/1/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 54,
+   "device": {
+    "id": 27,
+    "name": "D01-AP-SHOP-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 55,
+   "device": {
+    "id": 10,
+    "name": "D01-ACC-SHOP-2"
+   },
+   "name": "2/1/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 56,
+   "device": {
+    "id": 28,
+    "name": "D01-AP-SHOP-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 51
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 57,
+   "device": {
+    "id": 8,
+    "name": "D01-ACC-MAIN-3"
+   },
+   "name": "3/1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 15
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 58,
+   "device": {
+    "id": 29,
+    "name": "D01-PRN-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 15
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 59,
+   "device": {
+    "id": 6,
+    "name": "D01-ACC-MAIN-1"
+   },
+   "name": "1/1/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 40
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 60,
+   "device": {
+    "id": 30,
+    "name": "D01-PRN-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 40
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 61,
+   "device": {
+    "id": 7,
+    "name": "D01-ACC-MAIN-2"
+   },
+   "name": "2/1/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 55
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 62,
+   "device": {
+    "id": 31,
+    "name": "D01-PRN-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 55
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 63,
+   "device": {
+    "id": 8,
+    "name": "D01-ACC-MAIN-3"
+   },
+   "name": "3/1/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 20
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 64,
+   "device": {
+    "id": 32,
+    "name": "D01-PRN-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 20
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 65,
+   "device": {
+    "id": 6,
+    "name": "D01-ACC-MAIN-1"
+   },
+   "name": "1/1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 30
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 66,
+   "device": {
+    "id": 33,
+    "name": "D01-PAY-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 30
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 67,
+   "device": {
+    "id": 7,
+    "name": "D01-ACC-MAIN-2"
+   },
+   "name": "2/1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 30
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 68,
+   "device": {
+    "id": 34,
+    "name": "D01-PAY-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 30
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 69,
+   "device": {
+    "id": 8,
+    "name": "D01-ACC-MAIN-3"
+   },
+   "name": "3/1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 30
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 70,
+   "device": {
+    "id": 35,
+    "name": "D01-PAY-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 30
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 71,
+   "device": {
+    "id": 9,
+    "name": "D01-ACC-SHOP-1"
+   },
+   "name": "1/1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 50
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 72,
+   "device": {
+    "id": 36,
+    "name": "D01-DIAG-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 50
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 73,
+   "device": {
+    "id": 10,
+    "name": "D01-ACC-SHOP-2"
+   },
+   "name": "2/1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 50
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 74,
+   "device": {
+    "id": 37,
+    "name": "D01-DIAG-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 50
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 75,
+   "device": {
+    "id": 9,
+    "name": "D01-ACC-SHOP-1"
+   },
+   "name": "1/1/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 50
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 76,
+   "device": {
+    "id": 38,
+    "name": "D01-DIAG-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 50
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 77,
+   "device": {
+    "id": 6,
+    "name": "D01-ACC-MAIN-1"
+   },
+   "name": "1/1/6",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 78,
+   "device": {
+    "id": 39,
+    "name": "D01-CAM-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 79,
+   "device": {
+    "id": 7,
+    "name": "D01-ACC-MAIN-2"
+   },
+   "name": "2/1/6",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 80,
+   "device": {
+    "id": 40,
+    "name": "D01-CAM-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 81,
+   "device": {
+    "id": 10,
+    "name": "D01-ACC-SHOP-2"
+   },
+   "name": "2/1/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 82,
+   "device": {
+    "id": 41,
+    "name": "D01-CAM-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 83,
+   "device": {
+    "id": 9,
+    "name": "D01-ACC-SHOP-1"
+   },
+   "name": "1/1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 84,
+   "device": {
+    "id": 42,
+    "name": "D01-CAM-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 85,
+   "device": {
+    "id": 10,
+    "name": "D01-ACC-SHOP-2"
+   },
+   "name": "2/1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 86,
+   "device": {
+    "id": 43,
+    "name": "D01-CAM-05"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 87,
+   "device": {
+    "id": 9,
+    "name": "D01-ACC-SHOP-1"
+   },
+   "name": "1/1/6",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 88,
+   "device": {
+    "id": 44,
+    "name": "D01-CAM-06"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 89,
+   "device": {
+    "id": 10,
+    "name": "D01-ACC-SHOP-2"
+   },
+   "name": "2/1/6",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 90,
+   "device": {
+    "id": 45,
+    "name": "D01-CAM-07"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 91,
+   "device": {
+    "id": 9,
+    "name": "D01-ACC-SHOP-1"
+   },
+   "name": "1/1/7",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 92,
+   "device": {
+    "id": 46,
+    "name": "D01-CAM-08"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 93,
+   "device": {
+    "id": 17,
+    "name": "D01-AP-MAIN-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 94,
+   "device": {
+    "id": 17,
+    "name": "D01-AP-MAIN-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-SERVICE"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 95,
+   "device": {
+    "id": 17,
+    "name": "D01-AP-MAIN-01"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 96,
+   "device": {
+    "id": 18,
+    "name": "D01-AP-MAIN-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 97,
+   "device": {
+    "id": 18,
+    "name": "D01-AP-MAIN-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-SERVICE"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 98,
+   "device": {
+    "id": 18,
+    "name": "D01-AP-MAIN-02"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 99,
+   "device": {
+    "id": 19,
+    "name": "D01-AP-MAIN-03"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 100,
+   "device": {
+    "id": 19,
+    "name": "D01-AP-MAIN-03"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-SERVICE"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 101,
+   "device": {
+    "id": 19,
+    "name": "D01-AP-MAIN-03"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 102,
+   "device": {
+    "id": 20,
+    "name": "D01-AP-MAIN-04"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 103,
+   "device": {
+    "id": 20,
+    "name": "D01-AP-MAIN-04"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-SERVICE"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 104,
+   "device": {
+    "id": 20,
+    "name": "D01-AP-MAIN-04"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 105,
+   "device": {
+    "id": 21,
+    "name": "D01-AP-MAIN-05"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 106,
+   "device": {
+    "id": 21,
+    "name": "D01-AP-MAIN-05"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-SERVICE"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 107,
+   "device": {
+    "id": 21,
+    "name": "D01-AP-MAIN-05"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 108,
+   "device": {
+    "id": 22,
+    "name": "D01-AP-MAIN-06"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 109,
+   "device": {
+    "id": 22,
+    "name": "D01-AP-MAIN-06"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-SERVICE"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 110,
+   "device": {
+    "id": 22,
+    "name": "D01-AP-MAIN-06"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 111,
+   "device": {
+    "id": 23,
+    "name": "D01-AP-MAIN-07"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 112,
+   "device": {
+    "id": 23,
+    "name": "D01-AP-MAIN-07"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-SERVICE"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 113,
+   "device": {
+    "id": 23,
+    "name": "D01-AP-MAIN-07"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 114,
+   "device": {
+    "id": 24,
+    "name": "D01-AP-MAIN-08"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 115,
+   "device": {
+    "id": 24,
+    "name": "D01-AP-MAIN-08"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-SERVICE"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 116,
+   "device": {
+    "id": 24,
+    "name": "D01-AP-MAIN-08"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 117,
+   "device": {
+    "id": 25,
+    "name": "D01-AP-SHOP-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "KV-SHOP"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 118,
+   "device": {
+    "id": 25,
+    "name": "D01-AP-SHOP-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "KV-SHOP"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 119,
+   "device": {
+    "id": 25,
+    "name": "D01-AP-SHOP-01"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": []
+  },
+  {
+   "id": 120,
+   "device": {
+    "id": 26,
+    "name": "D01-AP-SHOP-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "KV-SHOP"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 121,
+   "device": {
+    "id": 26,
+    "name": "D01-AP-SHOP-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "KV-SHOP"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 122,
+   "device": {
+    "id": 26,
+    "name": "D01-AP-SHOP-02"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": []
+  },
+  {
+   "id": 123,
+   "device": {
+    "id": 27,
+    "name": "D01-AP-SHOP-03"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "KV-SHOP"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 124,
+   "device": {
+    "id": 27,
+    "name": "D01-AP-SHOP-03"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "KV-SHOP"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 125,
+   "device": {
+    "id": 27,
+    "name": "D01-AP-SHOP-03"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": []
+  },
+  {
+   "id": 126,
+   "device": {
+    "id": 28,
+    "name": "D01-AP-SHOP-04"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "KV-SHOP"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 127,
+   "device": {
+    "id": 28,
+    "name": "D01-AP-SHOP-04"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "KV-SHOP"
+    },
+    {
+     "id": 4,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 128,
+   "device": {
+    "id": 28,
+    "name": "D01-AP-SHOP-04"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": []
+  }
+ ],
+ "wireless_links": [],
+ "wireless_lans": [
+  {
+   "id": 1,
+   "ssid": "KV-STAFF",
+   "description": "Sales tablets and staff laptops; EAP-TLS with device certificates",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 2,
+    "vid": 11,
+    "name": "SALES-WIFI"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Sales floor",
+     "slug": "zone-sales"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_eap": "EAP-TLS",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "5ghz",
+     "6ghz"
+    ]
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   }
+  },
+  {
+   "id": 2,
+   "ssid": "KV-SERVICE",
+   "description": "Write-up tablets in the service drive; EAP-TLS",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 8,
+    "vid": 41,
+    "name": "SERVICE-WIFI"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Service drive",
+     "slug": "zone-service"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_eap": "EAP-TLS",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "5ghz"
+    ]
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   }
+  },
+  {
+   "id": 3,
+   "ssid": "KV-SHOP",
+   "description": "Shop tablets and diagnostic interfaces that can't do 802.1X",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 10,
+    "vid": 51,
+    "name": "SHOP-WIFI"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Shop and technicians",
+     "slug": "zone-shop"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "wpa2-psk",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "2.4ghz",
+     "5ghz"
+    ]
+   },
+   "auth_type": {
+    "value": "wpa-personal",
+    "label": "WPA Personal (PSK)"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   }
+  },
+  {
+   "id": 4,
+   "ssid": "KV-GUEST",
+   "description": "Customers in the lounge and showroom; internet only, 25 Mb/s per client",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 13,
+    "vid": 70,
+    "name": "GUEST"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Kestrel Valley Motors",
+    "slug": "d01"
+   },
+   "tags": [
+    {
+     "name": "Customer Wi-Fi",
+     "slug": "zone-guest"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "open-portal",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "2.4ghz",
+     "5ghz"
+    ],
+    "wlan_client_isolation": true,
+    "wlan_portal": "captive"
+   },
+   "auth_type": {
+    "value": "open",
+    "label": "Open"
+   },
+   "auth_cipher": null
+  }
+ ],
+ "ip_addresses": [],
+ "contact_assignments": [
+  {
+   "id": 1,
+   "object_type": "dcim.site",
+   "object_id": 1,
+   "contact": {
+    "id": 1,
+    "name": "IT manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 2,
+   "object_type": "dcim.site",
+   "object_id": 1,
+   "contact": {
+    "id": 2,
+    "name": "MSP service desk"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 3,
+   "object_type": "dcim.device",
+   "object_id": 11,
+   "contact": {
+    "id": 3,
+    "name": "The manufacturer"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 4,
+   "object_type": "dcim.device",
+   "object_id": 11,
+   "contact": {
+    "id": 4,
+    "name": "Manufacturer's field IT"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 5,
+   "object_type": "dcim.device",
+   "object_id": 15,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 6,
+   "object_type": "dcim.device",
+   "object_id": 15,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 7,
+   "object_type": "dcim.device",
+   "object_id": 16,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 8,
+   "object_type": "dcim.device",
+   "object_id": 16,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 9,
+   "object_type": "dcim.device",
+   "object_id": 39,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 10,
+   "object_type": "dcim.device",
+   "object_id": 39,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 11,
+   "object_type": "dcim.device",
+   "object_id": 40,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 12,
+   "object_type": "dcim.device",
+   "object_id": 40,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 13,
+   "object_type": "dcim.device",
+   "object_id": 41,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 14,
+   "object_type": "dcim.device",
+   "object_id": 41,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 15,
+   "object_type": "dcim.device",
+   "object_id": 42,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 16,
+   "object_type": "dcim.device",
+   "object_id": 42,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 17,
+   "object_type": "dcim.device",
+   "object_id": 43,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 18,
+   "object_type": "dcim.device",
+   "object_id": 43,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 19,
+   "object_type": "dcim.device",
+   "object_id": 44,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 20,
+   "object_type": "dcim.device",
+   "object_id": 44,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 21,
+   "object_type": "dcim.device",
+   "object_id": 45,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 22,
+   "object_type": "dcim.device",
+   "object_id": 45,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 23,
+   "object_type": "dcim.device",
+   "object_id": 46,
+   "contact": {
+    "id": 5,
+    "name": "General manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 24,
+   "object_type": "dcim.device",
+   "object_id": 46,
+   "contact": {
+    "id": 6,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  }
+ ]
+}

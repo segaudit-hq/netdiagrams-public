@@ -16,7 +16,7 @@ from __future__ import annotations
 from .profiles import Profile, register
 
 BOOK = "Draw Secure Small Office Network Diagrams"
-BOOK_URL = "https://netdiagrams.com/books/office-network-diagrams/"
+BOOK_URL = "https://netdiagrams.com/books/small-office-network-diagrams/"
 
 # Zone tag slug -> tag name, in band order. The sample's tags and netbox-setup use these.
 ZONE_NAMES = {

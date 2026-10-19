@@ -52,7 +52,8 @@ CHOICE_SETS = {
         ("pci-cde", "PCI DSS cardholder data environment"), ("pci-connected", "PCI DSS connected-to system"),
         ("nerc-cip", "NERC CIP BES Cyber System"), ("safety", "Safety instrumented system (IEC 61511)"),
         ("gxp", "GxP / GDP (FDA 21 CFR Part 11)"), ("hipaa", "HIPAA ePHI"), ("sox", "SOX financial reporting"),
-        ("cui", "CMMC / NIST SP 800-171 CUI"), ("ferpa", "FERPA student records")],
+        ("cui", "CMMC / NIST SP 800-171 CUI"), ("ferpa", "FERPA student records"),
+        ("glba", "GLBA customer information"), ("cjis", "CJIS criminal justice information")],
     "Data classification": [("public", "Public"), ("internal", "Internal"), ("confidential", "Confidential"),
                             ("restricted", "Restricted")],
     "Physical access": [("open", "Open area"), ("locked-cabinet", "Locked cabinet"), ("locked-room", "Locked room"),
@@ -73,7 +74,7 @@ def choices(name: str) -> list[tuple[str, str]]:
 
 SHORT = {  # the register's words for each choice
     "pci-cde": "PCI CDE", "pci-connected": "PCI connected", "nerc-cip": "NERC CIP", "safety": "Safety", "gxp": "GxP",
-    "hipaa": "HIPAA", "sox": "SOX", "cui": "CUI", "ferpa": "FERPA",
+    "hipaa": "HIPAA", "sox": "SOX", "cui": "CUI", "ferpa": "FERPA", "glba": "GLBA", "cjis": "CJIS",
     "open": "Open area", "locked-cabinet": "Locked cabinet", "locked-room": "Locked room", "badge": "Badge",
     "badge-camera": "Badge + camera",
     "alerting": "Alerts on", "polling": "No alerts", "passive": "Passive (IDS or sensor)", "none": "None",

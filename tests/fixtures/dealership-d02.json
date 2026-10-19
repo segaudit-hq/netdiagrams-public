@@ -1,0 +1,1497 @@
+{
+ "format": "netdiagrams-export/1",
+ "netbox_version": "sample",
+ "netbox_url": "",
+ "exported_at": "2026-10-18T08:00:00Z",
+ "site": {
+  "id": 2,
+  "name": "Kestrel Valley Pre-Owned",
+  "slug": "d02",
+  "facility": "D02",
+  "custom_fields": {
+   "netdiagrams": {
+    "profile": "dealership"
+   },
+   "wireless_management": "cloud",
+   "wireless_manager": "Cloud Wi-Fi dashboard",
+   "monitoring": "alerting",
+   "monitored_by": "MSP monitoring (RMM)",
+   "log_forwarding": "siem",
+   "log_destination": "MSP SIEM, syslog over TLS",
+   "log_retention_days": 365,
+   "last_verified": "2026-08-28"
+  }
+ },
+ "locations": [
+  {
+   "id": 1,
+   "name": "CAB-1",
+   "slug": "cab-1",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "locked-cabinet",
+    "data_classification": "internal",
+    "last_verified": "2026-08-28"
+   }
+  },
+  {
+   "id": 2,
+   "name": "Sales floor",
+   "slug": "sales-floor",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "open"
+   }
+  }
+ ],
+ "devices": [
+  {
+   "id": 1,
+   "name": "D02-FW-01",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "FortiGate 40F-3G4G",
+    "manufacturer": {
+     "name": "Fortinet",
+     "slug": "fortinet"
+    },
+    "id": 1
+   },
+   "platform": {
+    "name": "fortios",
+    "slug": "fortios"
+   },
+   "serial": "FGxxxxxxxx21",
+   "asset_tag": "KV-0201",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Kestrel Valley Pre-Owned",
+    "slug": "d02"
+   },
+   "location": {
+    "id": 1,
+    "name": "CAB-1",
+    "slug": "cab-1"
+   },
+   "rack": {
+    "name": "CAB-1",
+    "slug": "cab-1"
+   },
+   "position": 8.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.31.99.2/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Pre-owned store firewall with cellular backup",
+   "tags": [
+    {
+     "name": "Firewall and remote access",
+     "slug": "zone-edge"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "FortiOS 7.4.x",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-09-24",
+    "install_date": "2024-03-18"
+   }
+  },
+  {
+   "id": 2,
+   "name": "D02-ACC-1",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "CX 6100 24G Class4 PoE",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 2
+   },
+   "platform": {
+    "name": "aos-cx",
+    "slug": "aos-cx"
+   },
+   "serial": "CNxxxxxx41",
+   "asset_tag": "KV-0202",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Kestrel Valley Pre-Owned",
+    "slug": "d02"
+   },
+   "location": {
+    "id": 1,
+    "name": "CAB-1",
+    "slug": "cab-1"
+   },
+   "rack": {
+    "name": "CAB-1",
+    "slug": "cab-1"
+   },
+   "position": 10.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.31.99.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Pre-owned store access switch",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "AOS-CX 10.13.x",
+    "criticality": "high",
+    "last_config_backup": "2026-10-14",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-03-18"
+   }
+  },
+  {
+   "id": 3,
+   "name": "D02-AP-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-615",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxx41",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Kestrel Valley Pre-Owned",
+    "slug": "d02"
+   },
+   "location": {
+    "id": 2,
+    "name": "Sales floor",
+    "slug": "sales-floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.31.99.101/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Sales floor ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 4,
+   "name": "D02-AP-02",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "AP-615",
+    "manufacturer": {
+     "name": "HPE Aruba Networking",
+     "slug": "hpe-aruba-networking"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "aos-ap",
+    "slug": "aos-ap"
+   },
+   "serial": "CNAPxx42",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Kestrel Valley Pre-Owned",
+    "slug": "d02"
+   },
+   "location": {
+    "id": 2,
+    "name": "Sales floor",
+    "slug": "sales-floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.31.99.102/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Closing office ceiling AP",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-04-02"
+   }
+  },
+  {
+   "id": 5,
+   "name": "D02-PRN-01",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "LaserJet M610",
+    "manufacturer": {
+     "name": "HP",
+     "slug": "hp"
+    },
+    "id": 4
+   },
+   "platform": null,
+   "serial": "HPxxxxx41",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Kestrel Valley Pre-Owned",
+    "slug": "d02"
+   },
+   "location": {
+    "id": 2,
+    "name": "Sales floor",
+    "slug": "sales-floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.31.15.31/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Closing office printer",
+   "tags": [
+    {
+     "name": "Finance and insurance",
+     "slug": "zone-fi"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-30",
+    "install_date": "2025-01-20"
+   }
+  },
+  {
+   "id": 6,
+   "name": "D02-PAY-01",
+   "role": {
+    "name": "Card terminal",
+    "slug": "card-terminal"
+   },
+   "device_type": {
+    "model": "Card terminal (P2PE)",
+    "manufacturer": {
+     "name": "Generic",
+     "slug": "generic"
+    },
+    "id": 5
+   },
+   "platform": null,
+   "serial": "PTxxxxx41",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "name": "Kestrel Valley Pre-Owned",
+    "slug": "d02"
+   },
+   "location": {
+    "id": 2,
+    "name": "Sales floor",
+    "slug": "sales-floor"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.31.30.11/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Card terminal, closing office",
+   "tags": [
+    {
+     "name": "Card terminals",
+     "slug": "zone-cde"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-15",
+    "install_date": "2025-06-09"
+   }
+  }
+ ],
+ "device_types": [
+  {
+   "id": 1,
+   "model": "FortiGate 40F-3G4G",
+   "manufacturer": {
+    "name": "Fortinet",
+    "slug": "fortinet"
+   },
+   "slug": "fortigate-40f-3g4g",
+   "custom_fields": {
+    "end_of_sale": "2027-09-30",
+    "end_of_support": "2032-09-30"
+   }
+  },
+  {
+   "id": 2,
+   "model": "CX 6100 24G Class4 PoE",
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "slug": "cx-6100-24g-class4-poe",
+   "custom_fields": {
+    "end_of_sale": "2029-10-31",
+    "end_of_support": "2034-10-31"
+   }
+  },
+  {
+   "id": 3,
+   "model": "AP-615",
+   "manufacturer": {
+    "name": "HPE Aruba Networking",
+    "slug": "hpe-aruba-networking"
+   },
+   "slug": "ap-615",
+   "custom_fields": {
+    "end_of_sale": "2030-06-30",
+    "end_of_support": "2035-06-30"
+   }
+  },
+  {
+   "id": 4,
+   "model": "LaserJet M610",
+   "manufacturer": {
+    "name": "HP",
+    "slug": "hp"
+   },
+   "slug": "laserjet-m610",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 5,
+   "model": "Card terminal (P2PE)",
+   "manufacturer": {
+    "name": "Generic",
+    "slug": "generic"
+   },
+   "slug": "card-terminal-p2pe",
+   "custom_fields": {
+    "end_of_sale": "2027-09-30",
+    "end_of_support": "2030-09-30"
+   }
+  }
+ ],
+ "virtual_chassis": [],
+ "cables": [
+  {
+   "id": 1,
+   "label": "D02-CBL-00001",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 1,
+      "name": "internal1",
+      "device": {
+       "id": 1,
+       "name": "D02-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 2,
+      "name": "1/1/24",
+      "device": {
+       "id": 2,
+       "name": "D02-ACC-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "label": "D02-CBL-00011",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 3,
+      "name": "1/1/1",
+      "device": {
+       "id": 2,
+       "name": "D02-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 4,
+      "name": "eth0",
+      "device": {
+       "id": 3,
+       "name": "D02-AP-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "label": "D02-CBL-00012",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 5,
+      "name": "1/1/2",
+      "device": {
+       "id": 2,
+       "name": "D02-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 6,
+      "name": "eth0",
+      "device": {
+       "id": 4,
+       "name": "D02-AP-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "label": "D02-CBL-00013",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 7,
+      "name": "1/1/3",
+      "device": {
+       "id": 2,
+       "name": "D02-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 8,
+      "name": "eth0",
+      "device": {
+       "id": 5,
+       "name": "D02-PRN-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "label": "D02-CBL-00014",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 9,
+      "name": "1/1/4",
+      "device": {
+       "id": 2,
+       "name": "D02-ACC-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 10,
+      "name": "eth0",
+      "device": {
+       "id": 6,
+       "name": "D02-PAY-01"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "modules": [],
+ "module_bays": [],
+ "inventory_items": [],
+ "vlans": [
+  {
+   "id": 1,
+   "vid": 10,
+   "name": "SALES",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "d02"
+   },
+   "tags": [
+    {
+     "name": "Sales floor",
+     "slug": "zone-sales"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "vid": 15,
+   "name": "FI",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "d02"
+   },
+   "tags": [
+    {
+     "name": "Finance and insurance",
+     "slug": "zone-fi"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "vid": 30,
+   "name": "CARD",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "d02"
+   },
+   "tags": [
+    {
+     "name": "Card terminals",
+     "slug": "zone-cde"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "vid": 70,
+   "name": "GUEST",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "d02"
+   },
+   "tags": [
+    {
+     "name": "Customer Wi-Fi",
+     "slug": "zone-guest"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "vid": 99,
+   "name": "NET-MGMT",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 2,
+    "slug": "d02"
+   },
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ]
+  }
+ ],
+ "prefixes": [
+  {
+   "id": 1,
+   "prefix": "10.31.10.0/24",
+   "vlan": {
+    "id": 1,
+    "vid": 10
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Sales floor",
+     "slug": "zone-sales"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  },
+  {
+   "id": 2,
+   "prefix": "10.31.15.0/24",
+   "vlan": {
+    "id": 2,
+    "vid": 15
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Finance and insurance",
+     "slug": "zone-fi"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1",
+    "compliance_scope": [
+     "glba"
+    ],
+    "data_classification": "confidential"
+   }
+  },
+  {
+   "id": 3,
+   "prefix": "10.31.30.0/26",
+   "vlan": {
+    "id": 3,
+    "vid": 30
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Card terminals",
+     "slug": "zone-cde"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1",
+    "compliance_scope": [
+     "pci-cde"
+    ],
+    "data_classification": "confidential"
+   }
+  },
+  {
+   "id": 4,
+   "prefix": "172.17.70.0/24",
+   "vlan": {
+    "id": 4,
+    "vid": 70
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Customer Wi-Fi",
+     "slug": "zone-guest"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1",
+    "data_classification": "public"
+   }
+  },
+  {
+   "id": 5,
+   "prefix": "10.31.99.0/24",
+   "vlan": {
+    "id": 5,
+    "vid": 99
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW-01 .1"
+   }
+  }
+ ],
+ "circuits": [
+  {
+   "id": 1,
+   "cid": "D02-ISP-C-01",
+   "provider": {
+    "name": "Provider C"
+   },
+   "type": {
+    "name": "Business broadband"
+   },
+   "commit_rate": 300000,
+   "status": {
+    "value": "active"
+   },
+   "description": "Broadband 300/30 · cellular backup on D02-FW-01"
+  }
+ ],
+ "interfaces": [
+  {
+   "id": 1,
+   "device": {
+    "id": 1,
+    "name": "D02-FW-01"
+   },
+   "name": "internal1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 2,
+    "name": "D02-ACC-1"
+   },
+   "name": "1/1/24",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 15
+    },
+    {
+     "vid": 30
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 2,
+    "name": "D02-ACC-1"
+   },
+   "name": "1/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 3,
+    "name": "D02-AP-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 5,
+   "device": {
+    "id": 2,
+    "name": "D02-ACC-1"
+   },
+   "name": "1/1/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 6,
+   "device": {
+    "id": 4,
+    "name": "D02-AP-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 7,
+   "device": {
+    "id": 2,
+    "name": "D02-ACC-1"
+   },
+   "name": "1/1/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 15
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 8,
+   "device": {
+    "id": 5,
+    "name": "D02-PRN-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 15
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 2,
+    "name": "D02-ACC-1"
+   },
+   "name": "1/1/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 30
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 10,
+   "device": {
+    "id": 6,
+    "name": "D02-PAY-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 30
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 11,
+   "device": {
+    "id": 3,
+    "name": "D02-AP-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "device": {
+    "id": 3,
+    "name": "D02-AP-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "device": {
+    "id": 3,
+    "name": "D02-AP-01"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "device": {
+    "id": 4,
+    "name": "D02-AP-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "device": {
+    "id": 4,
+    "name": "D02-AP-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "KV-GUEST"
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "device": {
+    "id": 4,
+    "name": "D02-AP-02"
+   },
+   "name": "radio2",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "6g-15-6025-160",
+    "label": "15 (6025/160)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "KV-STAFF"
+    }
+   ]
+  }
+ ],
+ "wireless_links": [],
+ "wireless_lans": [
+  {
+   "id": 1,
+   "ssid": "KV-STAFF",
+   "description": "Sales tablets; same SSID as D01",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 1,
+    "vid": 10,
+    "name": "SALES"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 2,
+   "scope": {
+    "id": 2,
+    "name": "Kestrel Valley Pre-Owned",
+    "slug": "d02"
+   },
+   "tags": [
+    {
+     "name": "Sales floor",
+     "slug": "zone-sales"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_eap": "EAP-TLS",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "5ghz",
+     "6ghz"
+    ]
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   }
+  },
+  {
+   "id": 2,
+   "ssid": "KV-GUEST",
+   "description": "Customers; internet only, local breakout",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 4,
+    "vid": 70,
+    "name": "GUEST"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 2,
+   "scope": {
+    "id": 2,
+    "name": "Kestrel Valley Pre-Owned",
+    "slug": "d02"
+   },
+   "tags": [
+    {
+     "name": "Customer Wi-Fi",
+     "slug": "zone-guest"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "open-portal",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "2.4ghz",
+     "5ghz"
+    ],
+    "wlan_client_isolation": true,
+    "wlan_portal": "captive"
+   },
+   "auth_type": {
+    "value": "open",
+    "label": "Open"
+   },
+   "auth_cipher": null
+  }
+ ],
+ "ip_addresses": [],
+ "contact_assignments": [
+  {
+   "id": 1,
+   "object_type": "dcim.site",
+   "object_id": 2,
+   "contact": {
+    "id": 11,
+    "name": "IT manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 2,
+   "object_type": "dcim.site",
+   "object_id": 2,
+   "contact": {
+    "id": 12,
+    "name": "MSP service desk"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  }
+ ]
+}

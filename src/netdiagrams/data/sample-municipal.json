@@ -1,0 +1,11124 @@
+{
+ "format": "netdiagrams-export/1",
+ "netbox_version": "sample",
+ "netbox_url": "",
+ "exported_at": "2026-10-18T08:00:00Z",
+ "site": {
+  "id": 1,
+  "name": "Halvern Civic Center",
+  "slug": "ch1",
+  "facility": "CH1",
+  "custom_fields": {
+   "netdiagrams": {
+    "profile": "municipal"
+   },
+   "wireless_management": "cloud",
+   "wireless_manager": "Cloud Wi-Fi dashboard",
+   "monitoring": "alerting",
+   "monitored_by": "City IT monitoring",
+   "log_forwarding": "siem",
+   "log_destination": "City SIEM service, syslog over TLS",
+   "log_retention_days": 365,
+   "last_verified": "2026-09-15"
+  }
+ },
+ "locations": [
+  {
+   "id": 1,
+   "name": "City Hall wing",
+   "slug": "city-hall-wing",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 2,
+   "name": "Basement",
+   "slug": "basement",
+   "parent": {
+    "id": 1,
+    "name": "City Hall wing"
+   },
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 3,
+   "name": "DATA-B",
+   "slug": "data-b",
+   "parent": {
+    "id": 2,
+    "name": "Basement"
+   },
+   "custom_fields": {
+    "physical_access": "badge-camera",
+    "data_classification": "confidential",
+    "last_verified": "2026-09-15"
+   }
+  },
+  {
+   "id": 4,
+   "name": "City Hall Floor 2",
+   "slug": "city-hall-floor-2",
+   "parent": {
+    "id": 1,
+    "name": "City Hall wing"
+   },
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 5,
+   "name": "IDF-C2",
+   "slug": "idf-c2",
+   "parent": {
+    "id": 4,
+    "name": "City Hall Floor 2"
+   },
+   "custom_fields": {
+    "physical_access": "locked-room",
+    "data_classification": "internal",
+    "last_verified": "2026-09-15"
+   }
+  },
+  {
+   "id": 6,
+   "name": "Police wing",
+   "slug": "police-wing",
+   "parent": null,
+   "custom_fields": {
+    "physical_access": "badge",
+    "data_classification": "restricted",
+    "last_verified": "2026-09-15"
+   }
+  },
+  {
+   "id": 7,
+   "name": "IDF-PD",
+   "slug": "idf-pd",
+   "parent": {
+    "id": 6,
+    "name": "Police wing"
+   },
+   "custom_fields": {
+    "physical_access": "badge-camera",
+    "data_classification": "restricted",
+    "last_verified": "2026-09-15"
+   }
+  },
+  {
+   "id": 8,
+   "name": "City Hall Floor 1",
+   "slug": "city-hall-floor-1",
+   "parent": {
+    "id": 1,
+    "name": "City Hall wing"
+   },
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  },
+  {
+   "id": 9,
+   "name": "Council chamber",
+   "slug": "council-chamber",
+   "parent": {
+    "id": 8,
+    "name": "City Hall Floor 1"
+   },
+   "custom_fields": {
+    "physical_access": "badge"
+   }
+  }
+ ],
+ "devices": [
+  {
+   "id": 1,
+   "name": "CH1-FW-01",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "PA-1410",
+    "manufacturer": {
+     "name": "Palo Alto Networks",
+     "slug": "palo-alto-networks"
+    },
+    "id": 1
+   },
+   "platform": {
+    "name": "panos",
+    "slug": "panos"
+   },
+   "serial": "PAxxxxxxxx01",
+   "asset_tag": "HV-0001",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 40.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.2/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Internet edge and inter-zone firewall (HA active)",
+   "tags": [
+    {
+     "name": "Firewall and remote access",
+     "slug": "zone-edge"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "PAN-OS 11.1.x",
+    "support_contract": "Premium support",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-09-24",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 2,
+   "name": "CH1-FW-02",
+   "role": {
+    "name": "Firewall",
+    "slug": "firewall"
+   },
+   "device_type": {
+    "model": "PA-1410",
+    "manufacturer": {
+     "name": "Palo Alto Networks",
+     "slug": "palo-alto-networks"
+    },
+    "id": 1
+   },
+   "platform": {
+    "name": "panos",
+    "slug": "panos"
+   },
+   "serial": "PAxxxxxxxx02",
+   "asset_tag": "HV-0002",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 40.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.3/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Internet edge and inter-zone firewall (HA passive)",
+   "tags": [
+    {
+     "name": "Firewall and remote access",
+     "slug": "zone-edge"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "PAN-OS 11.1.x",
+    "support_contract": "Premium support",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-09-24",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 3,
+   "name": "CH1-OOB-01",
+   "role": {
+    "name": "Console server",
+    "slug": "console-server"
+   },
+   "device_type": {
+    "model": "OM1204-4E-L",
+    "manufacturer": {
+     "name": "Opengear",
+     "slug": "opengear"
+    },
+    "id": 2
+   },
+   "platform": {
+    "name": "opengear",
+    "slug": "opengear"
+   },
+   "serial": "OMxxxxxx01",
+   "asset_tag": "HV-0003",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 41.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.5/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Out-of-band console with cellular",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "Opengear 24.x",
+    "criticality": "medium",
+    "last_config_backup": "2026-06-30",
+    "last_patched": "2026-07-15",
+    "install_date": "2024-06-10"
+   }
+  },
+  {
+   "id": 4,
+   "name": "CH1-CORE-1",
+   "role": {
+    "name": "Core switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "C9500-24Y4C",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "ios-xe",
+    "slug": "ios-xe"
+   },
+   "serial": "FCWxxxxx11",
+   "asset_tag": "HV-0010",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 38.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.10/24"
+   },
+   "virtual_chassis": {
+    "id": 1,
+    "name": "CH1-CORE"
+   },
+   "vc_position": 1,
+   "description": "Core pair member 1 (StackWise Virtual active)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS XE 17.12.x",
+    "support_contract": "Smart Net NBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 5,
+   "name": "CH1-CORE-2",
+   "role": {
+    "name": "Core switch",
+    "slug": "core-switch"
+   },
+   "device_type": {
+    "model": "C9500-24Y4C",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 3
+   },
+   "platform": {
+    "name": "ios-xe",
+    "slug": "ios-xe"
+   },
+   "serial": "FCWxxxxx12",
+   "asset_tag": "HV-0011",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 38.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": null,
+   "virtual_chassis": {
+    "id": 1,
+    "name": "CH1-CORE"
+   },
+   "vc_position": 2,
+   "description": "Core pair member 2 (StackWise Virtual standby)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS XE 17.12.x",
+    "support_contract": "Smart Net NBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 6,
+   "name": "CH1-ACC-C1-1",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "C9300-48P",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "ios-xe",
+    "slug": "ios-xe"
+   },
+   "serial": "FOCxxxxx11",
+   "asset_tag": "HV-0021",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 35.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.21/24"
+   },
+   "virtual_chassis": {
+    "id": 2,
+    "name": "CH1-ACC-C1"
+   },
+   "vc_position": 1,
+   "description": "City Hall floor 1 access stack member 1 (active)",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS XE 17.12.x",
+    "support_contract": "Smart Net NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 7,
+   "name": "CH1-ACC-C1-2",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "C9300-48P",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "ios-xe",
+    "slug": "ios-xe"
+   },
+   "serial": "FOCxxxxx12",
+   "asset_tag": "HV-0022",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 34.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": null,
+   "virtual_chassis": {
+    "id": 2,
+    "name": "CH1-ACC-C1"
+   },
+   "vc_position": 2,
+   "description": "City Hall floor 1 access stack member 2",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS XE 17.12.x",
+    "support_contract": "Smart Net NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 8,
+   "name": "CH1-ACC-C2-1",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "C9300-48P",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "ios-xe",
+    "slug": "ios-xe"
+   },
+   "serial": "FOCxxxxx21",
+   "asset_tag": "HV-0031",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 5,
+    "name": "IDF-C2",
+    "slug": "idf-c2"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 21.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.22/24"
+   },
+   "virtual_chassis": {
+    "id": 3,
+    "name": "CH1-ACC-C2"
+   },
+   "vc_position": 1,
+   "description": "City Hall floor 2 access stack member 1 (active)",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS XE 17.12.x",
+    "support_contract": "Smart Net NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 9,
+   "name": "CH1-ACC-C2-2",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "C9300-48P",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "ios-xe",
+    "slug": "ios-xe"
+   },
+   "serial": "FOCxxxxx22",
+   "asset_tag": "HV-0032",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 5,
+    "name": "IDF-C2",
+    "slug": "idf-c2"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 20.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": null,
+   "virtual_chassis": {
+    "id": 3,
+    "name": "CH1-ACC-C2"
+   },
+   "vc_position": 2,
+   "description": "City Hall floor 2 access stack member 2",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS XE 17.12.x",
+    "support_contract": "Smart Net NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 10,
+   "name": "CH1-ACC-PD-1",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "C9300-48P",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "ios-xe",
+    "slug": "ios-xe"
+   },
+   "serial": "FOCxxxxx31",
+   "asset_tag": "HV-0041",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 7,
+    "name": "IDF-PD",
+    "slug": "idf-pd"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 21.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.23/24"
+   },
+   "virtual_chassis": {
+    "id": 4,
+    "name": "CH1-ACC-PD"
+   },
+   "vc_position": 1,
+   "description": "Police wing access stack member 1 (active)",
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS XE 17.12.x",
+    "support_contract": "Smart Net NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 11,
+   "name": "CH1-ACC-PD-2",
+   "role": {
+    "name": "Access switch",
+    "slug": "access-switch"
+   },
+   "device_type": {
+    "model": "C9300-48P",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 4
+   },
+   "platform": {
+    "name": "ios-xe",
+    "slug": "ios-xe"
+   },
+   "serial": "FOCxxxxx32",
+   "asset_tag": "HV-0042",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 7,
+    "name": "IDF-PD",
+    "slug": "idf-pd"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 20.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": null,
+   "virtual_chassis": {
+    "id": 4,
+    "name": "CH1-ACC-PD"
+   },
+   "vc_position": 2,
+   "description": "Police wing access stack member 2",
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "IOS XE 17.12.x",
+    "support_contract": "Smart Net NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-08-19",
+    "install_date": "2024-06-10",
+    "support_contract_end": "2027-06-30"
+   }
+  },
+  {
+   "id": 12,
+   "name": "CH1-HV-01",
+   "role": {
+    "name": "Hypervisor",
+    "slug": "hypervisor"
+   },
+   "device_type": {
+    "model": "PowerEdge R660",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    },
+    "id": 5
+   },
+   "platform": null,
+   "serial": "SVCTAGxx01",
+   "asset_tag": "HV-0050",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 30.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.40.11/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City virtualization host 1 (directory, files, finance, permits)",
+   "tags": [
+    {
+     "name": "City servers",
+     "slug": "zone-servers"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "Hypervisor 8.0",
+    "support_contract": "ProSupport NBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-10-08",
+    "install_date": "2023-09-18",
+    "support_contract_end": "2026-12-15"
+   }
+  },
+  {
+   "id": 13,
+   "name": "CH1-HV-02",
+   "role": {
+    "name": "Hypervisor",
+    "slug": "hypervisor"
+   },
+   "device_type": {
+    "model": "PowerEdge R660",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    },
+    "id": 5
+   },
+   "platform": null,
+   "serial": "SVCTAGxx02",
+   "asset_tag": "HV-0051",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 28.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.40.12/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City virtualization host 2",
+   "tags": [
+    {
+     "name": "City servers",
+     "slug": "zone-servers"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "Hypervisor 8.0",
+    "support_contract": "ProSupport NBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-10-08",
+    "install_date": "2023-09-18",
+    "support_contract_end": "2026-12-15"
+   }
+  },
+  {
+   "id": 14,
+   "name": "CH1-BKP-01",
+   "role": {
+    "name": "Storage",
+    "slug": "storage"
+   },
+   "device_type": {
+    "model": "StoreOnce 3720",
+    "manufacturer": {
+     "name": "HPE",
+     "slug": "hpe"
+    },
+    "id": 6
+   },
+   "platform": null,
+   "serial": "CZxxxxxx01",
+   "asset_tag": "HV-0052",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 24.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.45.20/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City backup appliance, copies to the offsite vault",
+   "tags": [
+    {
+     "name": "City servers",
+     "slug": "zone-servers"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "StoreOnce 4.3.x",
+    "support_contract": "Foundation Care NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-09-02",
+    "install_date": "2023-09-18",
+    "support_contract_end": "2027-03-31"
+   }
+  },
+  {
+   "id": 15,
+   "name": "CH1-PD-HV-01",
+   "role": {
+    "name": "Hypervisor",
+    "slug": "hypervisor"
+   },
+   "device_type": {
+    "model": "PowerEdge R660",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    },
+    "id": 5
+   },
+   "platform": null,
+   "serial": "SVCTAGxx61",
+   "asset_tag": "HV-0061",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R03",
+    "slug": "r03"
+   },
+   "position": 30.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.31.61.11/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Police host (records management, evidence index, police directory)",
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "Hypervisor 8.0",
+    "support_contract": "ProSupport NBD",
+    "lifecycle": "In support",
+    "criticality": "critical",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-10-08",
+    "install_date": "2023-09-18",
+    "support_contract_end": "2026-12-15"
+   }
+  },
+  {
+   "id": 16,
+   "name": "CH1-PD-NAS-01",
+   "role": {
+    "name": "Storage",
+    "slug": "storage"
+   },
+   "device_type": {
+    "model": "PowerVault ME5012",
+    "manufacturer": {
+     "name": "Dell",
+     "slug": "dell"
+    },
+    "id": 7
+   },
+   "platform": null,
+   "serial": "SVCTAGxx62",
+   "asset_tag": "HV-0062",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R03",
+    "slug": "r03"
+   },
+   "position": 26.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.31.61.20/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Evidence storage (interview video, body-worn camera uploads)",
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "ME5 firmware 1.2.x",
+    "support_contract": "ProSupport NBD",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-09-02",
+    "install_date": "2023-09-18",
+    "support_contract_end": "2026-12-15"
+   }
+  },
+  {
+   "id": 17,
+   "name": "CH1-STATE-RTR",
+   "role": {
+    "name": "Router",
+    "slug": "router"
+   },
+   "device_type": {
+    "model": "ISR 1121",
+    "manufacturer": {
+     "name": "Cisco",
+     "slug": "cisco"
+    },
+    "id": 8
+   },
+   "platform": null,
+   "serial": "FGLxxxxx71",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R03",
+    "slug": "r03"
+   },
+   "position": 36.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": null,
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "State CJIS network router (owned and managed by the state; drawn, not configured)",
+   "tags": [
+    {
+     "name": "State, county and vendors",
+     "slug": "zone-partner"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "Managed by the state",
+    "criticality": "high",
+    "monitoring": "none",
+    "log_forwarding": "none",
+    "install_date": "2023-05-22"
+   }
+  },
+  {
+   "id": 18,
+   "name": "CH1-UPS-01",
+   "role": {
+    "name": "UPS",
+    "slug": "ups"
+   },
+   "device_type": {
+    "model": "9PX 3000",
+    "manufacturer": {
+     "name": "Eaton",
+     "slug": "eaton"
+    },
+    "id": 9
+   },
+   "platform": null,
+   "serial": "EAxxxxxx01",
+   "asset_tag": "HV-0070",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R01",
+    "slug": "r01"
+   },
+   "position": 1.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.41/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Rack R01 UPS (network card)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2025-11-20",
+    "install_date": "2021-04-26"
+   }
+  },
+  {
+   "id": 19,
+   "name": "CH1-UPS-02",
+   "role": {
+    "name": "UPS",
+    "slug": "ups"
+   },
+   "device_type": {
+    "model": "9PX 3000",
+    "manufacturer": {
+     "name": "Eaton",
+     "slug": "eaton"
+    },
+    "id": 9
+   },
+   "platform": null,
+   "serial": "EAxxxxxx02",
+   "asset_tag": "HV-0071",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 1.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.42/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Rack R02 UPS (network card)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2025-11-20",
+    "install_date": "2021-04-26"
+   }
+  },
+  {
+   "id": 20,
+   "name": "CH1-UPS-03",
+   "role": {
+    "name": "UPS",
+    "slug": "ups"
+   },
+   "device_type": {
+    "model": "9PX 2000",
+    "manufacturer": {
+     "name": "Eaton",
+     "slug": "eaton"
+    },
+    "id": 10
+   },
+   "platform": null,
+   "serial": "EAxxxxxx03",
+   "asset_tag": "HV-0072",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R03",
+    "slug": "r03"
+   },
+   "position": 1.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.99.43/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Police rack R03 UPS (network card)",
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2025-11-20",
+    "install_date": "2021-04-26"
+   }
+  },
+  {
+   "id": 21,
+   "name": "CH1-NVR-01",
+   "role": {
+    "name": "NVR",
+    "slug": "nvr"
+   },
+   "device_type": {
+    "model": "Streamvault SV-1000E",
+    "manufacturer": {
+     "name": "Genetec",
+     "slug": "genetec"
+    },
+    "id": 11
+   },
+   "platform": null,
+   "serial": "GNxxxxxx01",
+   "asset_tag": "HV-0080",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 30.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.80.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City building video recorder (lobby, counters, parking)",
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "medium",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-03-14"
+   }
+  },
+  {
+   "id": 22,
+   "name": "CH1-DOOR-01",
+   "role": {
+    "name": "Door controller",
+    "slug": "door-controller"
+   },
+   "device_type": {
+    "model": "Synergis Cloud Link",
+    "manufacturer": {
+     "name": "Genetec",
+     "slug": "genetec"
+    },
+    "id": 12
+   },
+   "platform": null,
+   "serial": "GNxxxxxx02",
+   "asset_tag": "HV-0081",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 28.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.30.81.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Door access controller (both wings; police doors on their own schedule)",
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "high",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-05-04",
+    "install_date": "2022-03-14"
+   }
+  },
+  {
+   "id": 23,
+   "name": "CH1-BAS-01",
+   "role": {
+    "name": "HVAC controller",
+    "slug": "hvac-controller"
+   },
+   "device_type": {
+    "model": "Tracer SC+",
+    "manufacturer": {
+     "name": "Trane",
+     "slug": "trane"
+    },
+    "id": 13
+   },
+   "platform": null,
+   "serial": "TRxxxxxx01",
+   "asset_tag": "HV-0082",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.82.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Building automation controller (HVAC, both wings)",
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "medium",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-08-05",
+    "install_date": "2019-10-07"
+   }
+  },
+  {
+   "id": 24,
+   "name": "CH1-TSC-01",
+   "role": {
+    "name": "Signal system",
+    "slug": "signal-system"
+   },
+   "device_type": {
+    "model": "Centracs server",
+    "manufacturer": {
+     "name": "Econolite",
+     "slug": "econolite"
+    },
+    "id": 14
+   },
+   "platform": null,
+   "serial": "ECxxxxxx01",
+   "asset_tag": "HV-0090",
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 3,
+    "name": "DATA-B",
+    "slug": "data-b"
+   },
+   "rack": {
+    "name": "R02",
+    "slug": "r02"
+   },
+   "position": 26.0,
+   "face": {
+    "value": "front"
+   },
+   "primary_ip4": {
+    "address": "10.32.90.10/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Traffic signal central system (42 intersections on city fiber)",
+   "tags": [
+    {
+     "name": "Traffic signals and field",
+     "slug": "zone-field"
+    }
+   ],
+   "custom_fields": {
+    "sw_version": "Centracs 3.x",
+    "support_contract": "Vendor support annual",
+    "lifecycle": "In support",
+    "criticality": "high",
+    "last_config_backup": "2026-10-17",
+    "last_patched": "2026-09-10",
+    "install_date": "2021-08-30",
+    "support_contract_end": "2027-01-31"
+   }
+  },
+  {
+   "id": 25,
+   "name": "CH1-AP-C1-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxC1-01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.101/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 1 ceiling AP 1",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 26,
+   "name": "CH1-AP-C1-02",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxC1-02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.102/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 1 ceiling AP 2",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 27,
+   "name": "CH1-AP-C1-03",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxC1-03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.103/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 1 ceiling AP 3",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 28,
+   "name": "CH1-AP-C1-04",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxC1-04",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.104/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 1 ceiling AP 4",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 29,
+   "name": "CH1-PRN-C1-01",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "TASKalfa 3554ci",
+    "manufacturer": {
+     "name": "Kyocera",
+     "slug": "kyocera"
+    },
+    "id": 16
+   },
+   "platform": null,
+   "serial": "KYxxxxxC11",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.11.201/23"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 1 printer",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-30",
+    "install_date": "2025-02-03"
+   }
+  },
+  {
+   "id": 30,
+   "name": "CH1-CAM-C1-01",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "XNV-8082R",
+    "manufacturer": {
+     "name": "Hanwha Vision",
+     "slug": "hanwha-vision"
+    },
+    "id": 17
+   },
+   "platform": null,
+   "serial": "HWxxxxC101",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.21/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lobby, counter and parking camera",
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-03-14"
+   }
+  },
+  {
+   "id": 31,
+   "name": "CH1-CAM-C1-02",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "XNV-8082R",
+    "manufacturer": {
+     "name": "Hanwha Vision",
+     "slug": "hanwha-vision"
+    },
+    "id": 17
+   },
+   "platform": null,
+   "serial": "HWxxxxC102",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.22/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lobby, counter and parking camera",
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-03-14"
+   }
+  },
+  {
+   "id": 32,
+   "name": "CH1-CAM-C1-03",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "XNV-8082R",
+    "manufacturer": {
+     "name": "Hanwha Vision",
+     "slug": "hanwha-vision"
+    },
+    "id": 17
+   },
+   "platform": null,
+   "serial": "HWxxxxC103",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.23/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lobby, counter and parking camera",
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-03-14"
+   }
+  },
+  {
+   "id": 33,
+   "name": "CH1-CAM-C1-04",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "XNV-8082R",
+    "manufacturer": {
+     "name": "Hanwha Vision",
+     "slug": "hanwha-vision"
+    },
+    "id": 17
+   },
+   "platform": null,
+   "serial": "HWxxxxC104",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.24/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lobby, counter and parking camera",
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-03-14"
+   }
+  },
+  {
+   "id": 34,
+   "name": "CH1-AP-C2-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxC2-01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 4,
+    "name": "City Hall Floor 2",
+    "slug": "city-hall-floor-2"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.105/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 2 ceiling AP 1",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 35,
+   "name": "CH1-AP-C2-02",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxC2-02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 4,
+    "name": "City Hall Floor 2",
+    "slug": "city-hall-floor-2"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.106/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 2 ceiling AP 2",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 36,
+   "name": "CH1-AP-C2-03",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxC2-03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 4,
+    "name": "City Hall Floor 2",
+    "slug": "city-hall-floor-2"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.107/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 2 ceiling AP 3",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 37,
+   "name": "CH1-AP-C2-04",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxC2-04",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 4,
+    "name": "City Hall Floor 2",
+    "slug": "city-hall-floor-2"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.108/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 2 ceiling AP 4",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 38,
+   "name": "CH1-PRN-C2-01",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "TASKalfa 3554ci",
+    "manufacturer": {
+     "name": "Kyocera",
+     "slug": "kyocera"
+    },
+    "id": 16
+   },
+   "platform": null,
+   "serial": "KYxxxxxC21",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 4,
+    "name": "City Hall Floor 2",
+    "slug": "city-hall-floor-2"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.11.211/23"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "City Hall Floor 2 printer",
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-30",
+    "install_date": "2025-02-03"
+   }
+  },
+  {
+   "id": 39,
+   "name": "CH1-CAM-C2-01",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "XNV-8082R",
+    "manufacturer": {
+     "name": "Hanwha Vision",
+     "slug": "hanwha-vision"
+    },
+    "id": 17
+   },
+   "platform": null,
+   "serial": "HWxxxxC201",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 4,
+    "name": "City Hall Floor 2",
+    "slug": "city-hall-floor-2"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.31/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lobby, counter and parking camera",
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-03-14"
+   }
+  },
+  {
+   "id": 40,
+   "name": "CH1-CAM-C2-02",
+   "role": {
+    "name": "Camera",
+    "slug": "camera"
+   },
+   "device_type": {
+    "model": "XNV-8082R",
+    "manufacturer": {
+     "name": "Hanwha Vision",
+     "slug": "hanwha-vision"
+    },
+    "id": 17
+   },
+   "platform": null,
+   "serial": "HWxxxxC202",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 4,
+    "name": "City Hall Floor 2",
+    "slug": "city-hall-floor-2"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.80.32/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Lobby, counter and parking camera",
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "monitoring": "polling",
+    "log_forwarding": "local",
+    "last_config_backup": "2026-09-30",
+    "last_patched": "2026-08-12",
+    "install_date": "2022-03-14"
+   }
+  },
+  {
+   "id": 41,
+   "name": "CH1-AP-PD-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxPD-01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 6,
+    "name": "Police wing",
+    "slug": "police-wing"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.109/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Police wing ceiling AP 1",
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 42,
+   "name": "CH1-AP-PD-02",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxPD-02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 6,
+    "name": "Police wing",
+    "slug": "police-wing"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.110/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Police wing ceiling AP 2",
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 43,
+   "name": "CH1-AP-PD-03",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxPD-03",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 6,
+    "name": "Police wing",
+    "slug": "police-wing"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.111/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Police wing ceiling AP 3",
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 44,
+   "name": "CH1-PRN-PD-01",
+   "role": {
+    "name": "Printer",
+    "slug": "printer"
+   },
+   "device_type": {
+    "model": "TASKalfa 3554ci",
+    "manufacturer": {
+     "name": "Kyocera",
+     "slug": "kyocera"
+    },
+    "id": 16
+   },
+   "platform": null,
+   "serial": "KYxxxxxPD1",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 6,
+    "name": "Police wing",
+    "slug": "police-wing"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.31.60.201/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Police wing printer",
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "low",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-30",
+    "install_date": "2025-02-03"
+   }
+  },
+  {
+   "id": 45,
+   "name": "CH1-AP-CC-01",
+   "role": {
+    "name": "Access point",
+    "slug": "access-point"
+   },
+   "device_type": {
+    "model": "MR46",
+    "manufacturer": {
+     "name": "Cisco Meraki",
+     "slug": "cisco-meraki"
+    },
+    "id": 15
+   },
+   "platform": {
+    "name": "meraki",
+    "slug": "meraki"
+   },
+   "serial": "Q2xx-xxCC-01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 9,
+    "name": "Council chamber",
+    "slug": "council-chamber"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.99.112/24"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Council chamber AP (public and staff SSIDs)",
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "ap_mode": "cloud",
+    "criticality": "medium",
+    "install_date": "2024-07-01"
+   }
+  },
+  {
+   "id": 46,
+   "name": "CH1-PAY-01",
+   "role": {
+    "name": "Payment terminal",
+    "slug": "payment-terminal"
+   },
+   "device_type": {
+    "model": "P400",
+    "manufacturer": {
+     "name": "Verifone",
+     "slug": "verifone"
+    },
+    "id": 18
+   },
+   "platform": null,
+   "serial": "VFxxxxxx01",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.25.11/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Utility billing counter terminal",
+   "tags": [
+    {
+     "name": "Payment counters",
+     "slug": "zone-pay"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "medium",
+    "compliance_scope": [
+     "pci-cde"
+    ],
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-18",
+    "install_date": "2024-01-15"
+   }
+  },
+  {
+   "id": 47,
+   "name": "CH1-PAY-02",
+   "role": {
+    "name": "Payment terminal",
+    "slug": "payment-terminal"
+   },
+   "device_type": {
+    "model": "P400",
+    "manufacturer": {
+     "name": "Verifone",
+     "slug": "verifone"
+    },
+    "id": 18
+   },
+   "platform": null,
+   "serial": "VFxxxxxx02",
+   "asset_tag": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "location": {
+    "id": 8,
+    "name": "City Hall Floor 1",
+    "slug": "city-hall-floor-1"
+   },
+   "rack": null,
+   "position": null,
+   "face": null,
+   "primary_ip4": {
+    "address": "10.30.25.12/26"
+   },
+   "virtual_chassis": null,
+   "vc_position": null,
+   "description": "Permit counter terminal",
+   "tags": [
+    {
+     "name": "Payment counters",
+     "slug": "zone-pay"
+    }
+   ],
+   "custom_fields": {
+    "criticality": "medium",
+    "compliance_scope": [
+     "pci-cde"
+    ],
+    "last_config_backup": "2026-10-01",
+    "last_patched": "2026-09-18",
+    "install_date": "2024-01-15"
+   }
+  }
+ ],
+ "device_types": [
+  {
+   "id": 1,
+   "model": "PA-1410",
+   "manufacturer": {
+    "name": "Palo Alto Networks",
+    "slug": "palo-alto-networks"
+   },
+   "slug": "pa-1410",
+   "custom_fields": {
+    "end_of_sale": "2030-06-30",
+    "end_of_support": "2035-06-30"
+   }
+  },
+  {
+   "id": 2,
+   "model": "OM1204-4E-L",
+   "manufacturer": {
+    "name": "Opengear",
+    "slug": "opengear"
+   },
+   "slug": "om1204-4e-l",
+   "custom_fields": {
+    "end_of_sale": "2028-12-31",
+    "end_of_support": "2031-12-31"
+   }
+  },
+  {
+   "id": 3,
+   "model": "C9500-24Y4C",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "c9500-24y4c",
+   "custom_fields": {
+    "end_of_sale": "2029-10-31",
+    "end_of_support": "2034-10-31"
+   }
+  },
+  {
+   "id": 4,
+   "model": "C9300-48P",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "c9300-48p",
+   "custom_fields": {
+    "end_of_sale": "2028-10-31",
+    "end_of_support": "2033-10-31"
+   }
+  },
+  {
+   "id": 5,
+   "model": "PowerEdge R660",
+   "manufacturer": {
+    "name": "Dell",
+    "slug": "dell"
+   },
+   "slug": "poweredge-r660",
+   "custom_fields": {
+    "end_of_sale": "2029-05-31",
+    "end_of_support": "2033-05-31"
+   }
+  },
+  {
+   "id": 6,
+   "model": "StoreOnce 3720",
+   "manufacturer": {
+    "name": "HPE",
+    "slug": "hpe"
+   },
+   "slug": "storeonce-3720",
+   "custom_fields": {
+    "end_of_sale": "2028-06-30",
+    "end_of_support": "2031-06-30"
+   }
+  },
+  {
+   "id": 7,
+   "model": "PowerVault ME5012",
+   "manufacturer": {
+    "name": "Dell",
+    "slug": "dell"
+   },
+   "slug": "powervault-me5012",
+   "custom_fields": {
+    "end_of_sale": "2029-03-31",
+    "end_of_support": "2032-03-31"
+   }
+  },
+  {
+   "id": 8,
+   "model": "ISR 1121",
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "slug": "isr-1121",
+   "custom_fields": {
+    "end_of_sale": "2027-04-30",
+    "end_of_support": "2032-04-30"
+   }
+  },
+  {
+   "id": 9,
+   "model": "9PX 3000",
+   "manufacturer": {
+    "name": "Eaton",
+    "slug": "eaton"
+   },
+   "slug": "9px-3000",
+   "custom_fields": {
+    "end_of_sale": "2028-12-31",
+    "end_of_support": "2031-12-31"
+   }
+  },
+  {
+   "id": 10,
+   "model": "9PX 2000",
+   "manufacturer": {
+    "name": "Eaton",
+    "slug": "eaton"
+   },
+   "slug": "9px-2000",
+   "custom_fields": {
+    "end_of_sale": "2028-12-31",
+    "end_of_support": "2031-12-31"
+   }
+  },
+  {
+   "id": 11,
+   "model": "Streamvault SV-1000E",
+   "manufacturer": {
+    "name": "Genetec",
+    "slug": "genetec"
+   },
+   "slug": "streamvault-sv-1000e",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 12,
+   "model": "Synergis Cloud Link",
+   "manufacturer": {
+    "name": "Genetec",
+    "slug": "genetec"
+   },
+   "slug": "synergis-cloud-link",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 13,
+   "model": "Tracer SC+",
+   "manufacturer": {
+    "name": "Trane",
+    "slug": "trane"
+   },
+   "slug": "tracer-sc",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 14,
+   "model": "Centracs server",
+   "manufacturer": {
+    "name": "Econolite",
+    "slug": "econolite"
+   },
+   "slug": "centracs-server",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 15,
+   "model": "MR46",
+   "manufacturer": {
+    "name": "Cisco Meraki",
+    "slug": "cisco-meraki"
+   },
+   "slug": "mr46",
+   "custom_fields": {
+    "end_of_sale": "2027-07-31",
+    "end_of_support": "2032-07-31"
+   }
+  },
+  {
+   "id": 16,
+   "model": "TASKalfa 3554ci",
+   "manufacturer": {
+    "name": "Kyocera",
+    "slug": "kyocera"
+   },
+   "slug": "taskalfa-3554ci",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 17,
+   "model": "XNV-8082R",
+   "manufacturer": {
+    "name": "Hanwha Vision",
+    "slug": "hanwha-vision"
+   },
+   "slug": "xnv-8082r",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  },
+  {
+   "id": 18,
+   "model": "P400",
+   "manufacturer": {
+    "name": "Verifone",
+    "slug": "verifone"
+   },
+   "slug": "p400",
+   "custom_fields": {
+    "end_of_sale": null,
+    "end_of_support": null
+   }
+  }
+ ],
+ "virtual_chassis": [
+  {
+   "id": 1,
+   "name": "CH1-CORE"
+  },
+  {
+   "id": 2,
+   "name": "CH1-ACC-C1"
+  },
+  {
+   "id": 3,
+   "name": "CH1-ACC-C2"
+  },
+  {
+   "id": 4,
+   "name": "CH1-ACC-PD"
+  }
+ ],
+ "cables": [
+  {
+   "id": 1,
+   "label": "CH1-CBL-00001",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 1,
+      "name": "ethernet1/1",
+      "device": {
+       "id": 1,
+       "name": "CH1-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 2,
+      "name": "Twe1/0/1",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "label": "CH1-CBL-00002",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 3,
+      "name": "ethernet1/2",
+      "device": {
+       "id": 1,
+       "name": "CH1-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 4,
+      "name": "Twe2/0/1",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "label": "CH1-CBL-00003",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 5,
+      "name": "ethernet1/1",
+      "device": {
+       "id": 2,
+       "name": "CH1-FW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 6,
+      "name": "Twe1/0/2",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "label": "CH1-CBL-00004",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 7,
+      "name": "ethernet1/2",
+      "device": {
+       "id": 2,
+       "name": "CH1-FW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 8,
+      "name": "Twe2/0/2",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "label": "CH1-CBL-00005",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "9e9e9e",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 9,
+      "name": "ha1",
+      "device": {
+       "id": 1,
+       "name": "CH1-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 10,
+      "name": "ha1",
+      "device": {
+       "id": 2,
+       "name": "CH1-FW-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "label": "CH1-CBL-00011",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 11,
+      "name": "Twe1/0/11",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 12,
+      "name": "Te1/1/1",
+      "device": {
+       "id": 6,
+       "name": "CH1-ACC-C1-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "label": "CH1-CBL-00012",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 13,
+      "name": "Twe2/0/11",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 14,
+      "name": "Te2/1/1",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "label": "CH1-CBL-00013",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "00bcd4",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 15,
+      "name": "Twe1/0/12",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 16,
+      "name": "Te1/1/1",
+      "device": {
+       "id": 8,
+       "name": "CH1-ACC-C2-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "label": "CH1-CBL-00014",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "00bcd4",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 17,
+      "name": "Twe2/0/12",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 18,
+      "name": "Te2/1/1",
+      "device": {
+       "id": 9,
+       "name": "CH1-ACC-C2-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "label": "CH1-CBL-00015",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 19,
+      "name": "Twe1/0/13",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 20,
+      "name": "Te1/1/1",
+      "device": {
+       "id": 10,
+       "name": "CH1-ACC-PD-1"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "label": "CH1-CBL-00016",
+   "type": "mmf-om4",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 21,
+      "name": "Twe2/0/13",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 22,
+      "name": "Te2/1/1",
+      "device": {
+       "id": 11,
+       "name": "CH1-ACC-PD-2"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "label": "CH1-CBL-00021",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 23,
+      "name": "Twe1/0/21",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 24,
+      "name": "nic1",
+      "device": {
+       "id": 12,
+       "name": "CH1-HV-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "label": "CH1-CBL-00022",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 25,
+      "name": "Twe2/0/21",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 26,
+      "name": "nic2",
+      "device": {
+       "id": 12,
+       "name": "CH1-HV-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "label": "CH1-CBL-00023",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 27,
+      "name": "Twe1/0/22",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 28,
+      "name": "nic1",
+      "device": {
+       "id": 13,
+       "name": "CH1-HV-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "label": "CH1-CBL-00024",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 29,
+      "name": "Twe2/0/22",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 30,
+      "name": "nic2",
+      "device": {
+       "id": 13,
+       "name": "CH1-HV-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 16,
+   "label": "CH1-CBL-00025",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "111111",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 31,
+      "name": "Twe1/0/14",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 32,
+      "name": "port1",
+      "device": {
+       "id": 14,
+       "name": "CH1-BKP-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 17,
+   "label": "CH1-CBL-00031",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 33,
+      "name": "Twe1/0/15",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 34,
+      "name": "nic1",
+      "device": {
+       "id": 15,
+       "name": "CH1-PD-HV-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 18,
+   "label": "CH1-CBL-00032",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 35,
+      "name": "Twe2/0/15",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 36,
+      "name": "nic2",
+      "device": {
+       "id": 15,
+       "name": "CH1-PD-HV-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 19,
+   "label": "CH1-CBL-00033",
+   "type": "dac-passive",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 37,
+      "name": "Twe1/0/16",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 38,
+      "name": "port1",
+      "device": {
+       "id": 16,
+       "name": "CH1-PD-NAS-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 20,
+   "label": "CH1-CBL-00034",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 39,
+      "name": "ethernet1/5",
+      "device": {
+       "id": 1,
+       "name": "CH1-FW-01"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 40,
+      "name": "Gi0/1/0",
+      "device": {
+       "id": 17,
+       "name": "CH1-STATE-RTR"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 21,
+   "label": "CH1-CBL-00035",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 41,
+      "name": "ethernet1/5",
+      "device": {
+       "id": 2,
+       "name": "CH1-FW-02"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 42,
+      "name": "Gi0/1/1",
+      "device": {
+       "id": 17,
+       "name": "CH1-STATE-RTR"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 22,
+   "label": "CH1-CBL-00041",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 43,
+      "name": "Gi2/0/45",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 44,
+      "name": "eth0",
+      "device": {
+       "id": 21,
+       "name": "CH1-NVR-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 23,
+   "label": "CH1-CBL-00042",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 45,
+      "name": "Gi2/0/46",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 46,
+      "name": "eth0",
+      "device": {
+       "id": 22,
+       "name": "CH1-DOOR-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 24,
+   "label": "CH1-CBL-00043",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 47,
+      "name": "Gi2/0/47",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 48,
+      "name": "eth0",
+      "device": {
+       "id": 23,
+       "name": "CH1-BAS-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 25,
+   "label": "CH1-CBL-00044",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "a16207",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 49,
+      "name": "Twe1/0/17",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 50,
+      "name": "nic1",
+      "device": {
+       "id": 24,
+       "name": "CH1-TSC-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 26,
+   "label": "CH1-CBL-00051",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 51,
+      "name": "Twe1/0/20",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 52,
+      "name": "nmc",
+      "device": {
+       "id": 18,
+       "name": "CH1-UPS-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 27,
+   "label": "CH1-CBL-00052",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 53,
+      "name": "Twe2/0/20",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 54,
+      "name": "nmc",
+      "device": {
+       "id": 19,
+       "name": "CH1-UPS-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 28,
+   "label": "CH1-CBL-00053",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 55,
+      "name": "Twe2/0/19",
+      "device": {
+       "id": 5,
+       "name": "CH1-CORE-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 56,
+      "name": "nmc",
+      "device": {
+       "id": 20,
+       "name": "CH1-UPS-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 29,
+   "label": "CH1-CBL-00054",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 57,
+      "name": "Twe1/0/19",
+      "device": {
+       "id": 4,
+       "name": "CH1-CORE-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 58,
+      "name": "net1",
+      "device": {
+       "id": 3,
+       "name": "CH1-OOB-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 30,
+   "label": "CH1-CBL-00101",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 59,
+      "name": "Gi1/0/1",
+      "device": {
+       "id": 6,
+       "name": "CH1-ACC-C1-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 60,
+      "name": "eth0",
+      "device": {
+       "id": 25,
+       "name": "CH1-AP-C1-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 31,
+   "label": "CH1-CBL-00102",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 61,
+      "name": "Gi2/0/1",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 62,
+      "name": "eth0",
+      "device": {
+       "id": 26,
+       "name": "CH1-AP-C1-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 32,
+   "label": "CH1-CBL-00103",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 63,
+      "name": "Gi1/0/2",
+      "device": {
+       "id": 6,
+       "name": "CH1-ACC-C1-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 64,
+      "name": "eth0",
+      "device": {
+       "id": 27,
+       "name": "CH1-AP-C1-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 33,
+   "label": "CH1-CBL-00104",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 65,
+      "name": "Gi2/0/2",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 66,
+      "name": "eth0",
+      "device": {
+       "id": 28,
+       "name": "CH1-AP-C1-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 34,
+   "label": "CH1-CBL-00105",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 67,
+      "name": "Gi1/0/3",
+      "device": {
+       "id": 6,
+       "name": "CH1-ACC-C1-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 68,
+      "name": "eth0",
+      "device": {
+       "id": 29,
+       "name": "CH1-PRN-C1-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 35,
+   "label": "CH1-CBL-00106",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 69,
+      "name": "Gi2/0/3",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 70,
+      "name": "eth0",
+      "device": {
+       "id": 30,
+       "name": "CH1-CAM-C1-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 36,
+   "label": "CH1-CBL-00107",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 71,
+      "name": "Gi1/0/4",
+      "device": {
+       "id": 6,
+       "name": "CH1-ACC-C1-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 72,
+      "name": "eth0",
+      "device": {
+       "id": 31,
+       "name": "CH1-CAM-C1-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "label": "CH1-CBL-00108",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 73,
+      "name": "Gi2/0/4",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 74,
+      "name": "eth0",
+      "device": {
+       "id": 32,
+       "name": "CH1-CAM-C1-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "label": "CH1-CBL-00109",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 75,
+      "name": "Gi1/0/5",
+      "device": {
+       "id": 6,
+       "name": "CH1-ACC-C1-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 76,
+      "name": "eth0",
+      "device": {
+       "id": 33,
+       "name": "CH1-CAM-C1-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "label": "CH1-CBL-00110",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 77,
+      "name": "Gi1/0/1",
+      "device": {
+       "id": 8,
+       "name": "CH1-ACC-C2-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 78,
+      "name": "eth0",
+      "device": {
+       "id": 34,
+       "name": "CH1-AP-C2-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "label": "CH1-CBL-00111",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 79,
+      "name": "Gi2/0/1",
+      "device": {
+       "id": 9,
+       "name": "CH1-ACC-C2-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 80,
+      "name": "eth0",
+      "device": {
+       "id": 35,
+       "name": "CH1-AP-C2-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 41,
+   "label": "CH1-CBL-00112",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 81,
+      "name": "Gi1/0/2",
+      "device": {
+       "id": 8,
+       "name": "CH1-ACC-C2-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 82,
+      "name": "eth0",
+      "device": {
+       "id": 36,
+       "name": "CH1-AP-C2-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 42,
+   "label": "CH1-CBL-00113",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 83,
+      "name": "Gi2/0/2",
+      "device": {
+       "id": 9,
+       "name": "CH1-ACC-C2-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 84,
+      "name": "eth0",
+      "device": {
+       "id": 37,
+       "name": "CH1-AP-C2-04"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 43,
+   "label": "CH1-CBL-00114",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 85,
+      "name": "Gi1/0/3",
+      "device": {
+       "id": 8,
+       "name": "CH1-ACC-C2-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 86,
+      "name": "eth0",
+      "device": {
+       "id": 38,
+       "name": "CH1-PRN-C2-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 44,
+   "label": "CH1-CBL-00115",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 87,
+      "name": "Gi2/0/3",
+      "device": {
+       "id": 9,
+       "name": "CH1-ACC-C2-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 88,
+      "name": "eth0",
+      "device": {
+       "id": 39,
+       "name": "CH1-CAM-C2-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 45,
+   "label": "CH1-CBL-00116",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 89,
+      "name": "Gi1/0/4",
+      "device": {
+       "id": 8,
+       "name": "CH1-ACC-C2-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 90,
+      "name": "eth0",
+      "device": {
+       "id": 40,
+       "name": "CH1-CAM-C2-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 46,
+   "label": "CH1-CBL-00117",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 91,
+      "name": "Gi1/0/1",
+      "device": {
+       "id": 10,
+       "name": "CH1-ACC-PD-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 92,
+      "name": "eth0",
+      "device": {
+       "id": 41,
+       "name": "CH1-AP-PD-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 47,
+   "label": "CH1-CBL-00118",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 93,
+      "name": "Gi2/0/1",
+      "device": {
+       "id": 11,
+       "name": "CH1-ACC-PD-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 94,
+      "name": "eth0",
+      "device": {
+       "id": 42,
+       "name": "CH1-AP-PD-02"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 48,
+   "label": "CH1-CBL-00119",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 95,
+      "name": "Gi1/0/2",
+      "device": {
+       "id": 10,
+       "name": "CH1-ACC-PD-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 96,
+      "name": "eth0",
+      "device": {
+       "id": 43,
+       "name": "CH1-AP-PD-03"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 49,
+   "label": "CH1-CBL-00120",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "7c4dff",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 97,
+      "name": "Gi2/0/2",
+      "device": {
+       "id": 11,
+       "name": "CH1-ACC-PD-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 98,
+      "name": "eth0",
+      "device": {
+       "id": 44,
+       "name": "CH1-PRN-PD-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 50,
+   "label": "CH1-CBL-00121",
+   "type": "cat6a",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 99,
+      "name": "Gi2/0/5",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 100,
+      "name": "eth0",
+      "device": {
+       "id": 45,
+       "name": "CH1-AP-CC-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 51,
+   "label": "CH1-CBL-00122",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 101,
+      "name": "Gi1/0/6",
+      "device": {
+       "id": 6,
+       "name": "CH1-ACC-C1-1"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 102,
+      "name": "eth0",
+      "device": {
+       "id": 46,
+       "name": "CH1-PAY-01"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "id": 52,
+   "label": "CH1-CBL-00123",
+   "type": "cat6",
+   "status": {
+    "value": "connected"
+   },
+   "color": "2196f3",
+   "length": null,
+   "length_unit": null,
+   "a_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 103,
+      "name": "Gi2/0/6",
+      "device": {
+       "id": 7,
+       "name": "CH1-ACC-C1-2"
+      }
+     }
+    }
+   ],
+   "b_terminations": [
+    {
+     "object_type": "dcim.interface",
+     "object": {
+      "id": 104,
+      "name": "eth0",
+      "device": {
+       "id": 47,
+       "name": "CH1-PAY-02"
+      }
+     }
+    }
+   ]
+  }
+ ],
+ "modules": [],
+ "module_bays": [],
+ "inventory_items": [
+  {
+   "id": 1,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "SFP-10G-SR",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "SFP-10G-SR",
+   "serial": "FCxxxxx51",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 15,
+    "name": "Twe1/0/12"
+   }
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 8,
+    "name": "CH1-ACC-C2-1"
+   },
+   "name": "SFP-10G-SR",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "SFP-10G-SR",
+   "serial": "FOxxxxx52",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 16,
+    "name": "Te1/1/1"
+   }
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "SFP-10G-SR",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "SFP-10G-SR",
+   "serial": "FCxxxxx53",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 17,
+    "name": "Twe2/0/12"
+   }
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 9,
+    "name": "CH1-ACC-C2-2"
+   },
+   "name": "SFP-10G-SR",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "SFP-10G-SR",
+   "serial": "FOxxxxx54",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 18,
+    "name": "Te2/1/1"
+   }
+  },
+  {
+   "id": 5,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "SFP-10G-SR",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "SFP-10G-SR",
+   "serial": "FCxxxxx55",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 19,
+    "name": "Twe1/0/13"
+   }
+  },
+  {
+   "id": 6,
+   "device": {
+    "id": 10,
+    "name": "CH1-ACC-PD-1"
+   },
+   "name": "SFP-10G-SR",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "SFP-10G-SR",
+   "serial": "FOxxxxx56",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 20,
+    "name": "Te1/1/1"
+   }
+  },
+  {
+   "id": 7,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "SFP-10G-SR",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "SFP-10G-SR",
+   "serial": "FCxxxxx57",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 21,
+    "name": "Twe2/0/13"
+   }
+  },
+  {
+   "id": 8,
+   "device": {
+    "id": 11,
+    "name": "CH1-ACC-PD-2"
+   },
+   "name": "SFP-10G-SR",
+   "label": "",
+   "role": {
+    "name": "Transceiver",
+    "slug": "transceiver"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "SFP-10G-SR",
+   "serial": "FOxxxxx58",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": "dcim.interface",
+   "component": {
+    "id": 22,
+    "name": "Te2/1/1"
+   }
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "C9K-PWR-950WAC-R",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "C9K-PWR-950WAC-R",
+   "serial": "FCxxxxx59",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 10,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "C9K-PWR-950WAC-R",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "C9K-PWR-950WAC-R",
+   "serial": "FCxxxxx60",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 11,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "C9K-T1-FANTRAY",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "C9K-T1-FANTRAY",
+   "serial": "FCxxxxx61",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 12,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "C9K-T1-FANTRAY",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "C9K-T1-FANTRAY",
+   "serial": "FCxxxxx62",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 13,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "C9K-PWR-950WAC-R",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "C9K-PWR-950WAC-R",
+   "serial": "FCxxxxx63",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 14,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "C9K-PWR-950WAC-R",
+   "label": "",
+   "role": {
+    "name": "Power supply",
+    "slug": "psu"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "C9K-PWR-950WAC-R",
+   "serial": "FCxxxxx64",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 15,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "C9K-T1-FANTRAY",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "C9K-T1-FANTRAY",
+   "serial": "FCxxxxx65",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  },
+  {
+   "id": 16,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "C9K-T1-FANTRAY",
+   "label": "",
+   "role": {
+    "name": "Fan",
+    "slug": "fan"
+   },
+   "manufacturer": {
+    "name": "Cisco",
+    "slug": "cisco"
+   },
+   "part_id": "C9K-T1-FANTRAY",
+   "serial": "FCxxxxx66",
+   "asset_tag": null,
+   "discovered": false,
+   "description": "",
+   "component_type": null,
+   "component": null
+  }
+ ],
+ "vlans": [
+  {
+   "id": 1,
+   "vid": 10,
+   "name": "STAFF-WIRED",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "vid": 11,
+   "name": "STAFF-WIFI",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "vid": 20,
+   "name": "VOICE",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Voice",
+     "slug": "zone-voice"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "vid": 25,
+   "name": "PAY-COUNTER",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Payment counters",
+     "slug": "zone-pay"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "vid": 40,
+   "name": "SERVERS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "City servers",
+     "slug": "zone-servers"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "vid": 45,
+   "name": "BACKUP",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "City servers",
+     "slug": "zone-servers"
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "vid": 60,
+   "name": "PD-WORKSTATIONS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ]
+  },
+  {
+   "id": 8,
+   "vid": 61,
+   "name": "PD-SERVERS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ]
+  },
+  {
+   "id": 9,
+   "vid": 62,
+   "name": "PD-WIFI",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ]
+  },
+  {
+   "id": 10,
+   "vid": 70,
+   "name": "PUBLIC-WIFI",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ]
+  },
+  {
+   "id": 11,
+   "vid": 80,
+   "name": "CAMERAS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ]
+  },
+  {
+   "id": 12,
+   "vid": 81,
+   "name": "DOOR-ACCESS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ]
+  },
+  {
+   "id": 13,
+   "vid": 82,
+   "name": "HVAC",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ]
+  },
+  {
+   "id": 14,
+   "vid": 90,
+   "name": "SIGNALS",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Traffic signals and field",
+     "slug": "zone-field"
+    }
+   ]
+  },
+  {
+   "id": 15,
+   "vid": 99,
+   "name": "NET-MGMT",
+   "role": null,
+   "status": {
+    "value": "active"
+   },
+   "site": {
+    "id": 1,
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ]
+  }
+ ],
+ "prefixes": [
+  {
+   "id": 1,
+   "prefix": "10.30.10.0/23",
+   "vlan": {
+    "id": 1,
+    "vid": 10
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 2,
+   "prefix": "10.30.12.0/22",
+   "vlan": {
+    "id": 2,
+    "vid": 11
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 3,
+   "prefix": "10.30.20.0/24",
+   "vlan": {
+    "id": 3,
+    "vid": 20
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Voice",
+     "slug": "zone-voice"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 4,
+   "prefix": "10.30.25.0/26",
+   "vlan": {
+    "id": 4,
+    "vid": 25
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Payment counters",
+     "slug": "zone-pay"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "compliance_scope": [
+     "pci-cde"
+    ],
+    "data_classification": "confidential"
+   }
+  },
+  {
+   "id": 5,
+   "prefix": "10.30.40.0/24",
+   "vlan": {
+    "id": 5,
+    "vid": 40
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "City servers",
+     "slug": "zone-servers"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 6,
+   "prefix": "10.30.45.0/24",
+   "vlan": {
+    "id": 6,
+    "vid": 45
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "City servers",
+     "slug": "zone-servers"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 7,
+   "prefix": "10.31.60.0/24",
+   "vlan": {
+    "id": 7,
+    "vid": 60
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "data_classification": "restricted"
+   }
+  },
+  {
+   "id": 8,
+   "prefix": "10.31.61.0/24",
+   "vlan": {
+    "id": 8,
+    "vid": 61
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "data_classification": "restricted"
+   }
+  },
+  {
+   "id": 9,
+   "prefix": "10.31.62.0/24",
+   "vlan": {
+    "id": 9,
+    "vid": 62
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "compliance_scope": [
+     "cjis"
+    ],
+    "data_classification": "restricted"
+   }
+  },
+  {
+   "id": 10,
+   "prefix": "172.20.0.0/22",
+   "vlan": {
+    "id": 10,
+    "vid": 70
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1",
+    "data_classification": "public"
+   }
+  },
+  {
+   "id": 11,
+   "prefix": "10.30.80.0/24",
+   "vlan": {
+    "id": 11,
+    "vid": 80
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 12,
+   "prefix": "10.30.81.0/24",
+   "vlan": {
+    "id": 12,
+    "vid": 81
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 13,
+   "prefix": "10.30.82.0/24",
+   "vlan": {
+    "id": 13,
+    "vid": 82
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Building systems",
+     "slug": "zone-building"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 14,
+   "prefix": "10.32.90.0/24",
+   "vlan": {
+    "id": 14,
+    "vid": 90
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Traffic signals and field",
+     "slug": "zone-field"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  },
+  {
+   "id": 15,
+   "prefix": "10.30.99.0/24",
+   "vlan": {
+    "id": 15,
+    "vid": 99
+   },
+   "vrf": null,
+   "tags": [
+    {
+     "name": "Network management",
+     "slug": "zone-mgmt"
+    }
+   ],
+   "status": {
+    "value": "active"
+   },
+   "custom_fields": {
+    "gateway": "FW HA .1"
+   }
+  }
+ ],
+ "circuits": [
+  {
+   "id": 1,
+   "cid": "CH1-ISP-A-01",
+   "provider": {
+    "name": "Provider A"
+   },
+   "type": {
+    "name": "Dedicated internet access"
+   },
+   "commit_rate": 1000000,
+   "status": {
+    "value": "active"
+   },
+   "description": "DIA 1G · fiber"
+  },
+  {
+   "id": 2,
+   "cid": "CH1-ISP-B-01",
+   "provider": {
+    "name": "Provider B"
+   },
+   "type": {
+    "name": "Business cable"
+   },
+   "commit_rate": 500000,
+   "status": {
+    "value": "active"
+   },
+   "description": "Cable 500/50 · modem"
+  },
+  {
+   "id": 3,
+   "cid": "CH1-STATE-01",
+   "provider": {
+    "name": "State CJIS network"
+   },
+   "type": {
+    "name": "State-managed circuit"
+   },
+   "commit_rate": 100000,
+   "status": {
+    "value": "active"
+   },
+   "description": "State network · state router"
+  },
+  {
+   "id": 4,
+   "cid": "CH1-COUNTY-01",
+   "provider": {
+    "name": "County IT"
+   },
+   "type": {
+    "name": "County fiber (dispatch)"
+   },
+   "commit_rate": 1000000,
+   "status": {
+    "value": "active"
+   },
+   "description": "County 911 dispatch link"
+  }
+ ],
+ "interfaces": [
+  {
+   "id": 1,
+   "device": {
+    "id": 1,
+    "name": "CH1-FW-01"
+   },
+   "name": "ethernet1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po1"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 61
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 90
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 2,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po1"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 61
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 90
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 3,
+   "device": {
+    "id": 1,
+    "name": "CH1-FW-01"
+   },
+   "name": "ethernet1/2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po1"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 61
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 90
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 4,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po1"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 61
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 90
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 5,
+   "device": {
+    "id": 2,
+    "name": "CH1-FW-02"
+   },
+   "name": "ethernet1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po2"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 61
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 90
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 6,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po2"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 61
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 90
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 7,
+   "device": {
+    "id": 2,
+    "name": "CH1-FW-02"
+   },
+   "name": "ethernet1/2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po2"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 61
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 90
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 8,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/2",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po2"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 61
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 90
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 9,
+   "device": {
+    "id": 1,
+    "name": "CH1-FW-01"
+   },
+   "name": "ha1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 10,
+   "device": {
+    "id": 2,
+    "name": "CH1-FW-02"
+   },
+   "name": "ha1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 11,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/11",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po11"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 12,
+   "device": {
+    "id": 6,
+    "name": "CH1-ACC-C1-1"
+   },
+   "name": "Te1/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po11"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 13,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/11",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po11"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 14,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Te2/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po11"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 15,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/12",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po12"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 16,
+   "device": {
+    "id": 8,
+    "name": "CH1-ACC-C2-1"
+   },
+   "name": "Te1/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po12"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 17,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/12",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po12"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 18,
+   "device": {
+    "id": 9,
+    "name": "CH1-ACC-C2-2"
+   },
+   "name": "Te2/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po12"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 10
+    },
+    {
+     "vid": 11
+    },
+    {
+     "vid": 20
+    },
+    {
+     "vid": 25
+    },
+    {
+     "vid": 70
+    },
+    {
+     "vid": 80
+    },
+    {
+     "vid": 81
+    },
+    {
+     "vid": 82
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 19,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/13",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po13"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 20
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 20,
+   "device": {
+    "id": 10,
+    "name": "CH1-ACC-PD-1"
+   },
+   "name": "Te1/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po13"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 20
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 21,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/13",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po13"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 20
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 22,
+   "device": {
+    "id": 11,
+    "name": "CH1-ACC-PD-2"
+   },
+   "name": "Te2/1/1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po13"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 20
+    },
+    {
+     "vid": 60
+    },
+    {
+     "vid": 62
+    },
+    {
+     "vid": 99
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 23,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/21",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po21"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 24,
+   "device": {
+    "id": 12,
+    "name": "CH1-HV-01"
+   },
+   "name": "nic1",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po21"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 25,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/21",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po21"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 26,
+   "device": {
+    "id": 12,
+    "name": "CH1-HV-01"
+   },
+   "name": "nic2",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po21"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 27,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/22",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po22"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 28,
+   "device": {
+    "id": 13,
+    "name": "CH1-HV-02"
+   },
+   "name": "nic1",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po22"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 29,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/22",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po22"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 30,
+   "device": {
+    "id": 13,
+    "name": "CH1-HV-02"
+   },
+   "name": "nic2",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po22"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 40
+    },
+    {
+     "vid": 45
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 31,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/14",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 45
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 32,
+   "device": {
+    "id": 14,
+    "name": "CH1-BKP-01"
+   },
+   "name": "port1",
+   "type": {
+    "value": "10gbase-x-sfpp"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 45
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 33,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/15",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po15"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 61
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 34,
+   "device": {
+    "id": 15,
+    "name": "CH1-PD-HV-01"
+   },
+   "name": "nic1",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po15"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 61
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 35,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/15",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po15"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 61
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 36,
+   "device": {
+    "id": 15,
+    "name": "CH1-PD-HV-01"
+   },
+   "name": "nic2",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": {
+    "name": "Po15"
+   },
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": null,
+   "tagged_vlans": [
+    {
+     "vid": 61
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 37,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/16",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 61
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 38,
+   "device": {
+    "id": 16,
+    "name": "CH1-PD-NAS-01"
+   },
+   "name": "port1",
+   "type": {
+    "value": "25gbase-x-sfp28"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 61
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 39,
+   "device": {
+    "id": 1,
+    "name": "CH1-FW-01"
+   },
+   "name": "ethernet1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 40,
+   "device": {
+    "id": 17,
+    "name": "CH1-STATE-RTR"
+   },
+   "name": "Gi0/1/0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 41,
+   "device": {
+    "id": 2,
+    "name": "CH1-FW-02"
+   },
+   "name": "ethernet1/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 42,
+   "device": {
+    "id": 17,
+    "name": "CH1-STATE-RTR"
+   },
+   "name": "Gi0/1/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 43,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Gi2/0/45",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 44,
+   "device": {
+    "id": 21,
+    "name": "CH1-NVR-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 45,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Gi2/0/46",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 81
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 46,
+   "device": {
+    "id": 22,
+    "name": "CH1-DOOR-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 81
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 47,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Gi2/0/47",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 82
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 48,
+   "device": {
+    "id": 23,
+    "name": "CH1-BAS-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 82
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 49,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/17",
+   "type": {
+    "value": "10gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 90
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 50,
+   "device": {
+    "id": 24,
+    "name": "CH1-TSC-01"
+   },
+   "name": "nic1",
+   "type": {
+    "value": "10gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 90
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 51,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/20",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 52,
+   "device": {
+    "id": 18,
+    "name": "CH1-UPS-01"
+   },
+   "name": "nmc",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 53,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/20",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 54,
+   "device": {
+    "id": 19,
+    "name": "CH1-UPS-02"
+   },
+   "name": "nmc",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 55,
+   "device": {
+    "id": 5,
+    "name": "CH1-CORE-2"
+   },
+   "name": "Twe2/0/19",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 56,
+   "device": {
+    "id": 20,
+    "name": "CH1-UPS-03"
+   },
+   "name": "nmc",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 57,
+   "device": {
+    "id": 4,
+    "name": "CH1-CORE-1"
+   },
+   "name": "Twe1/0/19",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 58,
+   "device": {
+    "id": 3,
+    "name": "CH1-OOB-01"
+   },
+   "name": "net1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 59,
+   "device": {
+    "id": 6,
+    "name": "CH1-ACC-C1-1"
+   },
+   "name": "Gi1/0/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 60,
+   "device": {
+    "id": 25,
+    "name": "CH1-AP-C1-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 61,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Gi2/0/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 62,
+   "device": {
+    "id": 26,
+    "name": "CH1-AP-C1-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 63,
+   "device": {
+    "id": 6,
+    "name": "CH1-ACC-C1-1"
+   },
+   "name": "Gi1/0/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 64,
+   "device": {
+    "id": 27,
+    "name": "CH1-AP-C1-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 65,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Gi2/0/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 66,
+   "device": {
+    "id": 28,
+    "name": "CH1-AP-C1-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 67,
+   "device": {
+    "id": 6,
+    "name": "CH1-ACC-C1-1"
+   },
+   "name": "Gi1/0/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 10
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 68,
+   "device": {
+    "id": 29,
+    "name": "CH1-PRN-C1-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 10
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 69,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Gi2/0/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 70,
+   "device": {
+    "id": 30,
+    "name": "CH1-CAM-C1-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 71,
+   "device": {
+    "id": 6,
+    "name": "CH1-ACC-C1-1"
+   },
+   "name": "Gi1/0/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 72,
+   "device": {
+    "id": 31,
+    "name": "CH1-CAM-C1-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 73,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Gi2/0/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 74,
+   "device": {
+    "id": 32,
+    "name": "CH1-CAM-C1-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 75,
+   "device": {
+    "id": 6,
+    "name": "CH1-ACC-C1-1"
+   },
+   "name": "Gi1/0/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 76,
+   "device": {
+    "id": 33,
+    "name": "CH1-CAM-C1-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 77,
+   "device": {
+    "id": 8,
+    "name": "CH1-ACC-C2-1"
+   },
+   "name": "Gi1/0/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 78,
+   "device": {
+    "id": 34,
+    "name": "CH1-AP-C2-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 79,
+   "device": {
+    "id": 9,
+    "name": "CH1-ACC-C2-2"
+   },
+   "name": "Gi2/0/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 80,
+   "device": {
+    "id": 35,
+    "name": "CH1-AP-C2-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 81,
+   "device": {
+    "id": 8,
+    "name": "CH1-ACC-C2-1"
+   },
+   "name": "Gi1/0/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 82,
+   "device": {
+    "id": 36,
+    "name": "CH1-AP-C2-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 83,
+   "device": {
+    "id": 9,
+    "name": "CH1-ACC-C2-2"
+   },
+   "name": "Gi2/0/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 84,
+   "device": {
+    "id": 37,
+    "name": "CH1-AP-C2-04"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 85,
+   "device": {
+    "id": 8,
+    "name": "CH1-ACC-C2-1"
+   },
+   "name": "Gi1/0/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 10
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 86,
+   "device": {
+    "id": 38,
+    "name": "CH1-PRN-C2-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 10
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 87,
+   "device": {
+    "id": 9,
+    "name": "CH1-ACC-C2-2"
+   },
+   "name": "Gi2/0/3",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 88,
+   "device": {
+    "id": 39,
+    "name": "CH1-CAM-C2-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 89,
+   "device": {
+    "id": 8,
+    "name": "CH1-ACC-C2-1"
+   },
+   "name": "Gi1/0/4",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 90,
+   "device": {
+    "id": 40,
+    "name": "CH1-CAM-C2-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 80
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 91,
+   "device": {
+    "id": 10,
+    "name": "CH1-ACC-PD-1"
+   },
+   "name": "Gi1/0/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 62
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 92,
+   "device": {
+    "id": 41,
+    "name": "CH1-AP-PD-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 62
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 93,
+   "device": {
+    "id": 11,
+    "name": "CH1-ACC-PD-2"
+   },
+   "name": "Gi2/0/1",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 62
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 94,
+   "device": {
+    "id": 42,
+    "name": "CH1-AP-PD-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 62
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 95,
+   "device": {
+    "id": 10,
+    "name": "CH1-ACC-PD-1"
+   },
+   "name": "Gi1/0/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 62
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 96,
+   "device": {
+    "id": 43,
+    "name": "CH1-AP-PD-03"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 62
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 97,
+   "device": {
+    "id": 11,
+    "name": "CH1-ACC-PD-2"
+   },
+   "name": "Gi2/0/2",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 60
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 98,
+   "device": {
+    "id": 44,
+    "name": "CH1-PRN-PD-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 60
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 99,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Gi2/0/5",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 100,
+   "device": {
+    "id": 45,
+    "name": "CH1-AP-CC-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "2.5gbase-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "tagged"
+   },
+   "untagged_vlan": {
+    "vid": 99
+   },
+   "tagged_vlans": [
+    {
+     "vid": 11
+    },
+    {
+     "vid": 70
+    }
+   ],
+   "description": "",
+   "vrf": null,
+   "poe_mode": {
+    "value": "pd",
+    "label": "PD"
+   },
+   "poe_type": {
+    "value": "type2-ieee802.3at",
+    "label": "802.3at (Type 2)"
+   }
+  },
+  {
+   "id": 101,
+   "device": {
+    "id": 6,
+    "name": "CH1-ACC-C1-1"
+   },
+   "name": "Gi1/0/6",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 25
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 102,
+   "device": {
+    "id": 46,
+    "name": "CH1-PAY-01"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 25
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 103,
+   "device": {
+    "id": 7,
+    "name": "CH1-ACC-C1-2"
+   },
+   "name": "Gi2/0/6",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 25
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 104,
+   "device": {
+    "id": 47,
+    "name": "CH1-PAY-02"
+   },
+   "name": "eth0",
+   "type": {
+    "value": "1000base-t"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": {
+    "value": "access"
+   },
+   "untagged_vlan": {
+    "vid": 25
+   },
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null
+  },
+  {
+   "id": 105,
+   "device": {
+    "id": 25,
+    "name": "CH1-AP-C1-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 106,
+   "device": {
+    "id": 25,
+    "name": "CH1-AP-C1-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 107,
+   "device": {
+    "id": 26,
+    "name": "CH1-AP-C1-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 108,
+   "device": {
+    "id": 26,
+    "name": "CH1-AP-C1-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 109,
+   "device": {
+    "id": 27,
+    "name": "CH1-AP-C1-03"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 110,
+   "device": {
+    "id": 27,
+    "name": "CH1-AP-C1-03"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 111,
+   "device": {
+    "id": 28,
+    "name": "CH1-AP-C1-04"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 112,
+   "device": {
+    "id": 28,
+    "name": "CH1-AP-C1-04"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 113,
+   "device": {
+    "id": 34,
+    "name": "CH1-AP-C2-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 114,
+   "device": {
+    "id": 34,
+    "name": "CH1-AP-C2-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 115,
+   "device": {
+    "id": 35,
+    "name": "CH1-AP-C2-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 116,
+   "device": {
+    "id": 35,
+    "name": "CH1-AP-C2-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 117,
+   "device": {
+    "id": 36,
+    "name": "CH1-AP-C2-03"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 118,
+   "device": {
+    "id": 36,
+    "name": "CH1-AP-C2-03"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 119,
+   "device": {
+    "id": 37,
+    "name": "CH1-AP-C2-04"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 120,
+   "device": {
+    "id": 37,
+    "name": "CH1-AP-C2-04"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 121,
+   "device": {
+    "id": 41,
+    "name": "CH1-AP-PD-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": []
+  },
+  {
+   "id": 122,
+   "device": {
+    "id": 41,
+    "name": "CH1-AP-PD-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "PD-SECURE"
+    }
+   ]
+  },
+  {
+   "id": 123,
+   "device": {
+    "id": 42,
+    "name": "CH1-AP-PD-02"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": []
+  },
+  {
+   "id": 124,
+   "device": {
+    "id": 42,
+    "name": "CH1-AP-PD-02"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "PD-SECURE"
+    }
+   ]
+  },
+  {
+   "id": 125,
+   "device": {
+    "id": 43,
+    "name": "CH1-AP-PD-03"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": []
+  },
+  {
+   "id": 126,
+   "device": {
+    "id": 43,
+    "name": "CH1-AP-PD-03"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 3,
+     "ssid": "PD-SECURE"
+    }
+   ]
+  },
+  {
+   "id": 127,
+   "device": {
+    "id": 45,
+    "name": "CH1-AP-CC-01"
+   },
+   "name": "radio0",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "2.4g-6-2437-22",
+    "label": "6 (2437/22)"
+   },
+   "wireless_lans": [
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  },
+  {
+   "id": 128,
+   "device": {
+    "id": 45,
+    "name": "CH1-AP-CC-01"
+   },
+   "name": "radio1",
+   "type": {
+    "value": "ieee802.11ax"
+   },
+   "enabled": true,
+   "lag": null,
+   "mode": null,
+   "untagged_vlan": null,
+   "tagged_vlans": [],
+   "description": "",
+   "vrf": null,
+   "rf_role": {
+    "value": "ap",
+    "label": "Access point"
+   },
+   "rf_channel": {
+    "value": "5g-42-5210-80",
+    "label": "42 (5210/80)"
+   },
+   "wireless_lans": [
+    {
+     "id": 1,
+     "ssid": "HALVERN-STAFF"
+    },
+    {
+     "id": 2,
+     "ssid": "HALVERN-PUBLIC"
+    }
+   ]
+  }
+ ],
+ "wireless_links": [],
+ "wireless_lans": [
+  {
+   "id": 1,
+   "ssid": "HALVERN-STAFF",
+   "description": "City staff laptops and phones; EAP-TLS with device certificates",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 2,
+    "vid": 11,
+    "name": "STAFF-WIFI"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "City staff",
+     "slug": "zone-staff"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_eap": "EAP-TLS",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "5ghz"
+    ]
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   }
+  },
+  {
+   "id": 2,
+   "ssid": "HALVERN-PUBLIC",
+   "description": "Residents and visitors; internet only, filtered, 10 Mb/s per client",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 10,
+    "vid": 70,
+    "name": "PUBLIC-WIFI"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Public Wi-Fi",
+     "slug": "zone-public"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "open-portal",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "2.4ghz",
+     "5ghz"
+    ],
+    "wlan_client_isolation": true,
+    "wlan_portal": "captive"
+   },
+   "auth_type": {
+    "value": "open",
+    "label": "Open"
+   },
+   "auth_cipher": null
+  },
+  {
+   "id": 3,
+   "ssid": "PD-SECURE",
+   "description": "Police laptops only; broadcast in the police wing only",
+   "status": {
+    "value": "active"
+   },
+   "vlan": {
+    "id": 9,
+    "vid": 62,
+    "name": "PD-WIFI"
+   },
+   "scope_type": "dcim.site",
+   "scope_id": 1,
+   "scope": {
+    "id": 1,
+    "name": "Halvern Civic Center",
+    "slug": "ch1"
+   },
+   "tags": [
+    {
+     "name": "Police (CJIS)",
+     "slug": "zone-cjis"
+    }
+   ],
+   "custom_fields": {
+    "wlan_security": "wpa3-enterprise",
+    "wlan_eap": "EAP-TLS",
+    "wlan_switching": "local",
+    "wlan_bands": [
+     "5ghz"
+    ]
+   },
+   "auth_type": {
+    "value": "wpa-enterprise",
+    "label": "WPA Enterprise"
+   },
+   "auth_cipher": {
+    "value": "aes",
+    "label": "AES"
+   }
+  }
+ ],
+ "ip_addresses": [],
+ "contact_assignments": [
+  {
+   "id": 1,
+   "object_type": "dcim.site",
+   "object_id": 1,
+   "contact": {
+    "id": 1,
+    "name": "IT manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 2,
+   "object_type": "dcim.site",
+   "object_id": 1,
+   "contact": {
+    "id": 2,
+    "name": "City IT"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 3,
+   "object_type": "dcim.location",
+   "object_id": 6,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 4,
+   "object_type": "dcim.location",
+   "object_id": 7,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 5,
+   "object_type": "dcim.device",
+   "object_id": 10,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 6,
+   "object_type": "dcim.device",
+   "object_id": 10,
+   "contact": {
+    "id": 4,
+    "name": "Police IT liaison"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 7,
+   "object_type": "dcim.device",
+   "object_id": 11,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 8,
+   "object_type": "dcim.device",
+   "object_id": 11,
+   "contact": {
+    "id": 4,
+    "name": "Police IT liaison"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 9,
+   "object_type": "dcim.device",
+   "object_id": 15,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 10,
+   "object_type": "dcim.device",
+   "object_id": 15,
+   "contact": {
+    "id": 4,
+    "name": "Police IT liaison"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 11,
+   "object_type": "dcim.device",
+   "object_id": 16,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 12,
+   "object_type": "dcim.device",
+   "object_id": 16,
+   "contact": {
+    "id": 4,
+    "name": "Police IT liaison"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 13,
+   "object_type": "dcim.device",
+   "object_id": 17,
+   "contact": {
+    "id": 5,
+    "name": "State CJIS agency"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 14,
+   "object_type": "dcim.device",
+   "object_id": 17,
+   "contact": {
+    "id": 6,
+    "name": "State network operations"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 15,
+   "object_type": "dcim.device",
+   "object_id": 20,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 16,
+   "object_type": "dcim.device",
+   "object_id": 20,
+   "contact": {
+    "id": 4,
+    "name": "Police IT liaison"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 17,
+   "object_type": "dcim.device",
+   "object_id": 21,
+   "contact": {
+    "id": 7,
+    "name": "Facilities manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 18,
+   "object_type": "dcim.device",
+   "object_id": 21,
+   "contact": {
+    "id": 8,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 19,
+   "object_type": "dcim.device",
+   "object_id": 22,
+   "contact": {
+    "id": 7,
+    "name": "Facilities manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 20,
+   "object_type": "dcim.device",
+   "object_id": 22,
+   "contact": {
+    "id": 8,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 21,
+   "object_type": "dcim.device",
+   "object_id": 23,
+   "contact": {
+    "id": 7,
+    "name": "Facilities manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 22,
+   "object_type": "dcim.device",
+   "object_id": 23,
+   "contact": {
+    "id": 9,
+    "name": "HVAC contractor"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 23,
+   "object_type": "dcim.device",
+   "object_id": 24,
+   "contact": {
+    "id": 10,
+    "name": "Public works director"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 24,
+   "object_type": "dcim.device",
+   "object_id": 24,
+   "contact": {
+    "id": 11,
+    "name": "Signal vendor"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 25,
+   "object_type": "dcim.device",
+   "object_id": 30,
+   "contact": {
+    "id": 7,
+    "name": "Facilities manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 26,
+   "object_type": "dcim.device",
+   "object_id": 30,
+   "contact": {
+    "id": 8,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 27,
+   "object_type": "dcim.device",
+   "object_id": 31,
+   "contact": {
+    "id": 7,
+    "name": "Facilities manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 28,
+   "object_type": "dcim.device",
+   "object_id": 31,
+   "contact": {
+    "id": 8,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 29,
+   "object_type": "dcim.device",
+   "object_id": 32,
+   "contact": {
+    "id": 7,
+    "name": "Facilities manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 30,
+   "object_type": "dcim.device",
+   "object_id": 32,
+   "contact": {
+    "id": 8,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 31,
+   "object_type": "dcim.device",
+   "object_id": 33,
+   "contact": {
+    "id": 7,
+    "name": "Facilities manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 32,
+   "object_type": "dcim.device",
+   "object_id": 33,
+   "contact": {
+    "id": 8,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 33,
+   "object_type": "dcim.device",
+   "object_id": 39,
+   "contact": {
+    "id": 7,
+    "name": "Facilities manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 34,
+   "object_type": "dcim.device",
+   "object_id": 39,
+   "contact": {
+    "id": 8,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 35,
+   "object_type": "dcim.device",
+   "object_id": 40,
+   "contact": {
+    "id": 7,
+    "name": "Facilities manager"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 36,
+   "object_type": "dcim.device",
+   "object_id": 40,
+   "contact": {
+    "id": 8,
+    "name": "Security installer"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 37,
+   "object_type": "dcim.device",
+   "object_id": 41,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 38,
+   "object_type": "dcim.device",
+   "object_id": 41,
+   "contact": {
+    "id": 4,
+    "name": "Police IT liaison"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 39,
+   "object_type": "dcim.device",
+   "object_id": 42,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 40,
+   "object_type": "dcim.device",
+   "object_id": 42,
+   "contact": {
+    "id": 4,
+    "name": "Police IT liaison"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 41,
+   "object_type": "dcim.device",
+   "object_id": 43,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 42,
+   "object_type": "dcim.device",
+   "object_id": 43,
+   "contact": {
+    "id": 4,
+    "name": "Police IT liaison"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 43,
+   "object_type": "dcim.device",
+   "object_id": 44,
+   "contact": {
+    "id": 3,
+    "name": "Police department"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 44,
+   "object_type": "dcim.device",
+   "object_id": 44,
+   "contact": {
+    "id": 4,
+    "name": "Police IT liaison"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 45,
+   "object_type": "dcim.device",
+   "object_id": 46,
+   "contact": {
+    "id": 12,
+    "name": "Finance director"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 46,
+   "object_type": "dcim.device",
+   "object_id": 46,
+   "contact": {
+    "id": 1,
+    "name": "IT manager"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 47,
+   "object_type": "dcim.device",
+   "object_id": 47,
+   "contact": {
+    "id": 12,
+    "name": "Finance director"
+   },
+   "role": {
+    "slug": "asset-owner",
+    "name": "Asset owner"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  },
+  {
+   "id": 48,
+   "object_type": "dcim.device",
+   "object_id": 47,
+   "contact": {
+    "id": 1,
+    "name": "IT manager"
+   },
+   "role": {
+    "slug": "custodian",
+    "name": "Custodian"
+   },
+   "priority": {
+    "value": "primary"
+   }
+  }
+ ]
+}

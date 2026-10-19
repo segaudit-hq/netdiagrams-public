@@ -435,6 +435,9 @@ netdiagrams sample --profile retail
 `netbox-setup` follows the profile too: Purdue level and security level fields
 are only offered for manufacturing and warehouse.
 
+The book that goes with the manufacturing standard is *Draw Secure
+Manufacturing Network Diagrams* (netdiagrams.com/books/manufacturing-network-diagrams/).
+
 ### Warehouse (`--profile warehouse`)
 
 For distribution centers, cross-docks and 3PL sites. The template is the same
@@ -457,6 +460,9 @@ one with some serials, addresses and cable labels still to collect, to show
 the plan cards. The warehouse template and both samples are generated from
 the S01 template (see Development), so a fix to S01 is carried over by
 regenerating them.
+
+The book that goes with this standard is *Draw Secure Warehouse Network
+Diagrams* (netdiagrams.com/books/warehouse-network-diagrams/).
 
 ### Offices: `--profile office`
 
@@ -498,7 +504,53 @@ netdiagrams build --input office-starter.json
 ```
 
 The book that goes with this standard is *Draw Secure Small Office Network
-Diagrams* (netdiagrams.com/books/office-network-diagrams/).
+Diagrams* (netdiagrams.com/books/small-office-network-diagrams/).
+
+### Banks and credit unions: `--profile bank`
+
+The bank standard (B01) is eight sheets drawn for a community bank or credit
+union and its branches, around one firewall pair with the core processor's own
+router behind it. Zones band by trust: outside and the outside parties, the
+edge and the processor links, banking (teller line, platform and back office,
+wire room, card issuing), services, customer-facing (ATMs and lobby guests),
+security and management.
+
+```bash
+netdiagrams sample --profile bank -o ninebark.drawio   # the finished set, for "Ninebark Community Bank"
+netdiagrams build --profile bank                       # your own bank, from NetBox
+```
+
+| Sheet | What it shows |
+|---|---|
+| 1 Overview | How the bank is protected, in business terms, for the board and the examiners |
+| 2 Logical | The six bands, a zone per box with its VLAN table, the firewall's interfaces, the core processor's link |
+| 3 Physical | Providers and the core processor's circuit, the firewall pair, the provider-owned router on port5, the core and floor stacks, servers, UPSes, the console server, one card per kind of end device per floor (ATM ×2, Camera ×9), link and asset registers |
+| 3d Wireless | Access points per floor with their switch port and cable, and the SSID table (staff and guests only) |
+| 4 Traffic flows | Who may talk to whom, lane by lane, ending in default deny (example until you write yours) |
+| 5 Failover | What fails, what takes over, what people notice, including the single core circuit (example) |
+| 6 Branches, processors and cloud | Branches, the core and card processors, the Federal Reserve, the cloud and the providers, with a site table (example) |
+| 7 Flow register | The flows as a register, a zone matrix and the naming standards |
+
+A branch is better drafted than fitted to the main office's sheets:
+`netdiagrams draft --profile bank` lays it out in the same bands with the bank
+shapes. `netdiagrams stencils --profile bank` saves those shapes (ATMs, teller
+cash recyclers, wire workstations, card printers, alarm panels, the
+provider-owned router, plus the office kit) as NetBox device cards, and
+`netdiagrams netbox-setup --profile bank` writes the bank zone tags
+(`zone-teller`, `zone-wire`, `zone-card`, `zone-atm`...), roles and the
+compliance scopes with GLBA first.
+
+A day-one bank with the gaps a first import has (missing serials, an
+unlabeled uplink, cameras with no zone, a VLAN with no prefix):
+
+```bash
+python3 scripts/make_bank_sample.py --site starter -o bank-starter.json
+netdiagrams build --input bank-starter.json
+```
+
+The book that goes with this standard is *Draw Secure Bank and Credit Union
+Network Diagrams* (netdiagrams.com/books/bank-network-diagrams/).
+
 ### Schools (`education`)
 
 ```bash
@@ -519,11 +571,15 @@ picks the school standard by itself. `netdiagrams stencils --profile education`
 adds school device shapes (camera, door controller, BAS controller, PA, NVR,
 classroom display, printer) and trust-tier bands to the shape library.
 
+The book that goes with this standard is *Draw Secure School Network
+Diagrams* (netdiagrams.com/books/school-network-diagrams/).
+
 ### Retail (`--profile retail`)
 
 | Profile | Template | Example | Bands |
 |---|---|---|---|
 | `manufacturing` (default) | S01, 11 sheets | Plant A | Purdue levels L5 to L0 |
+| `bank` | B01, 8 sheets | Ninebark Community Bank | outside, edge and processor links, banking, services, customer-facing, security and management |
 | `retail` | R01, 10 sheets | Store 014 | outside, head office, store, cardholder data (CDE), guest and devices |
 
 The retail standard draws one store: firewall and SD-WAN edge, 4G backup line,
@@ -548,6 +604,175 @@ controller, sensor) and the five zone bands; `draft` draws with the same shapes.
 `scripts/make_retail.py` is the single source of the R01 template, its shape
 library and the sample estate (Store 014, plus Store 027 and Store 031 with
 `--estate DIR`).
+
+The book that goes with this standard is *Draw Secure Retail Network
+Diagrams* (netdiagrams.com/books/retail-network-diagrams/).
+
+### Car dealerships: `--profile dealership`
+
+The dealership standard (D01) is eight sheets drawn for one franchised rooftop,
+Kestrel Valley Motors, around one firewall pair. Zones follow where customer
+financial information goes and band by department: outside (the hosted DMS,
+lenders and credit bureaus); the edge; sales, F&I and the back office with the
+card terminals; service, the shop, parts and the manufacturer's router; and
+customer Wi-Fi, phones, the building and lot, and management.
+
+```bash
+netdiagrams sample --profile dealership -o kestrel-valley.drawio   # the finished set, for "Kestrel Valley Motors"
+netdiagrams build --profile dealership                            # your own dealership, from NetBox
+```
+
+| Sheet | What it shows |
+|---|---|
+| 1 Overview | How the dealership is protected, in business terms, for the dealer principal and the Qualified Individual |
+| 2 Logical | The five bands, a zone per box with its VLAN table, the firewall's interfaces and tunnels |
+| 3 Physical | Providers, the firewall pair, the core, the main-building and service-building stacks, the deal-jacket NAS, the manufacturer's router on its own VLAN, UPSes, the console server, one card per kind of end device per building, link and asset registers |
+| 3d Wireless | Access points per building with their switch port and cable, and the SSID table (staff, service lane, shop, guest) |
+| 4 Traffic flows | Who may talk to whom, lane by lane, ending in default deny (example until you write yours) |
+| 5 Failover | What fails, what takes over, what people notice, including the morning the DMS goes dark (example) |
+| 6 Rooftops and cloud | The pre-owned store, the hosted DMS, SaaS, the MSP and vendor support, with a site table (example) |
+| 7 Flow register | The flows as a register, a zone matrix and the naming standards |
+
+`netdiagrams stencils --profile dealership` saves the dealership shapes (card
+terminal, diagnostic PC, key cabinet, manufacturer router, printer, camera,
+video recorder, NAS, UPS, console server), and `netdiagrams netbox-setup
+--profile dealership` writes the zone tags (`zone-fi`, `zone-shop`, `zone-oem`,
+`zone-guest`...) and roles. The sample puts the F&I, office and file subnets in
+the `glba` compliance scope (the FTC Safeguards Rule) and the card terminals in
+`pci-cde`. A day-one dealership with the gaps a first import has:
+
+```bash
+python3 scripts/make_dealer_sample.py --site starter -o dealership-starter.json
+netdiagrams build --input dealership-starter.json
+```
+
+The book that goes with this standard is *Draw Secure Car Dealership Network
+Diagrams* (netdiagrams.com/books/car-dealership-network-diagrams/).
+
+### Cities, towns and counties: `--profile municipal`
+
+The local government standard (M01) is eight sheets drawn for a civic center
+where City Hall and the police share one building and one network, around one
+firewall pair. Zones band by who they serve: outside (internet, state, county
+and the water plant as a boundary), the edge, the public, City Hall, public
+safety (police, CJIS) and facilities, field and management.
+
+```bash
+netdiagrams sample --profile municipal -o halvern.drawio   # the finished set, for "Halvern Civic Center"
+netdiagrams build --profile municipal                      # your own city, from NetBox
+```
+
+| Sheet | What it shows |
+|---|---|
+| 1 Overview | How the city is protected, for the city manager, the council and the insurer |
+| 2 Logical | The six bands, a zone per box with its VLAN table, the firewall's interfaces and VPN pools |
+| 3 Physical | Providers and the state and county circuits, the firewall pair, the core pair, the police cage (R03) with the state-managed router, the wing stacks, servers, building systems, the signal system, UPSes, link and asset registers |
+| 3d Wireless | Access points per area, the SSID table (PD-SECURE in the police wing only) |
+| 4 Traffic flows | Who may talk to whom, lane by lane, ending in default deny (example) |
+| 5 Failover | ISP, firewall, core, the storm and the generator, the console server, the state circuit (example) |
+| 6 City buildings and links | The civic center hub, the library, public works and fire stations on city fiber, state and county edges, the water plant boundary (example) |
+| 7 Flow register | The flows as a register, a zone matrix and the naming standards |
+
+`netdiagrams stencils --profile municipal` saves the city shapes (payment
+terminal, traffic signal system, HVAC controller, public PC and the office
+ones) and `netdiagrams netbox-setup --profile municipal` writes the city zone
+tags (`zone-cjis`, `zone-public`, `zone-pay`, `zone-field`, `zone-water`...)
+and roles. The library (LB1) is a second export; a day-one civic center shows
+the gaps a first import has:
+
+```bash
+python3 scripts/make_city_sample.py --site starter -o city-starter.json
+netdiagrams build --input city-starter.json
+```
+
+The book that goes with this standard is *Draw Secure Local Government Network
+Diagrams* (netdiagrams.com/books/local-government-network-diagrams/).
+
+### Hotels: `--profile hotel`
+
+The hotel standard (H01) is eight sheets drawn for a full-service hotel, the
+fictional Alder Bay Hotel and Conference Center, around one firewall pair with
+three owners around it: the owner, the management company that runs IT, and the
+brand whose router and cloud PMS sit in the rack. Zones band by who they serve:
+outside (internet, brand and vendors), the edge, payments and operations, guests
+and rooms, building and safety.
+
+```bash
+netdiagrams sample --profile hotel -o alder-bay.drawio   # the finished set
+netdiagrams build --profile hotel                        # your own hotel, from NetBox
+```
+
+Sheets: 1 Overview, 2 Logical, 3 Physical, 3d Wireless, 4 Traffic flows,
+5 Failover, 6 Portfolio (brand, management company, sister property) and
+7 Flow register. `netdiagrams stencils --profile hotel` saves the hotel shapes
+and `netdiagrams netbox-setup --profile hotel` writes the zone tags
+(`zone-payments`, `zone-guest`, `zone-roomtech`, `zone-building`...) and roles.
+A day-one hotel with the gaps a first import has:
+
+```bash
+python3 scripts/make_hotel_sample.py --site starter -o hotel-starter.json
+netdiagrams build --input hotel-starter.json
+```
+
+The book that goes with this standard is *Draw Secure Hotel Network Diagrams*
+(netdiagrams.com/books/hotel-network-diagrams/).
+
+### Corporate HQ and multi-site: `--profile corporate`
+
+The corporate standard (C01) is drawn for a company past one firewall: a routed
+campus core with VRFs, an internal segmentation firewall pair that gates every
+VRF and every data center tier, an edge pair for everything outside, SD-WAN
+hubs, a DR site, branches built to typicals, home workers and the cloud. Zones
+band by trust: outside (internet, WAN, cloud); the edge (firewalls, DMZ,
+extranet); users (corporate, voice, printers, legal); the data center
+(applications, data, infrastructure, backup, legal systems); shared spaces and
+building systems; management.
+
+```bash
+netdiagrams sample --profile corporate -o sable-ridge.drawio   # the finished set, for "Sable Ridge HQ campus"
+netdiagrams build --profile corporate                          # your own campus, from NetBox
+```
+
+| Sheet | What it shows |
+|---|---|
+| 1 Overview | How the company network is protected, in business terms, for the board, the auditors and clients |
+| 2 Logical | The six bands, a zone per box with its VLAN table (VLAN, name, VRF, subnet, gateway), the two firewall pairs' interfaces and the VRF table |
+| 3 Physical | Providers, the data center and campus core, then every floor of every building: its access stack, rack UPS and one counted card per kind of end device (AP ×10, Camera ×6); link and asset registers |
+| 3d Wireless | Access points per floor and building, the controller pair and the SSID table |
+| 3e Riser | Buildings, floors and closets from NetBox's location tree, with the cables between them (drawn by the build) |
+| 4 Traffic flows | F01 to F33, lane by lane, ending in default deny (example until you write yours) |
+| 5 Failover | Eight scenarios: what fails, what takes over, what people notice (example) |
+| 6 Multi-site WAN | Hubs, the regional office, branch typicals, home workers and the cloud, with a site table (example) |
+| 7 Flow register | The flows with an owner each, the zone matrix and the naming and addressing standards |
+
+The VLAN tables have their own VRF column: a table whose header has `VRF`
+gets the VRF there, and the gateway column keeps only the gateway.
+
+A branch is drafted, not fitted to the HQ sheets: `netdiagrams draft --profile
+corporate` lays it out in the same six bands with the corporate shapes.
+`netdiagrams stencils --profile corporate` saves those shapes (SD-WAN hubs,
+distribution and DC leaf switches, storage and backup, UPSes, console servers,
+printers, video recorders, cameras, badge and BMS controllers, meeting-room
+systems) as NetBox device cards, and `netdiagrams netbox-setup --profile
+corporate` writes the twenty zone tags (`zone-corp`, `zone-legal`,
+`zone-dc-app`, `zone-dms`...) and the roles.
+
+```bash
+python3 scripts/make_corporate_sample.py --site c11 -o c11.json   # C11 Ashcombe, a BR-M branch
+netdiagrams draft --profile corporate --input c11.json -o c11.drawio
+```
+
+A day-one campus with the gaps a first import has (half the prefixes with no
+VRF, South's stacks with no rack positions, the Commons cameras with no zone,
+an unlabeled campus fiber link, the legal hosts untagged):
+
+```bash
+python3 scripts/make_corporate_sample.py --site starter -o corporate-starter.json
+netdiagrams build --input corporate-starter.json
+```
+
+The book that goes with this standard is *Draw Secure Corporate Network
+Diagrams* (netdiagrams.com/books/corporate-network-diagrams/).
 
 ## Options
 
@@ -581,5 +806,21 @@ python3 scripts/make_site.py large -o large.json   # a 3,000-device test site (a
 python3 scripts/make_office_template.py  # redraw the O01 office template
 python3 scripts/make_office_sample.py    # and its sample export (--site o02 / starter for the fixtures)
 python3 scripts/make_office_stencils.py  # and the office shape library
+python3 scripts/make_bank_sample.py --site starter -o bank-starter.json
+python3 scripts/make_bank_template.py  # redraw the B01 bank template
+python3 scripts/make_bank_sample.py    # and its sample export (--site b02 / starter for the fixtures)
+python3 scripts/make_bank_stencils.py  # and the bank shape library
 python3 scripts/make_retail.py  # regenerate the R01 retail template and the Store 014 export
+python3 scripts/make_dealer_template.py  # redraw the D01 dealership template
+python3 scripts/make_dealer_sample.py    # and its sample export (--site d02 / starter for the fixtures)
+python3 scripts/make_dealer_stencils.py  # and the dealership shape library
+python3 scripts/make_city_template.py    # redraw the M01 municipal template
+python3 scripts/make_city_sample.py      # and its sample export (--site lb1 / starter for the fixtures)
+python3 scripts/make_city_stencils.py    # and the municipal shape library
+python3 scripts/make_hotel_template.py  # redraw the H01 hotel template
+python3 scripts/make_hotel_sample.py    # and its sample export (--site h02 / starter for the fixtures)
+python3 scripts/make_hotel_stencils.py  # and the hotel shape library
+python3 scripts/make_corporate_template.py  # redraw the C01 corporate template (its registers come from the sample)
+python3 scripts/make_corporate_sample.py    # and its sample export (--site starter / c11 for the day one and the branch)
+python3 scripts/make_corporate_stencils.py  # and the corporate shape library
 ```

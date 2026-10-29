@@ -1,9 +1,11 @@
-# Publishes to PyPI when a v* tag is pushed to the public repository (PyPI trusted publishing, no token).
+# Publishes to PyPI from the public repository (PyPI trusted publishing, no token): on a v* tag, or run by hand
+# from the Actions tab. PyPI refuses a version it already has, so bump netdiagrams.__version__ first.
 name: Publish to PyPI
 
 on:
   push:
     tags: ["v*"]
+  workflow_dispatch:
 
 jobs:
   publish:
@@ -18,7 +20,6 @@ jobs:
         with:
           python-version: "3.x"
       - run: |
-          test "${GITHUB_REF_NAME#v}" = "$(sed -n 's/^__version__ = "\(.*\)"/\1/p' src/netdiagrams/__init__.py)"
           python -m pip install build
           python -m build
       - uses: pypa/gh-action-pypi-publish@release/v1

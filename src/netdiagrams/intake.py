@@ -53,6 +53,7 @@ class Intake:
     panels: list = field(default_factory=list)
     traced: list = field(default_factory=list)            # "A:port ⇄ B:port via PANEL:port"
     unnamed: list = field(default_factory=list)
+    shared_names: list = field(default_factory=list)      # "NAME: NAME-id, ..." devices that share a name (tenants)
     duplicate_labels: dict = field(default_factory=dict)  # label -> how many cables carry it
     shadowed_vlans: list = field(default_factory=list)    # "VID name (group)" dropped for the site's own
     left_out_wlans: list = field(default_factory=list)    # "SSID (VLAN VID)" not this site's
@@ -84,8 +85,11 @@ def prepare(export: dict, file_settings: dict | None = None, file_name: str = ""
     cfg, sources = config.resolve(export, file_settings, file_name)
     info = Intake(settings=cfg, sources=sources)
     _apply_fields(export, cfg)
+    for d in export.get("devices", []):   # NetBox 3.5 and older call the role device_role
+        if not d.get("role") and isinstance(d.get("device_role"), dict):
+            d["role"] = d["device_role"]
     _map_roles(export, cfg, info)
-    _name_unnamed(export, info)
+    _name_devices(export, info)
     _inherit_from_type(export, info)
     _split_by_status(export, info)
     _trace_patch_panels(export, info)
@@ -111,23 +115,32 @@ def _terms(c: dict) -> list[dict]:
     return (c.get("a_terminations") or []) + (c.get("b_terminations") or [])
 
 
-def _name_unnamed(export: dict, info: Intake) -> None:
+def _name_devices(export: dict, info: Intake) -> None:
+    """Every device gets a name of its own: an unnamed one is called role-id, and a name NetBox lets two
+    tenants share stays on the first device (by id) while the others add -id, so no card shows another's data."""
     named = {}
-    for d in export.get("devices", []):
-        if not d.get("name") and d.get("id") is not None:
+    devices = [d for d in export.get("devices", []) if d.get("id") is not None]
+    for d in devices:
+        if not d.get("name"):
             d["name"] = f"{_get(d, 'role', 'slug') or 'device'}-{d['id']}"
             named[d["id"]] = d["name"]
             info.unnamed.append(d["name"])
+    by_name: dict[str, list[dict]] = {}
+    for d in sorted(devices, key=lambda d: d["id"]):
+        by_name.setdefault(d["name"], []).append(d)
+    for name, same in by_name.items():
+        if len(same) > 1:
+            for d in same[1:]:
+                d["name"] = named[d["id"]] = f"{name}-{d['id']}"
+            info.shared_names.append(f"{name}: " + ", ".join(d["name"] for d in same))
     if not named:
         return
-    for c in export.get("cables", []):
-        for t in _terms(c):
-            dev = (t.get("object") or {}).get("device") or {}
-            if dev.get("id") in named:
-                dev["name"] = named[dev["id"]]
-    for i in export.get("interfaces", []):
-        dev = i.get("device") or {}
-        if dev.get("id") in named:
+    refs = [(t.get("object") or {}).get("device") for c in export.get("cables", []) for t in _terms(c)]
+    refs += [o.get("device") for key in ("interfaces", "modules", "module_bays", "inventory_items")
+             for o in export.get(key) or []]
+    refs += [(o.get("assigned_object") or {}).get("device") for o in export.get("ip_addresses") or []]
+    for dev in refs:
+        if isinstance(dev, dict) and dev.get("id") in named:
             dev["name"] = named[dev["id"]]
 
 

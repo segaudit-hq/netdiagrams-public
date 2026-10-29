@@ -11,7 +11,9 @@ from __future__ import annotations
 import datetime as dt
 import json
 import re
+import socket
 import ssl
+import time
 from concurrent.futures import ThreadPoolExecutor
 import urllib.error
 import urllib.parse
@@ -65,9 +67,10 @@ def scrub(obj):
 
 
 class NetBoxError(RuntimeError):
-    def __init__(self, message: str, code: int | None = None):
+    def __init__(self, message: str, code: int | None = None, transient: bool = False):
         super().__init__(message)
         self.code = code  # the HTTP status, when NetBox answered
+        self.transient = transient  # busy or timed out: worth one more try
 
 
 class _NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -92,28 +95,49 @@ class NetBoxClient:
         scheme = "Bearer" if self.token.startswith("nbt_") else "Token"
         return {"Authorization": f"{scheme} {self.token}", "Accept": "application/json"}
 
-    def _open(self, request: urllib.request.Request, what: str) -> dict:
+    def _open(self, request: urllib.request.Request, what: str, timeout: float | None = None) -> dict:
         try:
-            with self.opener.open(request, timeout=self.timeout) as resp:
+            with self.opener.open(request, timeout=timeout or self.timeout) as resp:
                 return json.load(resp)
         except urllib.error.HTTPError as err:
             if 300 <= err.code < 400:
                 raise NetBoxError(f"NetBox redirected {request.full_url} to {err.headers.get('Location')}; "
                                   "use that address as the NetBox URL", err.code) from err
             detail = ""
-            if request.get_method() == "POST":
-                try:
-                    detail = ": " + err.read().decode("utf-8", "replace")[:300]
-                except Exception:
-                    pass
-            raise NetBoxError(f"NetBox returned {err.code} {what}{detail}", err.code) from err
+            try:
+                body = err.read().decode("utf-8", "replace")
+                if request.get_method() == "GET":  # NetBox says why: "Invalid token", "You do not have permission..."
+                    body = json.loads(body).get("detail") or ""
+                detail = f": {body[:300]}" if body else ""
+            except Exception:
+                pass
+            if err.code in (401, 403) and request.get_method() == "GET":
+                detail = detail.rstrip(".") + (". Check the API token ('netdiagrams login' saves a new one), and that its user may view "
+                           "these objects")
+            raise NetBoxError(f"NetBox returned {err.code} {what}{detail}", err.code,
+                              transient=err.code in (429, 502, 503, 504)) from err
         except urllib.error.URLError as err:
-            raise NetBoxError(f"Could not reach NetBox at {self.base}: {err.reason}") from err
-        except (OSError, ValueError) as err:  # a timeout mid-reply, or an HTML login page instead of JSON
-            raise NetBoxError(f"Bad reply from NetBox at {self.base}: {err}") from err
+            reason = str(err.reason)
+            hint = (". If NetBox uses a private CA, point SSL_CERT_FILE at its certificate, or pass --insecure"
+                    if "CERTIFICATE_VERIFY_FAILED" in reason else
+                    ". If NetBox serves plain HTTP, give the URL as http://..." if "WRONG_VERSION_NUMBER" in reason else "")
+            raise NetBoxError(f"Could not reach NetBox at {self.base}: {err.reason}{hint}",
+                              transient=isinstance(err.reason, socket.timeout)) from err
+        except ValueError as err:  # an HTML page (a login portal, a proxy, the wrong URL) instead of JSON
+            raise NetBoxError(f"NetBox at {self.base} did not answer with JSON ({err}); check the NetBox URL, and "
+                              "that no login page or proxy sits in front of its API") from err
+        except OSError as err:  # a timeout mid-reply
+            raise NetBoxError(f"Bad reply from NetBox at {self.base}: {err}", transient=True) from err
 
     def get(self, url: str) -> dict:
-        return self._open(urllib.request.Request(url, headers=self._headers(), method="GET"), f"for {url}")
+        request = lambda: urllib.request.Request(url, headers=self._headers(), method="GET")
+        try:
+            return self._open(request(), f"for {url}")
+        except NetBoxError as err:
+            if not err.transient:
+                raise
+        time.sleep(2)  # a busy NetBox or its proxy (429, 502-504, a slow page): a read is safe to ask again, once
+        return self._open(request(), f"for {url}", timeout=self.timeout * 2)
 
     def post(self, endpoint: str, payload: dict) -> dict:
         """Create one object. Used by netbox-setup --apply only; nothing else writes."""
@@ -134,6 +158,10 @@ class NetBoxClient:
             yield from page.get("results", [])
             nxt = page.get("next")
             url = urllib.parse.urlsplit(nxt)._replace(scheme=base.scheme, netloc=base.netloc).geturl() if nxt else ""
+
+    def check(self) -> None:
+        """One small read: the URL, TLS, the reply and the token all work, or NetBoxError says which doesn't."""
+        self.get(f"{self.base}/dcim/sites/?limit=1")
 
     def version(self) -> str:
         """'4.2.5' from /api/status/, or '' when the endpoint is not readable."""
@@ -261,9 +289,14 @@ def _merge(first: list[dict], more: list[dict]) -> list[dict]:
 
 
 def load_export(path: str | Path) -> dict:
-    data = json.loads(Path(path).read_text("utf-8"))
-    if not isinstance(data, dict) or "devices" not in data:
-        raise NetBoxError(f"{path} is not a NetDiagrams export (expected a 'devices' list)")
+    try:
+        data = json.loads(Path(path).read_text("utf-8"))
+    except (OSError, ValueError) as err:
+        raise NetBoxError(f"Can't read {path}: {err}") from err
+    if not isinstance(data, dict) or not isinstance(data.get("devices"), list) \
+            or not isinstance(data.setdefault("site", {}), dict):
+        raise NetBoxError(f"{path} is not a NetDiagrams export (expected a 'devices' list; "
+                          "'netdiagrams export' writes one)")
     for key in list(ENDPOINTS) + list(PER_DEVICE) + ["contact_assignments", "device_types"]:
         data.setdefault(key, [])
     return scrub(data)   # an export written by an older release, or by hand, may still carry a PSK

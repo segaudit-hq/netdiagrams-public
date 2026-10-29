@@ -73,7 +73,7 @@ netdiagrams sample --profile retail
 
 If your NetBox uses its own role names or custom field names, map them in a small `netdiagrams.json` file. `netdiagrams doctor --save-settings netdiagrams.json` proposes one for you.
 
-The full guide to every option, setting and sheet is in [docs/reference.md](docs/reference.md).
+The full guide to every option, setting and sheet is in [docs/reference.md](https://github.com/segaudit-hq/netdiagrams-public/blob/main/docs/reference.md).
 
 ## Learn the method
 
@@ -91,4 +91,4 @@ PYTHONPATH=src python3 -m unittest discover -s tests
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE) and [NOTICE](NOTICE). NetDiagrams is a product of SegAudit LLC.
+Apache License 2.0. See [LICENSE](https://github.com/segaudit-hq/netdiagrams-public/blob/main/LICENSE) and [NOTICE](https://github.com/segaudit-hq/netdiagrams-public/blob/main/NOTICE). NetDiagrams is a product of SegAudit LLC.

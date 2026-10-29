@@ -1,21 +1,36 @@
 [build-system]
-requires = ["setuptools>=68"]
+requires = ["setuptools>=77"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "netdiagrams"
-version = "0.1.0"
+dynamic = ["version"]
 description = "NetDiagrams: network diagrams from NetBox, drawn to a consistent standard in draw.io."
 readme = "README.md"
-license = {text = "Apache-2.0"}
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+keywords = ["netbox", "draw.io", "network diagram", "network documentation", "segmentation"]
+classifiers = [
+    "Environment :: Console",
+    "Intended Audience :: System Administrators",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Topic :: System :: Networking",
+]
 requires-python = ">=3.9"
 dependencies = []
 
 [project.urls]
 Homepage = "https://netdiagrams.com"
+Source = "https://github.com/segaudit-hq/netdiagrams-public"
+Documentation = "https://github.com/segaudit-hq/netdiagrams-public/blob/main/docs/reference.md"
+Issues = "https://github.com/segaudit-hq/netdiagrams-public/issues"
 
 [project.scripts]
 netdiagrams = "netdiagrams.cli:main"
+
+[tool.setuptools.dynamic]
+version = {attr = "netdiagrams.__version__"}
 
 [tool.setuptools.packages.find]
 where = ["src"]

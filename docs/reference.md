@@ -25,10 +25,10 @@ It only reads. NetDiagrams sends GET requests to NetBox and never changes it, an
 ## Install
 
 ```bash
-pip install .
+pip install git+https://github.com/segaudit-hq/netdiagrams-public
 ```
 
-You need Python 3.9 or newer. There are no other dependencies.
+Without git, `pip install https://github.com/segaudit-hq/netdiagrams-public/archive/refs/heads/main.zip` does the same, and `pip install .` installs from a copy of the repository. You need Python 3.9 or newer. There are no other dependencies.
 
 ## Run it
 
@@ -36,11 +36,11 @@ You need Python 3.9 or newer. There are no other dependencies.
 netdiagrams
 ```
 
-The first time, NetDiagrams asks for your NetBox URL and an API token (read-only is enough) and remembers them in `~/.config/netdiagrams/config.json`. It then writes one drawing per NetBox site that has devices, `<site>.drawio`, plus `<site>.drift.md`. Open the drawing in draw.io (desktop or diagrams.net).
+The first time, NetDiagrams asks for your NetBox URL and an API token (read-only is enough), checks them with one read, and remembers them in `~/.config/netdiagrams/config.json`. A URL typed without `http://` or `https://` is taken as `https://`. It then writes one drawing per NetBox site that has devices, `<site>.drawio`, plus `<site>.drift.md`. Open the drawing in draw.io (desktop or diagrams.net).
 
 That is the whole workflow. Run `netdiagrams` again whenever NetBox changes.
 
-To pick one site or a file name: `netdiagrams --site s07 -o s07.drawio`. In scripts and CI, set `NETBOX_URL` and `NETBOX_TOKEN` instead of logging in. `netdiagrams login` changes the saved login.
+To pick one site or a file name: `netdiagrams --site s07 -o s07.drawio` (folders in the `-o` path are made for you). In scripts and CI, set `NETBOX_URL` and `NETBOX_TOKEN` instead of logging in. `netdiagrams login` changes the saved login.
 
 Or save the NetBox data once and build from the file (offline, or to share without NetBox access):
 
@@ -348,7 +348,7 @@ netdiagrams netbox-setup --check   # present / missing / present but not on loca
 netdiagrams netbox-setup --apply   # create what is missing through the API
 ```
 
-`--check` compares and changes nothing. `--apply` creates the missing objects with a token that can write, one API call each, and reports each outcome; it is the only thing in NetDiagrams that writes to NetBox. Everything it adds is NetBox's own extension points, so an upgrade keeps it: custom fields in groups "OT" and "NetDiagrams", none required; choice sets; tags; device roles. It never updates or deletes: a field you renamed, a tag you recoloured or a role you already had is left alone and reported as present, and a field present but missing an object type is listed for you to extend by hand. It follows the NetBox version it finds (choice sets from 3.6, `object_types` from 4.0).
+`--offline` writes every file without reading NetBox. `--check` compares and changes nothing. `--apply` creates the missing objects with a token that can write, one API call each, and reports each outcome; it is the only thing in NetDiagrams that writes to NetBox. Everything it adds is NetBox's own extension points, so an upgrade keeps it: custom fields in groups "OT" and "NetDiagrams", none required; choice sets; tags; device roles. It never updates or deletes: a field you renamed, a tag you recoloured or a role you already had is left alone and reported as present, and a field present but missing an object type is listed for you to extend by hand. It follows the NetBox version it finds (choice sets from 3.6, `object_types` from 4.0).
 
 ### Audit evidence
 
@@ -785,15 +785,16 @@ Diagrams* (netdiagrams.com/books/corporate-network-diagrams/).
 - `--audit` / `--no-audit` always add, or never add, the "Audit evidence" sheet (3f); by default it comes when NetBox records any audit evidence for the site.
 - `--keep-unmatched` keeps template devices that NetBox doesn't have instead of removing them.
 - `--rename S01-=S07-` sets the prefix swap yourself when NetDiagrams can't work it out.
-- `--settings FILE` (build, draft, doctor, netbox-setup) reads settings from FILE instead of `netdiagrams.json`.
-- `--profile NAME` (build, draft, doctor, netbox-setup, sample, blank) draws to that industry's standard (see Industry profiles).
+- `--settings FILE` (build, draft, doctor, gaps, netbox-setup) reads settings from FILE instead of `netdiagrams.json`.
+- `--profile NAME` (build, draft, doctor, gaps, netbox-setup, sample, blank, stencils) draws to that industry's standard (see Industry profiles).
 - `--no-book-note` (build) leaves out the "How to draw this page" line under each sheet.
 - `--no-quality` (build) leaves out the "Data quality" sheet (1c); the score is still printed and saved.
 - `--fail-under SCORE` (doctor) exits 1 when a site's data quality is under SCORE.
 - `--no-guide` (build) removes the template's guide notes instead of parking them on a hidden "Guides" layer.
 - `--rev R1` (build) sets the revision in the title blocks; the default is the first six characters of the SHA-256 of the NetBox data and settings, printed in full in the drift report.
 - `--no-note` (draft, blank) leaves out the small "About this drawing" note.
-- `--insecure` skips TLS certificate checks (for a lab NetBox with a self-signed certificate).
+- `--netbox-url URL` reads that NetBox instead of `NETBOX_URL` or the saved login.
+- `--insecure` skips TLS certificate checks (for a lab NetBox with a self-signed certificate). For a NetBox signed by your own CA, point `SSL_CERT_FILE` at the CA's certificate instead.
 
 ## Development
 

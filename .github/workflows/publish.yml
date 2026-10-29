@@ -1,0 +1,24 @@
+# Publishes to PyPI when a v* tag is pushed to the public repository (PyPI trusted publishing, no token).
+name: Publish to PyPI
+
+on:
+  push:
+    tags: ["v*"]
+
+jobs:
+  publish:
+    if: github.repository == 'segaudit-hq/netdiagrams-public'
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - run: |
+          test "${GITHUB_REF_NAME#v}" = "$(sed -n 's/^__version__ = "\(.*\)"/\1/p' src/netdiagrams/__init__.py)"
+          python -m pip install build
+          python -m build
+      - uses: pypa/gh-action-pypi-publish@release/v1

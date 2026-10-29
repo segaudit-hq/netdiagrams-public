@@ -70,6 +70,19 @@ def _vertices(g: Graph, is_device):
         yield i, el, cell
 
 
+def leftovers(template: ET.Element) -> dict[str, set[str]]:
+    """Page id -> the template names its captions lost to '?', for the captions still showing on it."""
+    out: dict[str, set[str]] = {}
+    for diagram in template.findall("diagram"):
+        if diagram.find("mxGraphModel") is None:
+            continue
+        g = Graph(diagram)
+        names = {n for i, el in g.els.items() if not g.hidden(i) for n in (el.get(LEFTOVER_MARK) or "").split(",") if n}
+        if names:
+            out[diagram.get("id") or ""] = names
+    return out
+
+
 def device_cards(g: Graph, is_device) -> dict[str, str]:
     """Plain cards whose label starts with a device name (the template's controllers, switches, radios)."""
     out = {}
@@ -117,7 +130,6 @@ def fill(g: Graph, nb, report, is_device, keep_unmatched: bool, prefix: str) -> 
     pattern = re.compile(r"(?<![A-Z0-9-])" + re.escape(prefix) + r"[A-Z0-9]+(?:-[A-Z0-9]+)*(?![A-Za-z0-9])") \
         if prefix else None
     guide = set(profiles.current().guide_ids.get(page, ()))   # template prose bound for the hidden guide layer
-    leftovers: set[str] = set()
     for i, el, cell in _vertices(g, is_device):
         value = g.value(el)
         if not value or el.get(MGMT_MARK) or i in guide:
@@ -126,24 +138,20 @@ def fill(g: Graph, nb, report, is_device, keep_unmatched: bool, prefix: str) -> 
         if wx.aps and wx.no_controller:
             new = CAPWAP.sub(lambda m: _mgmt_phrase(wx), new)
             new = MODE_WORDS.sub("", new)     # "local mode" is a controller's word; the AP register carries the real mode
+        lost: set[str] = set()
         if pattern:
             def swap(m: re.Match) -> str:
                 name = m.group(0)
                 if is_backed(name, backed):
                     return name
-                leftovers.add(name)
+                lost.add(name)
                 return gaps.MISSING
             new = pattern.sub(swap, new)
         if new != value:
             g.set_value(el, new)
-            had = {n for n in (el.get(LEFTOVER_MARK) or "").split(",") if n} if el.tag == "object" else set()
-            if el.tag == "object":
-                el.set(LEFTOVER_MARK, ",".join(sorted(had | {n for n in leftovers if gaps.MISSING in new})))
-    # Names a previous build already replaced stay on the card's list.
-    for el in g.els.values():
-        leftovers.update(n for n in (el.get(LEFTOVER_MARK) or "").split(",") if n)
-    if leftovers:
-        report.template_leftovers.setdefault(page, set()).update(leftovers)
+        if lost:  # kept on the caption (an <object>, so draw.io keeps it too) for the card, this build and the next
+            had = {n for n in (el.get(LEFTOVER_MARK) or "").split(",") if n}
+            g.wrap(i, **{LEFTOVER_MARK: ",".join(sorted(had | lost))})
 
     # 4. The sheet's own name and title name the vendors NetBox records (W10).
     _vendor_names(g, wx)

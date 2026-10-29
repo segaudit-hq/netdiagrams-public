@@ -207,7 +207,9 @@ def mark_examples(g: Graph, edited: set[tuple[str, str]] = frozenset()) -> tuple
                  and "rounded=1" in (cell_of(el).get("style") or "") and g.box(i)[2] > 300 and g.box(i)[3] > 120]
         cards = [c for c in cards if card_around(g, c) not in cards]  # one band per card, not per nested card
         for card in cards:
-            watermark(g, "EXAMPLE", f"{possessive(profiles.current().site_name)}, not from this site's NetBox", g.box(card))
+            what = layer_name[:1].lower() + layer_name[1:]   # "Plant A's flow register", not "Plant A's,"
+            watermark(g, "EXAMPLE", f"{possessive(profiles.current().site_name)} {what}, not from this site's NetBox",
+                      g.box(card))
             marked.append(f"{g.name}: {layer_name}")
     for header in profiles.current().example_table_headers.get(page, ()):
         for table in g.tables():
@@ -669,6 +671,8 @@ def sweep_residue(g: Graph, boxes: list[tuple[float, float, float, float]], is_d
     for i, el in g.els.items():
         cell = cell_of(el)
         if cell is None or cell.get("parent") not in g.layers or is_device(el):
+            continue
+        if el.get("netdiagrams_ref") in g.els:  # a tag or stripe of a device that stays, however close it sits
             continue
         if g.layer_of(i).startswith(RESIDUE_SKIP + (profiles.current().band_layer,)):
             continue

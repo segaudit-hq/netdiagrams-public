@@ -31,6 +31,12 @@ def _saved() -> dict:
         return {}
 
 
+def _url(url: str) -> str:
+    """'netbox.example.com' or 'https://netbox.example.com/' as https://netbox.example.com."""
+    url = url.strip().rstrip("/")
+    return url if "://" in url or not url else f"https://{url}"
+
+
 def _save(url: str, token: str) -> None:
     CONFIG.parent.mkdir(mode=0o700, parents=True, exist_ok=True)
     fd = os.open(CONFIG, os.O_WRONLY | os.O_CREAT | os.O_TRUNC, 0o600)  # never readable by others, even briefly
@@ -45,14 +51,17 @@ def _client(args) -> NetBoxClient:
     If none is set and someone is at the keyboard, ask once and remember it.
     """
     saved = _saved()
-    url = args.netbox_url or os.environ.get("NETBOX_URL") or saved.get("url")
-    token = os.environ.get("NETBOX_TOKEN") or (saved.get("token") if url == saved.get("url") else None)
+    url = _url(args.netbox_url or os.environ.get("NETBOX_URL") or saved.get("url") or "")
+    token = os.environ.get("NETBOX_TOKEN") or (saved.get("token") if url == _url(saved.get("url") or "") else None)
     if (not url or not token) and sys.stdin.isatty():
-        url = url or input("NetBox URL: ").strip()
+        url = url or _url(input("NetBox URL: "))
         token = token or getpass.getpass("NetBox API token (read-only is enough): ").strip()
         if url and token:
+            client = NetBoxClient(url, token, verify_tls=not args.insecure)
+            client.check()  # a mistyped token saved here would fail every later run without asking again
             _save(url, token)
             print(f"Saved to {CONFIG} for next time.")
+            return client
     if not url or not token:
         raise NetBoxError("No NetBox to read from. Run netdiagrams in a terminal to log in once, set NETBOX_URL and "
                           "NETBOX_TOKEN, or pass --input with an export file.")
@@ -60,12 +69,12 @@ def _client(args) -> NetBoxClient:
 
 
 def cmd_login(args) -> None:
-    url = args.netbox_url or input("NetBox URL: ").strip()
+    url = _url(args.netbox_url or input("NetBox URL: "))
     token = getpass.getpass("NetBox API token (read-only is enough): ").strip()
     client = NetBoxClient(url, token, verify_tls=not args.insecure)
     sites = client.sites()
     _save(url, token)
-    print(f"Logged in to {client.base[:-4]} ({len(sites)} sites). Saved to {CONFIG}.")
+    print(f"Logged in to {client.base[:-4]} ({len(sites)} site{'' if len(sites) == 1 else 's'}). Saved to {CONFIG}.")
 
 
 def _settings(args) -> tuple[dict, str]:
@@ -95,7 +104,18 @@ def _profile(export: dict, cfg: tuple) -> profiles.Profile:
 
 
 def _template(args, profile: profiles.Profile) -> ET.Element:
-    return stencils.inflate(ET.parse(args.template).getroot()) if args.template else sync.default_template(profile)
+    if not args.template:
+        return sync.default_template(profile)
+    try:
+        return stencils.inflate(ET.parse(args.template).getroot())
+    except (OSError, ET.ParseError) as err:
+        raise SystemExit(f"netdiagrams: cannot read the template {args.template}: {err}")
+
+
+def _writable(path: Path) -> Path:
+    """``path``, with its folder made: -o reports/2026-10/s07.drawio works on a first run."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    return path
 
 
 def _render(export: dict, out: Path, segaudit_note: bool, cfg: tuple = ({}, "")) -> None:
@@ -129,7 +149,7 @@ def _exports(args):
 
 def _out_path(args, slug: str, suffix: str, many: bool) -> Path:
     if args.output and not many and not Path(args.output).is_dir():
-        return Path(args.output)
+        return _writable(Path(args.output))
     folder = Path(args.output or ".")  # several sites, or -o names a folder
     folder.mkdir(parents=True, exist_ok=True)
     return folder / f"{slug}{suffix}"
@@ -279,14 +299,14 @@ def cmd_sample(args) -> None:
         profile = profiles.get(args.profile)
     except config.SettingsError as err:
         raise SystemExit(f"netdiagrams: {err}")
-    out = Path(args.output or profile.sample_out)
+    out = _writable(Path(args.output or profile.sample_out))
     with profiles.use(profile):
         sync.write(sync.finish_sample(sync.default_template(profile)), out)
     print(f"Wrote {out}: {profile.sample_title}, fully drawn to the standard.")
 
 
 def cmd_blank(args) -> None:
-    out = Path(args.output or "blank.drawio")
+    out = _writable(Path(args.output or "blank.drawio"))
     try:
         profile = profiles.get(args.profile)
     except config.SettingsError as err:
@@ -302,8 +322,8 @@ def cmd_stencils(args) -> None:
         profile = profiles.from_settings(cfg)
     except config.SettingsError as err:
         raise SystemExit(f"netdiagrams: {err}")
-    out = Path(args.output or ("Network-Docs-Stencils.xml" if profile is profiles.MANUFACTURING
-                               else f"{profile.name}-stencils.xml"))
+    out = _writable(Path(args.output or ("Network-Docs-Stencils.xml" if profile is profiles.MANUFACTURING
+                                         else f"{profile.name}-stencils.xml")))
     with profiles.use(profile):
         n = stencils.write_library(out)
     print(f"Wrote {out}: {n} shapes for the {profile.industry.lower()} standard. "
@@ -325,12 +345,19 @@ def _netbox_setup(args, template: ET.Element, cfg: dict) -> None:
     if not args.offline:
         try:
             client = _client(args)
-            have = netbox_setup.inventory(client)
-            version = client.version()
-        except NetBoxError as err:
+        except NetBoxError:
             if args.check or args.apply:
                 raise
             print("Not logged in to NetBox, so every file is written. Run 'netdiagrams login' to skip what exists.")
+        else:
+            try:
+                have = netbox_setup.inventory(client)
+                version = client.version()
+            except NetBoxError as err:
+                if args.check or args.apply:
+                    raise
+                client, have = None, {}
+                print(f"Could not read what NetBox has ({err}), so every file is written.")
     if args.check:
         if client is None:
             raise NetBoxError("--check needs a NetBox to compare with (log in, or drop --offline).")
@@ -404,7 +431,7 @@ def cmd_share(args) -> None:
     except (OSError, ET.ParseError) as err:
         raise SystemExit(f"netdiagrams: cannot read {src}: {err}")
     report = share.share(mxfile, audience=args.audience, keep_examples=args.keep_examples)
-    out = Path(args.output or src.with_name(f"{src.stem}-{args.audience}{src.suffix}"))
+    out = _writable(Path(args.output or src.with_name(f"{src.stem}-{args.audience}{src.suffix}")))
     for line in report.lines():
         print(line)
     if report.leaks and not args.allow_leaks:
@@ -510,7 +537,7 @@ def parser() -> argparse.ArgumentParser:
                         "Nothing that exists is changed or removed.")
     netbox_args(n)
     n.set_defaults(func=cmd_netbox_setup)
-    for sp in (b, f, d, s, k, n, t):
+    for sp in (b, f, d, s, k, n, t, ga):
         sp.add_argument("--profile", metavar="NAME",
                         help=f"Industry standard to draw to: {', '.join(sorted(profiles.PROFILES))} "
                              f"(default: the 'profile' setting, else {profiles.DEFAULT}).")
@@ -530,7 +557,7 @@ def parser() -> argparse.ArgumentParser:
     sh.add_argument("-o", "--output", help="Output file (default: <drawing>-<audience>.drawio).")
     sh.set_defaults(func=cmd_share)
 
-    for sp in (b, f, d, n):
+    for sp in (b, f, d, n, ga):
         sp.add_argument("--settings", metavar="FILE",
                         help=f"Settings file (role map, zone field, naming...). Default: {config.FILE_NAME} "
                              "in the output folder or the current folder.")
@@ -543,6 +570,11 @@ def parser() -> argparse.ArgumentParser:
 
 def main(argv: list[str] | None = None) -> int:
     argv = list(sys.argv[1:] if argv is None else argv)
+    for stream in (sys.stdout, sys.stderr):  # a Windows console redirected to a file can't encode ▸ or a site's name
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(errors="replace")
+    if argv and not argv[0].startswith("-") and argv[0] not in COMMANDS:
+        parser().error(f"unknown command '{argv[0]}' (choose from {', '.join(sorted(COMMANDS))})")
     # 'netdiagrams' and 'netdiagrams --site s01' mean 'netdiagrams build ...'.
     if not argv or (argv[0] not in COMMANDS and argv[0] not in ("-h", "--help", "--version")):
         argv.insert(0, "build")
@@ -552,6 +584,12 @@ def main(argv: list[str] | None = None) -> int:
     except NetBoxError as err:
         print(f"netdiagrams: {err}", file=sys.stderr)
         return 2
+    except BrokenPipeError:  # 'netdiagrams doctor | head': Python's documented way out, no traceback at exit
+        os.dup2(os.open(os.devnull, os.O_WRONLY), sys.stdout.fileno())
+        return 1
+    except OSError as err:  # a folder that can't be written, a file that went away: say so, without a traceback
+        print(f"netdiagrams: {err}", file=sys.stderr)
+        return 1
     except KeyboardInterrupt:
         return 130
     return 0

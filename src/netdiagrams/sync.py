@@ -208,6 +208,7 @@ class Report:
             ("Patch panels (not drawn as devices)", self.intake.panels),
             ("Links traced through patch panels", self.intake.traced),
             ("Devices with no name in NetBox (named role-id here)", self.intake.unnamed),
+            ("Devices sharing a name in NetBox (the others get -id here)", self.intake.shared_names),
             ("Cable labels used on more than one cable",
              [f"{label} ×{n}" for label, n in self.intake.duplicate_labels.items()]),
             ("VLANs from a wider group left out (the site has its own with that number)",
@@ -602,6 +603,7 @@ def _fill(template: ET.Element, export: dict, prefix_map: dict[str, str] | None 
         report.audit = True
     checked = report.intake.data_date or today or dt.date.today().isoformat()
     found = gaps.find(export, endpoint_roles(), lambda d: ot.device_zones(d, nb.locations), checked)
+    report.template_leftovers = wireless_page.leftovers(template)  # captions the build kept, not ones it later removed
     report.quality = _assess_quality(export, nb, report, today, found, template, {rename(t) for t in template_names})
     if quality_sheet:
         _add_quality(template, pages, report, previous_quality)

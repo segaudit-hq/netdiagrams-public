@@ -25,10 +25,10 @@ It only reads. NetDiagrams sends GET requests to NetBox and never changes it, an
 ## Install
 
 ```bash
-pip install git+https://github.com/segaudit-hq/netdiagrams-public
+pip install netdiagrams
 ```
 
-Without git, `pip install https://github.com/segaudit-hq/netdiagrams-public/archive/refs/heads/main.zip` does the same, and `pip install .` installs from a copy of the repository. You need Python 3.9 or newer. There are no other dependencies.
+`pip install --upgrade netdiagrams` gets a newer release. For the latest unreleased code, `pip install git+https://github.com/segaudit-hq/netdiagrams-public` installs from GitHub, and `pip install .` installs from a copy of the repository. You need Python 3.9 or newer. There are no other dependencies.
 
 ## Run it
 

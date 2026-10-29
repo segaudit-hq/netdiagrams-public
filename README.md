@@ -12,7 +12,7 @@ You already keep your devices, cables, VLANs and sites in NetBox. NetDiagrams tu
 ## Quick start
 
 ```bash
-pip install git+https://github.com/segaudit-hq/netdiagrams-public
+pip install netdiagrams
 netdiagrams
 ```
 

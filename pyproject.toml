@@ -5,11 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "netdiagrams"
 dynamic = ["version"]
-description = "NetDiagrams: network diagrams from NetBox, drawn to a consistent standard in draw.io."
+description = "Generate network diagrams from NetBox: zoned draw.io drawings for audits, segmentation and documentation."
 readme = "README.md"
 license = "Apache-2.0"
 license-files = ["LICENSE", "NOTICE"]
-keywords = ["netbox", "draw.io", "network diagram", "network documentation", "segmentation"]
+keywords = ["netbox", "netbox diagram", "network diagram", "network topology", "draw.io", "drawio", "network documentation", "network segmentation", "purdue model", "iec 62443", "pci dss"]
 classifiers = [
     "Environment :: Console",
     "Intended Audience :: System Administrators",
@@ -23,6 +23,7 @@ dependencies = []
 [project.urls]
 Homepage = "https://netdiagrams.com"
 Source = "https://github.com/segaudit-hq/netdiagrams-public"
+Guides = "https://netdiagrams.com/tips/"
 Documentation = "https://github.com/segaudit-hq/netdiagrams-public/blob/main/docs/reference.md"
 Issues = "https://github.com/segaudit-hq/netdiagrams-public/issues"
 

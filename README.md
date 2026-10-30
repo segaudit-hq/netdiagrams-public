@@ -2,14 +2,14 @@
 
 **Network diagrams from your NetBox data, drawn to one consistent standard in draw.io.**
 
-You already keep your devices, cables, VLANs and sites in NetBox. NetDiagrams turns that data into a full set of drawings that look like an engineer drew them by hand: overview, logical, physical, hardware, wireless, flows, failover and multi-site sheets, each with registers and title blocks. Run it again whenever NetBox changes, and the drawings follow.
+NetDiagrams is a free, open-source command-line tool that generates network diagrams from NetBox. You already keep your devices, cables, VLANs and sites in NetBox. NetDiagrams turns that data into a full set of drawings that look like an engineer drew them by hand: overview, logical, physical, hardware, wireless, flows, failover and multi-site sheets, each with registers and title blocks. Run it again whenever NetBox changes, and the drawings follow.
 
 - **Works with free, self-hosted NetBox.** It needs only a read-only API token.
 - **Read-only.** It sends GET requests to NetBox, never changes it unless you opt in with `netbox-setup --apply`, and never connects to your network devices.
 - **No dependencies.** Pure Python 3.9+, standard library only.
 - **Opens anywhere draw.io does:** the desktop app, diagrams.net, Confluence, or exported HTML.
 
-## Quick start
+## How to draw a network diagram from NetBox
 
 ```bash
 pip install netdiagrams
@@ -80,6 +80,32 @@ The full guide to every option, setting and sheet is in [docs/reference.md](http
 The drawings follow a method for documenting segmented networks: what to draw on each sheet, how to name zones, and how to keep drawings current. It is written up as a series of ten industry guides at [netdiagrams.com](https://netdiagrams.com), one for each profile above, each with a free chapter and worksheets.
 
 Once your zones are drawn, [SegAudit](https://segaudit.com) checks that your firewall configuration actually enforces them.
+
+## How it compares to NetBox topology plugins
+
+NetBox plugins such as [netbox-topology-views](https://github.com/netbox-community/netbox-topology-views) and [netbox_drawio](https://github.com/CESNET/netbox_drawio) are installed on the NetBox server and draw a topology from inside NetBox. NetDiagrams takes a different approach, and you can use it alongside them:
+
+- **Nothing to install on NetBox.** It runs on your laptop or a CI job and reads the REST API with a read-only token.
+- **A finished document set, not one graph.** Each site gets overview, logical, physical, hardware, wireless, flow, failover and multi-site sheets, with registers and title blocks.
+- **Security zones first.** Sheets are grouped by zone, such as Purdue levels for a plant or the cardholder data environment for a store, with a register of the flows allowed between zones.
+- **Editable output.** The result is an ordinary draw.io file you can annotate, print or attach to an audit.
+
+## FAQ
+
+**Does NetDiagrams need a NetBox plugin?**
+No. It talks to the NetBox REST API from outside, so it works with NetBox you host yourself and with hosted NetBox, as long as you can create an API token. Both classic tokens and the newer `nbt_` tokens work.
+
+**Can it draw a Purdue model or IEC 62443 zones and conduits diagram?**
+Yes. The default `manufacturing` profile draws Purdue levels, the industrial DMZ and production cells, with a flow register for the conduits between zones.
+
+**Can it draw a PCI DSS segmentation diagram?**
+Yes. The `retail`, `hotel` and `bank` profiles keep the payment and card zones apart and show what is allowed to cross into them.
+
+**Does it change anything in NetBox or on my network?**
+No. It only reads from NetBox and never connects to network devices. The one exception is `netbox-setup --apply`, which you run on purpose and which only creates missing objects.
+
+**Is it free?**
+Yes. NetDiagrams is open source under the Apache License 2.0. The [industry guides](https://netdiagrams.com/books/) that explain the method are sold separately, and each one has a free chapter.
 
 ## Contributing
 
